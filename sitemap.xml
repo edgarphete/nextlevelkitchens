@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://www.nextlevelkitchens.co.nz/</loc>
+        <lastmod>2024-12-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_01.webp</image:loc>
+            <image:title>Next Level Kitchens - Custom Kitchen Design Auckland</image:title>
+            <image:caption>Professional kitchen renovation and design services in Auckland</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_04.webp</image:loc>
+            <image:title>Modern Family Kitchen Renovation Auckland</image:title>
+            <image:caption>Modern family kitchen renovation with custom cabinetry and premium finishes</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_05.webp</image:loc>
+            <image:title>Contemporary Kitchen Design Auckland</image:title>
+            <image:caption>Contemporary kitchen design with sleek lines and functional layout</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_06.webp</image:loc>
+            <image:title>Classic Elegant Kitchen Renovation</image:title>
+            <image:caption>Classic elegant kitchen renovation with timeless design and modern functionality</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_07.webp</image:loc>
+            <image:title>Luxury Bespoke Kitchen Auckland</image:title>
+            <image:caption>Luxury bespoke kitchen with premium materials and custom craftsmanship</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_08.webp</image:loc>
+            <image:title>Open Plan Kitchen Design Auckland</image:title>
+            <image:caption>Open plan kitchen design seamlessly integrated with living spaces</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_photo_09.webp</image:loc>
+            <image:title>Compact Kitchen Design Auckland</image:title>
+            <image:caption>Compact kitchen design maximizing functionality in smaller spaces</image:caption>
+        </image:image>
+    </url>
+</urlset>
