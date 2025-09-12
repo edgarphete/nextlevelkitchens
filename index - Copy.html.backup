@@ -469,48 +469,12 @@
         .hero-highlight {
             color: #22C55E;
             text-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
-            display: inline-block;
-            min-width: 200px;
-            text-align: left;
-        }
-
-        .rotating-text {
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            vertical-align: top;
-        }
-
-        .rotating-word {
-            display: inline-block;
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: all 0.6s ease-in-out;
-            position: absolute;
-            top: 0;
-            left: 0;
-            white-space: nowrap;
-        }
-
-        .rotating-word.active {
-            opacity: 1;
-            transform: translateY(0);
-            position: relative;
-        }
-
-        .rotating-word.fade-out {
-            opacity: 0;
-            transform: translateY(100%);
-            position: absolute;
         }
 
         .hero-subtext {
             font-size: 1.2rem;
             margin: 1.5rem 0;
             line-height: 1.6;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .hero-benefits {
@@ -693,9 +657,9 @@
         }
 
         .form-intro {
-            margin-bottom: 2.5rem;
+            /* margin-bottom: 2.5rem;
             padding-bottom: 2rem; 
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;*/
         }
 
         .form-intro h3 {
@@ -1599,97 +1563,20 @@
         }
 
         .testimonials-grid {
-            display: flex;
-            overflow: hidden;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .testimonials-slide {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
+            margin-bottom: 3rem;
         }
 
         .testimonial-card {
-            flex: 0 0 calc(33.333% - 1.33rem);
-            min-width: 320px;
             background: var(--light-grey);
-            padding: 1.5rem;
+            padding: 2.5rem;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 1px solid #e5e5e5;
             transition: all 0.3s ease;
             position: relative;
-        }
-
-        .testimonial-photo {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin: 0 auto 1rem auto;
-            display: block;
-            border: 2px solid var(--primary-color);
-        }
-
-        .testimonials-slider {
-            position: relative;
-        }
-
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active {
-            background: var(--primary-color);
-            transform: scale(1.2);
-        }
-
-        .slider-arrows {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .slider-arrows:hover {
-            background: var(--secondary-color);
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .slider-arrow-left {
-            left: -20px;
-        }
-
-        .slider-arrow-right {
-            right: -20px;
         }
 
         .testimonial-card:hover {
@@ -1729,7 +1616,7 @@
             font-size: 4rem;
             color: var(--primary-color);
             position: absolute;
-            top: -2rem;
+            top: -1rem;
             left: -1rem;
             opacity: 0.3;
             font-family: serif;
@@ -3674,21 +3561,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">★ Auckland's #1 Rated Kitchen Specialists</div>
-                <h1>Next Level <span class="hero-highlight">
-                    <span class="rotating-text">
-                        <span class="rotating-word active">Service</span>
-                        <span class="rotating-word">Craftsmanship</span>
-                        <span class="rotating-word">Results</span>
-                        <span class="rotating-word">Design</span>
-                        <span class="rotating-word">Cabinetry</span>
-                    </span>
-                </span></h1>
-                <h2 class="hero-subtext">Book your FREE design consultation (valued at $500) today. Enjoy transparent pricing, a 10-year warranty, and join over 100 Auckland homeowners who trust Next Level Kitchens.</h2>
+                <h1>Custom Kitchens in Auckland — Built in <span class="hero-highlight">6–8 Weeks</span></h1>
+                <h2 class="hero-subtext">Book your FREE design consultation (valued at $500) today. Enjoy transparent pricing, a 10-year warranty, and join over 500 Auckland homeowners who trust Next Level Kitchens.</h2>
                 
                 <div class="hero-benefits">
-                    <div class="benefit-item">✓ FREE Consultation</div>
-                    <div class="benefit-item">✓ 3D Render & Design</div>
-                    <div class="benefit-item">✓ Price Guarantee</div>
+                    <div class="benefit-item">✓ FREE In-Home Design Consultation</div>
+                    <div class="benefit-item">✓ 3D Renders & Detailed Quote</div>
+                    <div class="benefit-item">✓ Fixed Price Guarantee</div>
                 </div>
                 
                 <div class="hero-cta">
@@ -3698,7 +3577,7 @@
                 
                 <div class="hero-trust">
                     <div class="trust-item">
-                        <span class="trust-number">100+</span>
+                        <span class="trust-number">500+</span>
                         <span class="trust-text">Happy Customers</span>
                     </div>
                     <div class="trust-item">
@@ -3706,7 +3585,7 @@
                         <span class="trust-text">Google Reviews</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-number">10+</span>
+                        <span class="trust-number">15+</span>
                         <span class="trust-text">Years Experience</span>
                     </div>
                 </div>
@@ -3722,19 +3601,13 @@
                     <p class="testimonials-subtitle">Real feedback from real Auckland homeowners who trusted us with their dream kitchens.</p>
                 </div>
                 
-                <div class="testimonials-slider">
-                    <button class="slider-arrows slider-arrow-left">‹</button>
-                    <button class="slider-arrows slider-arrow-right">›</button>
-                    
-                    <div class="testimonials-grid">
-                        <div class="testimonials-slide">
+                <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_01.webp" alt="Kitchen Project for Suzanne B" class="testimonial-photo">
                     <div class="testimonial-rating">
                         <span class="stars">★★★★★</span>
                     </div>
                     <div class="testimonial-text">
-                        Everything about this business has been absolutely fantastic right from the very beginning. The clear communication, thoughtful design, high-quality product, professional installer, and skilled tradesmen all exceeded expectations. They made the entire experience seamless and enjoyable. Without hesitation, I would choose to work with them again and again for future projects.
+                        "Everything about this business is Fantastic right from the start. The communication, the design, the product, the installer and trades man. Would use them and only them again and again."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-name">Suzanne B</div>
@@ -3742,84 +3615,31 @@
                     </div>
                 </div>
                 
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Kitchen Project for Carol B" class="testimonial-photo">
+                <div class="testimonial-card featured">
                     <div class="testimonial-rating">
                         <span class="stars">★★★★★</span>
                     </div>
                     <div class="testimonial-text">
-                        For the longest time, I would stand outside my kitchen and picture exactly how I wanted it to look, down to the finest detail. With Next Level Kitchens, I got precisely that. The entire experience with Karl and his team was outstanding—transparent, clear on budget, excellent communication, and completely customer-focused.
+                        "For the longest time I would stand outside my kitchen and imagine what I'd want it to look like. I got exactly that! But the whole experience with Karl and his team was just fantastic. Transparent; we knew exactly what we were getting for our budget, excellent communication and totally focused on customer service"
                     </div>
                     <div class="testimonial-author">
-                        <div class="author-name">Carol B</div>
+                        <div class="author-name">Carol V</div>
                         <div class="author-location">Auckland</div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_01.webp" alt="Kitchen Project for Tracy M" class="testimonial-photo">
                     <div class="testimonial-rating">
                         <span class="stars">★★★★★</span>
                     </div>
                     <div class="testimonial-text">
-                        Next Level Kitchens renovated our kitchen, and we honestly couldn’t be happier with the final result. At first, the project was priced outside our budget, but with smart adjustments in materials, hardware, and layout, they aligned everything with our financial goals while still delivering a stunning, functional, and beautifully crafted kitchen.
+                        "Next Level Kitchen renovated our kitchen and we couldn't be happier. Initially, the project was priced outside our budget, but through some strategic adjustments in materials, hardware, and layout, they were able to bring the cost down to align with our financial goals, while still providing a beautiful, great quality kitchen. There communication throughout the process was fantastic and we highly recommend them."
                     </div>
                     <div class="testimonial-author">
                         <div class="author-name">Tracy M</div>
                         <div class="author-location">Auckland</div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_05.webp" alt="Kitchen Project for Des W" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Outstanding work from start to finish! The team at Next Level Kitchens transformed our outdated kitchen into a modern masterpiece. Their attention to detail, quality craftsmanship, and professional approach made the entire renovation process stress-free. Highly recommend their services.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Des W</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-
-
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Kitchen Project for James R" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Working with Next Level Kitchens was an incredible experience from start to finish. The design team really listened, understood our needs, and created a space that works perfectly for our family. The craftsmanship is flawless, the installation was smooth, and the communication outstanding. I couldn't recommend Karl and his team more highly.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">James R</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-
-
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_18.webp" alt="Kitchen Project for Sarah L" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        From the very first consultation, I felt confident choosing Next Level Kitchens. They explained every detail clearly, provided transparent pricing, and delivered on every promise. The finished kitchen is both practical and stunning, exceeding my expectations. Karl and his team showed professionalism, dedication, and true craftsmanship at every stage of the project.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Sarah L</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-                        </div>
-                    </div>
-                    
-                    <div class="slider-nav">
-                        <button class="slider-dot active" data-slide="0"></button>
-                        <button class="slider-dot" data-slide="1"></button>
-                    </div>
                 </div>
                 
                 <div class="testimonials-cta">
@@ -5203,96 +5023,6 @@
                 faqObserver.observe(item);
             });
         });
-
-        // Rotating text animation
-        function initRotatingText() {
-            const rotatingWords = document.querySelectorAll('.rotating-word');
-            let currentIndex = 0;
-            
-            function rotateText() {
-                // Remove active class from current word
-                rotatingWords[currentIndex].classList.remove('active');
-                rotatingWords[currentIndex].classList.add('fade-out');
-                
-                // Move to next word
-                currentIndex = (currentIndex + 1) % rotatingWords.length;
-                
-                // Add active class to next word after fade out completes
-                setTimeout(() => {
-                    rotatingWords.forEach(word => {
-                        word.classList.remove('fade-out');
-                    });
-                    rotatingWords[currentIndex].classList.add('active');
-                }, 600);
-            }
-            
-            // Start rotation after 2 seconds, then every 2 seconds
-            setTimeout(() => {
-                setInterval(rotateText, 2000);
-            }, 2000);
-        }
-        
-        // Initialize rotating text when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initRotatingText);
-
-        // Testimonials slider functionality
-        function initTestimonialsSlider() {
-            const slider = document.querySelector('.testimonials-slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            const prevBtn = document.querySelector('.slider-arrow-left');
-            const nextBtn = document.querySelector('.slider-arrow-right');
-            const cards = document.querySelectorAll('.testimonial-card');
-            
-            let currentSlide = 0;
-            const cardsPerSlide = 3;
-            const totalSlides = Math.ceil(cards.length / cardsPerSlide);
-            
-            // Update dots based on total slides
-            const sliderNav = document.querySelector('.slider-nav');
-            sliderNav.innerHTML = '';
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
-                dot.setAttribute('data-slide', i);
-                dot.addEventListener('click', () => goToSlide(i));
-                sliderNav.appendChild(dot);
-            }
-            
-            function updateSlider() {
-                const translateX = -currentSlide * 100;
-                slider.style.transform = `translateX(${translateX}%)`;
-                
-                // Update active dot
-                document.querySelectorAll('.slider-dot').forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-            
-            function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                updateSlider();
-            }
-            
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-            }
-            
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateSlider();
-            }
-            
-            // Event listeners
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-            
-            // Auto-rotate every 5 seconds
-            setInterval(nextSlide, 5000);
-        }
-        
-        // Initialize testimonials slider when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initTestimonialsSlider);
     </script>
 </body>
 </html>
