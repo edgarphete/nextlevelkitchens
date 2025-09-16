@@ -399,17 +399,23 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(2, 23, 50, 0.5), rgba(2, 23, 50, 0.5)), url('assets/images/nextlevelkitchens_photo_13.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: scroll;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             color: var(--white);
             text-align: center;
             position: relative;
+            width: 100%;
+        }
+
+        /* Hero Background */
+        .hero-1 {
+            background: linear-gradient(rgba(2, 23, 50, 0.4), rgba(2, 23, 50, 0.4)), url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
         }
 
         .hero::before {
@@ -427,6 +433,12 @@
             z-index: 2;
             max-width: 100%;
             margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 8vh;
         }
 
         .hero h1 {
@@ -472,37 +484,47 @@
             display: inline-block;
         }
 
-        .rotating-text {
+        /* Typing Effect */
+        .typing-container {
             display: inline-block;
             position: relative;
-            overflow: hidden;
-            vertical-align: top;
-            width: 630px;
+            min-width: 200px;
             text-align: left;
         }
 
-        .rotating-word {
+        .typed-word {
             display: inline-block;
-            opacity: 0;
-            transform: translateY(-100%);
-            transition: all 0.6s ease-in-out;
-            position: absolute;
-            top: 0;
-            left: 0;
+            border-right: 3px solid #22C55E;
+            animation: blink-cursor 1s infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 50% { border-color: #22C55E; }
+            51%, 100% { border-color: transparent; }
+        }
+
+        .typing-effect {
+            overflow: hidden;
             white-space: nowrap;
+            animation: typing 2s steps(20, end) forwards;
         }
 
-        .rotating-word.active {
-            opacity: 1;
-            transform: translateY(0);
-            position: relative;
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
         }
 
-        .rotating-word.fade-out {
-            opacity: 0;
-            transform: translateY(100%);
-            position: absolute;
+        .deleting-effect {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: deleting 1s steps(20, end) forwards;
         }
+
+        @keyframes deleting {
+            from { width: 100%; }
+            to { width: 0; }
+        }
+
 
         .hero-subtext {
             font-size: 1.2rem;
@@ -3261,6 +3283,15 @@
                 font-size: 3rem;
             }
 
+            .typing-container {
+                min-width: 180px;
+            }
+
+            .hero-content {
+                padding-top: 6vh;
+            }
+
+
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -3280,6 +3311,15 @@
             .hero h1 {
                 font-size: 2.2rem;
             }
+
+            .typing-container {
+                min-width: 150px;
+            }
+
+            .hero-content {
+                padding-top: 5vh;
+            }
+
 
             .about-stats {
                 grid-template-columns: repeat(2, 1fr);
@@ -3371,6 +3411,14 @@
          @media (max-width: 480px) {
              .hero h1 {
                  font-size: 2rem;
+             }
+
+             .typing-container {
+                 min-width: 120px;
+             }
+
+             .hero-content {
+                 padding-top: 4vh;
              }
 
              .hero p {
@@ -3811,6 +3859,21 @@
                 transition-duration: 0.01ms !important;
             }
         }
+
+        /* Very small mobile devices */
+        @media (max-width: 360px) {
+            .hero-content {
+                padding-top: 3vh;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .typing-container {
+                min-width: 100px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -3842,19 +3905,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero hero-1" id="home">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">★ Auckland's #1 Rated Kitchen Specialists</div>
-                <h1>Next Level <span class="hero-highlight">
-                    <span class="rotating-text">
-                        <span class="rotating-word active">Service</span>
-                        <span class="rotating-word">Craftsmanship</span>
-                        <span class="rotating-word">Results</span>
-                        <span class="rotating-word">Design</span>
-                        <span class="rotating-word">Cabinetry</span>
-                    </span>
-                </span></h1>
+                <h1>Next Level <span class="hero-highlight"><span class="typing-container"><span class="typed-word" id="typed-word">Kitchens</span></span></span></h1>
                 <h2 class="hero-subtext">Book your FREE design consultation (valued at $500) today. Enjoy transparent pricing, a 10-year warranty, and join over 100 Auckland homeowners who trust Next Level Kitchens.</h2>
                 
                 <div class="hero-benefits">
@@ -3864,7 +3919,7 @@
                 </div>
                 
                 <div class="hero-cta">
-                    <button class="btn btn-primary btn-pulse" onclick="openQuotePopup()">Get a free estemate →</button>
+                    <button class="btn btn-primary btn-pulse" onclick="openQuotePopup()">Get a free estimate →</button>
                      <a href="tel:+64211012617" class="btn btn-secondary">☎ Call Now (021) 101-2617</a>
                 </div>
                 
@@ -3890,8 +3945,8 @@
         <section class="testimonials section-padding">
             <div class="container">
                 <div class="testimonials-header">
-                    <h2>What Our Clients Say</h2>
-                    <p class="testimonials-subtitle">Real feedback from real Auckland homeowners who trusted us with their dream kitchens.</p>
+                    <h2>What our clients say about working with Next Level Kitchens</h2>
+                    <p class="testimonials-subtitle">Explore their stories and see how Next Level Kitchens helps homeowners move with clarity and confidence. Your dream kitchen is our biggest win.</p>
                 </div>
                 
                 <div class="testimonials-slider">
@@ -5089,8 +5144,8 @@
         let pageLoadTime = Date.now();
 
         document.addEventListener('mouseleave', function(e) {
-            // Only trigger if mouse leaves from the top area and page has been viewed for 2+ seconds
-            if (!exitIntentShown && e.clientY <= 0 && (Date.now() - pageLoadTime > 2000)) {
+            // Only trigger if mouse leaves from the top area and page has been viewed for 15+ seconds
+            if (!exitIntentShown && e.clientY <= 0 && (Date.now() - pageLoadTime > 15000)) {
                 exitIntentShown = true;
 
                 // Show the popup
@@ -5104,7 +5159,7 @@
 
         // Also trigger on mouse movement to very top (backup method)
         document.addEventListener('mousemove', function(e) {
-            if (!exitIntentShown && e.clientY <= 3 && (Date.now() - pageLoadTime > 2000)) {
+            if (!exitIntentShown && e.clientY <= 1 && (Date.now() - pageLoadTime > 15000)) {
                 exitIntentShown = true;
 
                 const popup = document.getElementById('exit-intent-popup');
@@ -5432,36 +5487,60 @@
             });
         });
 
-        // Rotating text animation
-        function initRotatingText() {
-            const rotatingWords = document.querySelectorAll('.rotating-word');
-            let currentIndex = 0;
-            
-            function rotateText() {
-                // Remove active class from current word
-                rotatingWords[currentIndex].classList.remove('active');
-                rotatingWords[currentIndex].classList.add('fade-out');
+        // Typing Effect for Hero
+        function initTypingEffect() {
+            const words = ['Kitchens', 'Service', 'Craftsmanship', 'Results', 'Design', 'Cabinetry'];
+            const typedWordElement = document.getElementById('typed-word');
+            let currentWordIndex = 0;
+            let isDeleting = false;
+            let charIndex = 0;
+            let typeSpeed = 200;
+            let deleteSpeed = 150;
+            let pauseTime = 2500;
+
+            function typeWriter() {
+                const currentWord = words[currentWordIndex];
                 
-                // Move to next word
-                currentIndex = (currentIndex + 1) % rotatingWords.length;
-                
-                // Add active class to next word after fade out completes
-                setTimeout(() => {
-                    rotatingWords.forEach(word => {
-                        word.classList.remove('fade-out');
-                    });
-                    rotatingWords[currentIndex].classList.add('active');
-                }, 600);
+                if (!isDeleting) {
+                    // Typing
+                    typedWordElement.textContent = currentWord.substring(0, charIndex + 1);
+                    charIndex++;
+                    
+                    if (charIndex === currentWord.length) {
+                        // Finished typing, pause then start deleting
+                        setTimeout(() => {
+                            isDeleting = true;
+                            typeWriter();
+                        }, pauseTime);
+                        return;
+                    }
+                    
+                    setTimeout(typeWriter, typeSpeed);
+                } else {
+                    // Deleting
+                    typedWordElement.textContent = currentWord.substring(0, charIndex - 1);
+                    charIndex--;
+                    
+                    if (charIndex === 0) {
+                        // Finished deleting, move to next word
+                        isDeleting = false;
+                        currentWordIndex = (currentWordIndex + 1) % words.length;
+                        setTimeout(typeWriter, typeSpeed);
+                        return;
+                    }
+                    
+                    setTimeout(typeWriter, deleteSpeed);
+                }
             }
-            
-            // Start rotation after 2 seconds, then every 2 seconds
+
+            // Start the effect after a brief delay
             setTimeout(() => {
-                setInterval(rotateText, 2000);
-            }, 2000);
+                typeWriter();
+            }, 1000);
         }
-        
-        // Initialize rotating text when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initRotatingText);
+
+        // Initialize typing effect when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initTypingEffect);
 
         // Testimonials slider functionality
         function initTestimonialsSlider() {
