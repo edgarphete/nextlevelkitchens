@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Primary Meta Tags -->
     <title>Custom Kitchens Auckland | Next Level Kitchens NZ</title>
@@ -179,6 +179,18 @@
             box-sizing: border-box;
         }
 
+        /* Mobile text overflow prevention */
+        html {
+            overflow-x: hidden;
+        }
+
+        body {
+            overflow-x: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+
         :root {
             --primary-color: #0E5EA4;
             --secondary-color: #021732;
@@ -216,7 +228,7 @@
         }
 
         h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 700;
             text-transform: uppercase;
         }
@@ -374,7 +386,7 @@
         }
 
         .nav-menu a:hover {
-            color: var(--primary-color);
+            color: var(--success-green);
         }
 
         .nav-right {
@@ -1333,7 +1345,7 @@
         }
 
         .step-number {
-            background: linear-gradient(135deg, var(--primary-color), #22C55E);
+            background: var(--primary-color);
             color: var(--white);
             width: 50px;
             height: 50px;
@@ -1460,13 +1472,14 @@
             font-style: italic;
         }
 
-        /* Portfolio Section */
-        .portfolio {
+        /* Gallery Marquee Section */
+        .gallery-marquee {
             background: var(--white);
             position: relative;
+            overflow: hidden;
         }
 
-        .portfolio::before {
+        .gallery-marquee::before {
             content: '';
             position: absolute;
             top: 0;
@@ -1477,19 +1490,21 @@
             z-index: 1;
         }
 
-        .portfolio-header {
+        .gallery-header {
             text-align: center;
             margin-bottom: 4rem;
             position: relative;
             z-index: 2;
         }
 
-        .portfolio h2 {
+        .gallery-marquee h2 {
             color: var(--secondary-color);
             margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
 
-        .portfolio-subtitle {
+        .gallery-subtitle {
             font-size: 1.2rem;
             color: var(--text-light);
             max-width: 700px;
@@ -1497,36 +1512,37 @@
             line-height: 1.6;
         }
 
-        .portfolio-carousel {
+        .gallery-marquee-container {
             width: 100%;
-            max-width: 1400px;
-            margin: 0 auto 4rem auto;
             overflow: hidden;
             position: relative;
+            padding: 2rem 0;
         }
 
-        .portfolio-track {
+        .gallery-marquee-track {
             display: flex;
-            animation: scroll 30s linear infinite;
-            width: calc(200% + 2.5rem);
+            gap: 2rem;
+            animation: galleryScroll 40s linear infinite;
+            width: max-content;
         }
 
-        .portfolio-track:hover {
+        .gallery-marquee-track:hover {
             animation-play-state: paused;
         }
 
-        @keyframes scroll {
+        @keyframes galleryScroll {
             0% {
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-50% - 1.25rem));
+                transform: translateX(-50%);
             }
         }
 
-        .portfolio-item {
-            flex: 0 0 calc(25% - 1.88rem);
-            margin-right: 2.5rem;
+        .gallery-item {
+            min-width: 350px;
+            max-width: 350px;
+            height: 250px;
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
@@ -1534,16 +1550,193 @@
             border: 1px solid #f0f0f0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            cursor: pointer;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
             border-color: var(--primary-color);
         }
 
-        .portfolio-item {
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(14, 94, 164, 0.85), rgba(2, 23, 50, 0.85));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay-content {
+            text-align: center;
+            padding: 2rem;
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .gallery-item:hover .gallery-overlay-content {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay-content h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .gallery-overlay-content p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Gallery Modal Styles */
+        .gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-modal-content {
+            position: relative;
+            margin: 2% auto;
+            width: 95%;
+            max-width: 1200px;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-modal-image {
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-modal-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
             cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design for Gallery */
+        @media (max-width: 768px) {
+            .gallery-marquee h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-item {
+                min-width: 280px;
+                max-width: 280px;
+                height: 200px;
+            }
+
+            .gallery-marquee-track {
+                gap: 1.5rem;
+            }
+
+            .gallery-overlay-content {
+                padding: 1.5rem;
+            }
+
+            .gallery-overlay-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .gallery-overlay-content p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-marquee h2 {
+                font-size: 1.75rem;
+            }
+
+            .gallery-item {
+                min-width: 250px;
+                max-width: 250px;
+                height: 180px;
+            }
+
+            .gallery-marquee-track {
+                gap: 1rem;
+            }
+
+            .gallery-overlay-content {
+                padding: 1rem;
+            }
+
+            .gallery-modal-close {
+                font-size: 30px;
+                width: 40px;
+                height: 40px;
+                top: -45px;
+            }
+        }
+
+        /* Cross-browser compatibility */
+        @supports not (backdrop-filter: blur(5px)) {
+            .gallery-modal {
+                background-color: rgba(0, 0, 0, 0.95);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .gallery-marquee-track {
+                animation-duration: 80s;
+            }
         }
 
         /* Modal Styles */
@@ -1655,52 +1848,7 @@
             right: 20px;
         }
 
-        .portfolio-image {
-            position: relative;
-            overflow: hidden;
-            height: 600px;
-        }
 
-        .portfolio-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .portfolio-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(2, 23, 50, 0.85), rgba(34, 197, 94, 0.85));
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .overlay-content {
-            text-align: center;
-            padding: 2rem;
-            transform: translateY(20px);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .portfolio-item:hover .overlay-content {
-            transform: translateY(0);
-        }
 
         .overlay-content h3 {
             font-size: 1.5rem;
@@ -1735,210 +1883,233 @@
             color: #22C55E;
         }
 
-        .portfolio-cta {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #f0f0f0;
+
+        /* Testimonials Marquee Section */
+        .testimonials-marquee {
+            background: var(--white);
+            color: var(--text-color);
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .testimonials-marquee .container {
             position: relative;
             z-index: 2;
         }
 
-        .portfolio-cta p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        /* Testimonials Section */
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--white);
-            color: var(--text-color);
-        }
-
-        .testimonials-header {
+        .testimonials-marquee .testimonials-header {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .testimonials h2 {
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--light-grey);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+            border: 1px solid #e0e0e0;
         }
 
-        .testimonials-subtitle {
+        .star-icon {
+            color: var(--accent);
             font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 600px;
+        }
+
+        .rating-text {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .testimonials-marquee h2 {
+            color: #000000;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            max-width: 800px;
             margin: 0 auto;
-            line-height: 1.6;
         }
 
-        .testimonials-grid {
-            display: flex;
+        .marquee-container {
+            width: 100%;
             overflow: hidden;
-            margin-bottom: 3rem;
             position: relative;
+            padding: 2rem 0;
         }
 
-        .testimonials-slide {
+        .marquee-track {
             display: flex;
             gap: 2rem;
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
+            animation: marqueeScroll 60s linear infinite;
+            width: max-content;
         }
 
-        .testimonial-card {
-            flex: 0 0 calc(33.333% - 1.33rem);
-            min-width: 320px;
-            background: var(--primary-color);
-            padding: 1.5rem;
-            border-radius: 15px;
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .testimonial-card-marquee {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            min-width: 400px;
+            max-width: 400px;
+            color: var(--text-color);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid var(--primary-color);
+            border: 1px solid #f0f0f0;
             transition: all 0.3s ease;
             position: relative;
-            color: white;
+            overflow: hidden;
         }
 
-        .testimonial-photo {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-            object-fit: cover;
-            margin: 0 auto 1rem auto;
-            display: block;
-            border: 2px solid var(--primary-color);
+
+        .testimonial-card-marquee:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
-        .testimonials-slider {
+        .quote-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            font-family: serif;
+            line-height: 1;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        .testimonial-card-marquee .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #000000;
+            margin-bottom: 2rem;
+            font-style: normal;
             position: relative;
+            z-index: 2;
         }
 
-        .slider-nav {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .slider-dot.active {
-            background: var(--success-green);
-            transform: scale(1.2);
-        }
-
-        .slider-arrows {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--success-green);
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
+        .author-info {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .slider-arrows:hover {
-            background: #16a34a;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .slider-arrow-left {
-            left: -20px;
-        }
-
-        .slider-arrow-right {
-            right: -20px;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .testimonial-card.featured {
-            border: 2px solid var(--primary-color);
-            transform: scale(1.02);
-        }
-
-        .testimonial-card.featured:hover {
-            transform: scale(1.02) translateY(-5px);
-        }
-
-        .testimonial-rating {
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-rating .stars {
-            color: #fbbf24;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            font-style: italic;
-            color: white;
+            gap: 1rem;
             position: relative;
+            z-index: 2;
         }
 
-        .testimonial-text::before {
-            content: '"';
-            font-size: 4rem;
-            color: white;
-            position: absolute;
-            top: -2rem;
-            left: -1rem;
-            opacity: 0.3;
-            font-family: serif;
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            flex-shrink: 0;
         }
 
-        .testimonial-author {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 1.5rem;
+        .author-details {
+            flex: 1;
         }
 
         .author-name {
-            font-weight: 700;
+            font-weight: 600;
             font-size: 1rem;
-            color: white;
-            margin-bottom: 0.25rem;
+            color: #000000;
+            margin: 0 0 0.25rem 0;
         }
 
-        .author-location {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .testimonials-cta {
-            text-align: center;
-            padding-top: 3rem;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .testimonials-cta p {
-            font-size: 1.1rem;
+        .author-title {
+            font-size: 0.85rem;
             color: var(--text-light);
-            margin-bottom: 2rem;
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .testimonials-marquee h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card-marquee {
+                min-width: 320px;
+                max-width: 320px;
+                padding: 1.5rem;
+            }
+
+            .quote-icon {
+                font-size: 3rem;
+            }
+
+            .marquee-track {
+                gap: 1.5rem;
+            }
+
+            .rating-badge {
+                padding: 0.4rem 0.8rem;
+            }
+
+            .rating-text {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonials-marquee h2 {
+                font-size: 1.75rem;
+            }
+
+            .testimonial-card-marquee {
+                min-width: 280px;
+                max-width: 280px;
+                padding: 1.25rem;
+            }
+
+            .testimonial-card-marquee .testimonial-text {
+                font-size: 0.9rem;
+            }
+
+            .author-avatar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .author-name {
+                font-size: 0.9rem;
+            }
+
+            .author-title {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Cross-browser compatibility */
+        @supports not (backdrop-filter: blur(10px)) {
+            .rating-badge {
+                background: #f5f5f5;
+            }
+            
+            .testimonial-card-marquee {
+                background: var(--white);
+            }
+        }
+
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track {
+                animation-duration: 120s;
+            }
         }
 
         /* Pricing Section */
@@ -2166,13 +2337,13 @@
 
         .guarantee-text h4 {
             margin: 0 0 0.5rem 0;
-            color: var(--dark-color);
+            color: #000000;
             font-size: 1.1rem;
         }
 
         .guarantee-text p {
             margin: 0;
-            color: var(--dark-color);
+            color: #000000;
             font-size: 0.9rem;
             line-height: 1.4;
         }
@@ -2360,156 +2531,6 @@
         }
 
 
-        /* Footer CTA Section */
-        .footer-cta {
-            background: linear-gradient(rgba(2, 23, 50, 0.6), rgba(14, 94, 164, 0.6)), url('assets/images/nextlevelkitchens_photo_18.webp');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: var(--white);
-            text-align: center;
-            position: relative;
-        }
-
-        .footer-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, transparent, rgba(14, 94, 164, 0.05), transparent);
-            pointer-events: none;
-        }
-
-        .footer-cta-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-cta-header {
-            margin-bottom: 3rem;
-        }
-
-        .footer-cta-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary-color), #1a73e8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            color: white;
-            box-shadow: 0 8px 30px rgba(14, 94, 164, 0.3);
-        }
-
-        .footer-cta h2 {
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .footer-cta-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 0;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
-            opacity: 0.9;
-        }
-
-        .footer-cta-actions {
-            margin-bottom: 3rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-large {
-            padding: 1.25rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            min-width: 200px;
-            justify-content: center;
-        }
-
-        .btn-large:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .cta-features {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-feature {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .cta-feature svg {
-            color: var(--success-green);
-            flex-shrink: 0;
-        }
-
-        .footer-cta-guarantee {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2.5rem;
-            backdrop-filter: blur(10px);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .guarantee-content {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .guarantee-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--success-green), #20c997);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            flex-shrink: 0;
-        }
-
-        .guarantee-text h4 {
-            margin: 0 0 0.5rem 0;
-            color: var(--dark-color);
-            font-size: 1.3rem;
-        }
-
-        .guarantee-text p {
-            margin: 0;
-            color: var(--dark-color);
-            line-height: 1.6;
-            font-size: 1rem;
-        }
 
         /* Footer */
         .footer {
@@ -2547,7 +2568,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--primary-color);
+            color: var(--success-green);
         }
 
         .footer-bottom {
@@ -2558,7 +2579,7 @@
         }
 
         .footer-bottom a {
-            color: var(--primary-color);
+            color: var(--success-green);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -2793,7 +2814,7 @@
         }
 
         .exit-popup-header h2 {
-            color: var(--primary-dark);
+            color: var(--primary-color);
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 10px;
@@ -2801,7 +2822,7 @@
         }
 
         .exit-popup-header h3 {
-            color: var(--primary-light);
+            color: var(--primary-color);
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 15px;
@@ -2831,7 +2852,7 @@
 
         .exit-popup-form label {
             display: block;
-            color: var(--primary-dark);
+            color: var(--primary-color);
             font-weight: 600;
             font-size: 0.9rem;
             margin-bottom: 5px;
@@ -2849,14 +2870,14 @@
         }
 
         .exit-form-control:focus {
-            border-color: var(--primary-light);
+            border-color: var(--primary-color);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(0,121,107,0.1);
+            box-shadow: 0 0 0 3px rgba(14, 94, 164, 0.1);
         }
 
         .exit-popup-btn {
             width: 100%;
-            background: var(--primary-dark);
+            background: var(--success-green);
             color: white;
             border: none;
             padding: 15px 25px;
@@ -2871,7 +2892,7 @@
         }
 
         .exit-popup-btn:hover {
-            background: var(--primary-light);
+            background: #1e7e34;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
@@ -2892,12 +2913,17 @@
         }
 
         .exit-form-guarantee i {
-            color: var(--primary-light);
+            color: var(--primary-color);
             font-size: 1rem;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            /* Hide hero badge on mobile */
+            .hero-badge {
+                display: none;
+            }
+
             .nav-menu {
                 position: fixed;
                 top: 0;
@@ -2926,12 +2952,109 @@
             }
 
             .nav-menu a:hover {
-                background: rgba(14, 94, 164, 0.2);
+                background: rgba(40, 167, 69, 0.2);
                 transform: translateY(-2px);
             }
 
             .header-phone {
                 display: none;
+            }
+
+            /* Mobile Navigation Improvements */
+            .header {
+                padding: 0;
+            }
+
+            .nav {
+                padding: 0.5rem 1rem;
+                min-height: 60px;
+                flex-wrap: wrap;
+            }
+
+            .logo img {
+                height: 50px;
+            }
+
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .nav-right .btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+
+            /* Hero section mobile improvements */
+            .hero-content {
+                padding-top: 18vh;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.1;
+                word-wrap: break-word;
+                hyphens: auto;
+                margin-bottom: 1rem;
+                overflow-wrap: break-word;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                line-height: 1.4;
+                margin-bottom: 1.5rem;
+            }
+
+            .typing-container {
+                min-width: 140px;
+                font-size: 2.2rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 2rem;
+                align-items: center;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                max-width: 320px;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .hero-benefits {
+                display: none;
+            }
+
+            .benefit-item {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            .hero-trust {
+                display: none;
+            }
+
+            .trust-item {
+                padding: 1rem 0.5rem;
+                text-align: center;
+            }
+
+            .trust-number {
+                font-size: 1.8rem;
+            }
+
+            .trust-label {
+                font-size: 0.85rem;
             }
 
             .mobile-menu-toggle {
@@ -2991,18 +3114,7 @@
                  grid-template-columns: repeat(2, 1fr);
              }
 
-            .portfolio-item {
-                flex: 0 0 calc(33.333% - 1.33rem);
-                margin-right: 2rem;
-             }
 
-             .portfolio-item {
-                 border-radius: 15px;
-             }
-
-             .portfolio-image {
-                 height: 180px;
-             }
 
              .overlay-content {
                  padding: 1.5rem;
@@ -3085,13 +3197,11 @@
 
             /* CRO Mobile Optimizations */
             .hero-benefits {
-                grid-template-columns: 1fr;
+                display: none;
             }
             
             .hero-trust {
-                gap: 1.5rem;
-                max-width: 100%;
-                justify-content: center;
+                display: none;
             }
 
             .trust-item {
@@ -3165,9 +3275,6 @@
                 gap: 1rem;
             }
 
-            .footer-cta-guarantee {
-                padding: 2rem 1.5rem;
-            }
 
             .footer-content {
                 flex-direction: column;
@@ -3205,10 +3312,6 @@
                 gap: 1rem;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
 
             .faq-grid {
                 grid-template-columns: 1fr;
@@ -3275,8 +3378,51 @@
 
         /* Tablet and small desktop */
         @media (max-width: 1024px) and (min-width: 769px) {
+            .header {
+                padding: 0;
+            }
+
+            .nav {
+                padding: 0.75rem 2rem;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+            }
+
             .container {
                 padding: 0 2rem;
+            }
+
+            /* Ensure phone number is visible on tablets */
+            .header-phone {
+                display: flex;
+                align-items: center;
+                margin-left: 1.5rem;
+            }
+
+            .header-phone a {
+                font-size: 1rem;
+                white-space: nowrap;
+            }
+
+            /* Optimize navigation menu for tablets */
+            .nav-menu {
+                gap: 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.9rem;
+            }
+
+            /* Ensure Get Quote button is visible */
+            .nav-right {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: none;
             }
 
             .hero h1 {
@@ -3300,29 +3446,90 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .portfolio-item {
-                flex: 0 0 calc(33.333% - 1.33rem);
-                margin-right: 2rem;
+        }
+
+        /* iPad Pro 11 specific optimization */
+        @media (max-width: 834px) and (min-width: 769px) {
+            .nav {
+                padding: 0.5rem 1.5rem;
+            }
+
+            .header-phone {
+                margin-left: 1rem;
+            }
+
+            .header-phone a {
+                font-size: 0.95rem;
+            }
+
+            .nav-menu {
+                gap: 1.2rem;
+            }
+
+            .nav-menu a {
+                font-size: 0.85rem;
+            }
+
+            .btn-small {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
             }
         }
 
-        /* Large mobile and small tablet */
+        /* Large mobile and small tablet - iPhone 14 Pro Max, etc. */
         @media (max-width: 600px) {
+            /* Hide hero badge on mobile */
+            .hero-badge {
+                display: none;
+            }
+
+            .header {
+                padding: 0;
+            }
+
+            .nav {
+                padding: 0.5rem 1rem;
+            }
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+                line-height: 1.1;
+                word-wrap: break-word;
+                hyphens: auto;
             }
 
             .typing-container {
-                min-width: 150px;
+                min-width: 130px;
+                font-size: 2rem;
             }
 
             .hero-content {
-                padding-top: 5vh;
+                padding-top: 18vh;
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
 
+            .hero p {
+                font-size: 1rem;
+                line-height: 1.4;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta .btn {
+                width: 100%;
+                padding: 1rem 1.5rem;
+                font-size: 1rem;
+                text-align: center;
+            }
 
             .about-stats {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
             }
 
             .services-grid {
@@ -3333,33 +3540,154 @@
                 grid-template-columns: 1fr;
             }
 
-            .portfolio-item {
-                flex: 0 0 calc(50% - 0.75rem);
-                margin-right: 1.5rem;
+            /* Trust indicators */
+            .hero-trust {
+                display: none;
+            }
+
+            .trust-item {
+                padding: 1rem 0.75rem;
+            }
+
+            /* Section buttons */
+            .section-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section-buttons .btn {
+                width: 100%;
+                text-align: center;
             }
         }
 
-        /* Large screens - ensure 4 images show */
-        @media (min-width: 1200px) {
-            .portfolio-item {
-                flex: 0 0 calc(25% - 1.88rem);
-                margin-right: 2.5rem;
+
+        /* iPhone 8 specific viewport - 375x667 */
+        @media (max-width: 375px) and (max-height: 667px) {
+            .hero-content {
+                padding-top: 35vh !important;
             }
         }
 
-        /* Extra small devices */
+        /* iPhone 14 specific viewport - 390x844 */
+        @media (max-width: 390px) and (min-height: 800px) {
+            .hero-content {
+                padding-top: 18vh !important;
+            }
+        }
+
+        /* iPhone 11 Pro specific viewport - 375x812 and similar tall screens */
+        @media (max-width: 414px) and (min-height: 800px) {
+            /* Hide hero badge on mobile */
+            .hero-badge {
+                display: none;
+            }
+
+            .header {
+                padding: 0;
+            }
+
+            .nav {
+                padding: 0.5rem 1rem;
+                min-height: 70px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .header-phone {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                margin-right: 1rem;
+                order: 2;
+            }
+
+            .header-phone a {
+                font-size: 0.95rem;
+                white-space: nowrap;
+            }
+
+            .nav-menu {
+                display: flex;
+                gap: 1.5rem;
+                order: 3;
+                margin-left: auto;
+            }
+
+            .nav-menu li {
+                margin: 0;
+            }
+
+            .nav-menu a {
+                font-size: 0.9rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .nav-right {
+                order: 4;
+                margin-left: 1rem;
+            }
+
+            .nav-right .btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+
+            .mobile-menu-toggle {
+                display: none;
+            }
+
+            .hero-content {
+                padding-top: 15vh !important;
+            }
+        }
+
+        /* Extra small devices - iPhone SE, small Android phones */
         @media (max-width: 360px) {
+            /* Hide hero badge on mobile */
+            .hero-badge {
+                display: none;
+            }
+
+            .header {
+                padding: 0;
+            }
+
+            .nav {
+                padding: 0.25rem 1rem;
+            }
             .container {
-                padding: 0 0.75rem;
+                padding: 0 1rem;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                line-height: 1.1;
+            }
+
+            .typing-container {
+                min-width: 80px;
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
             }
 
             .btn {
-                padding: 0.7rem 1.2rem;
-                font-size: 0.85rem;
+                padding: 0.9rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .hero-cta .btn {
+                padding: 1rem 1.2rem;
+                font-size: 0.9rem;
             }
 
             .section-padding {
@@ -3367,8 +3695,7 @@
             }
 
             .hero-trust {
-                gap: 1rem;
-                flex-direction: column;
+                display: none;
             }
 
             .trust-item {
@@ -3408,26 +3735,68 @@
             }
         }
 
+         /* iPhone 8, iPhone 14 and similar mobile devices */
          @media (max-width: 480px) {
+             /* Hide hero badge on mobile */
+             .hero-badge {
+                 display: none;
+             }
+
+             .header {
+                 padding: 0;
+             }
+
+             .nav {
+                 padding: 0.5rem 1rem;
+             }
              .hero h1 {
-                 font-size: 2rem;
+                 font-size: 1.8rem;
+                 line-height: 1.1;
+                 margin-bottom: 1rem;
+                 word-wrap: break-word;
+                 hyphens: auto;
              }
 
              .typing-container {
-                 min-width: 120px;
+                 min-width: 100px;
+                 font-size: 1.8rem;
              }
 
              .hero-content {
-                 padding-top: 4vh;
+                 padding-top: 15vh;
+                 padding-left: 1rem;
+                 padding-right: 1rem;
              }
 
              .hero p {
+                 font-size: 0.95rem;
+                 line-height: 1.4;
+                 margin-bottom: 1.5rem;
+             }
+
+             /* Hero CTA Buttons */
+             .hero-cta {
+                 flex-direction: column;
+                 gap: 1rem;
+                 margin-bottom: 2rem;
+             }
+
+             .hero-cta .btn {
+                 width: 100%;
+                 padding: 1rem 1.5rem;
                  font-size: 1rem;
+                 text-align: center;
+                 white-space: nowrap;
+             }
+
+             .hero-cta .btn-secondary {
+                 font-size: 0.95rem;
              }
 
              .about-stats {
                  grid-template-columns: 1fr;
                  gap: 1rem;
+                 margin-top: 2rem;
              }
 
              .services-grid {
@@ -3440,14 +3809,38 @@
                  gap: 1.5rem;
              }
 
-             .portfolio-item {
-                 flex: 0 0 calc(100% - 1rem);
-                 margin-right: 1rem;
+             /* Section Buttons Mobile */
+             .section-buttons {
+                 flex-direction: column;
+                 gap: 1rem;
+                 margin-top: 2rem;
              }
 
-             .portfolio-image {
-                 height: 160px;
+             .section-buttons .btn {
+                 width: 100%;
+                 padding: 1rem 1.5rem;
+                 font-size: 1rem;
+                 text-align: center;
              }
+
+             /* Trust indicators mobile */
+             .hero-trust {
+                 display: none;
+             }
+
+             .trust-item {
+                 text-align: center;
+                 padding: 1rem 0.5rem;
+             }
+
+             .trust-number {
+                 font-size: 1.5rem;
+             }
+
+             .trust-label {
+                 font-size: 0.8rem;
+             }
+
 
              .overlay-content {
                  padding: 1rem;
@@ -3464,6 +3857,28 @@
 
              .container-fluid {
                  padding: 0 1rem;
+             }
+
+             /* Mobile specific padding adjustments */
+             .section-padding {
+                 padding: 3rem 0;
+             }
+
+             .container {
+                 padding-left: 1rem;
+                 padding-right: 1rem;
+             }
+
+             /* Typography adjustments */
+             h2 {
+                 font-size: 1.8rem;
+                 line-height: 1.2;
+                 margin-bottom: 1rem;
+             }
+
+             h3 {
+                 font-size: 1.4rem;
+                 line-height: 1.3;
              }
 
              .btn {
@@ -3620,37 +4035,7 @@
             animation: pulse 1.5s ease-in-out infinite;
         }
 
-        .portfolio-item {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: scale(0.95);
-        }
 
-        .portfolio-item.animate {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-15px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-        }
-
-        .testimonial-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: translateX(-20px);
-        }
-
-        .testimonial-card.animate {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
-        }
 
         .pricing-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3736,7 +4121,7 @@
             left: 50%;
             width: 0;
             height: 2px;
-            background: var(--primary-color);
+            background: var(--success-green);
             transition: all 0.3s ease;
             transform: translateX(-50%);
         }
@@ -3831,16 +4216,7 @@
         .process-step:nth-child(4) { transition-delay: 0.4s; }
         .process-step:nth-child(5) { transition-delay: 0.5s; }
 
-        .portfolio-item:nth-child(1) { transition-delay: 0.1s; }
-        .portfolio-item:nth-child(2) { transition-delay: 0.2s; }
-        .portfolio-item:nth-child(3) { transition-delay: 0.3s; }
-        .portfolio-item:nth-child(4) { transition-delay: 0.4s; }
-        .portfolio-item:nth-child(5) { transition-delay: 0.5s; }
-        .portfolio-item:nth-child(6) { transition-delay: 0.6s; }
 
-        .testimonial-card:nth-child(1) { transition-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { transition-delay: 0.2s; }
-        .testimonial-card:nth-child(3) { transition-delay: 0.3s; }
 
         .pricing-card:nth-child(1) { transition-delay: 0.1s; }
         .pricing-card:nth-child(2) { transition-delay: 0.2s; }
@@ -3863,15 +4239,28 @@
         /* Very small mobile devices */
         @media (max-width: 360px) {
             .hero-content {
-                padding-top: 3vh;
+                padding-top: 15vh;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
+                margin-bottom: 0.75rem;
             }
 
             .typing-container {
-                min-width: 100px;
+                min-width: 80px;
+                font-size: 1.6rem;
+            }
+
+            .hero-benefits {
+                display: none;
+            }
+
+            .benefit-item {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.75rem;
             }
         }
     </style>
@@ -3890,9 +4279,9 @@
                  <ul class="nav-menu">
                      <li><a href="#home">Home</a></li>
                      <li><a href="#about">About</a></li>
-                     <li><a href="#portfolio">Portfolio</a></li>
+                     <li><a href="#gallery">Gallery</a></li>
                      <li><a href="#pricing">Pricing</a></li>
-                     <li><a href="#contact">Contact</a></li>
+                     <li><a href="#quote-form">Contact</a></li>
                  </ul>
                 <div class="nav-right">
                     <button class="btn btn-primary btn-small" onclick="openQuotePopup()">Get Quote</button>
@@ -3941,123 +4330,123 @@
         </div>
     </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials section-padding">
-            <div class="container">
-                <div class="testimonials-header">
-                    <h2>What our clients say about working with Next Level Kitchens</h2>
-                    <p class="testimonials-subtitle">Explore their stories and see how Next Level Kitchens helps homeowners move with clarity and confidence. Your dream kitchen is our biggest win.</p>
-                </div>
-                
-                <div class="testimonials-slider">
-                    <button class="slider-arrows slider-arrow-left">‹</button>
-                    <button class="slider-arrows slider-arrow-right">›</button>
-                
-                <div class="testimonials-grid">
-                        <div class="testimonials-slide">
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Kitchen Project for Suzanne B" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Everything about this business has been absolutely fantastic right from the very beginning. The clear communication, thoughtful design, high-quality product, professional installer, and skilled tradesmen all exceeded expectations. They made the entire experience seamless and enjoyable. Without hesitation, I would choose to work with them again and again for future projects.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Suzanne B</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_17.webp" alt="Kitchen Project for Carol B" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        For the longest time, I would stand outside my kitchen and picture exactly how I wanted it to look, down to the finest detail. With Next Level Kitchens, I got precisely that. The entire experience with Karl and his team was outstanding—transparent, clear on budget, excellent communication, and completely customer-focused.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Carol B</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_10.webp" alt="Kitchen Project for Tracy M" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Next Level Kitchens renovated our kitchen, and we honestly couldn’t be happier with the final result. At first, the project was priced outside our budget, but with smart adjustments in materials, hardware, and layout, they aligned everything with our financial goals while still delivering a stunning, functional, and beautifully crafted kitchen.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Tracy M</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_12.webp" alt="Kitchen Project for Des W" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Outstanding work from start to finish! The team at Next Level Kitchens transformed our outdated kitchen into a modern masterpiece. Their attention to detail, quality craftsmanship, and professional approach made the entire renovation process stress-free. Highly recommend their services.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Des W</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-
-
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_13.webp" alt="Kitchen Project for James R" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        Working with Next Level Kitchens was an incredible experience from start to finish. The design team really listened, understood our needs, and created a space that works perfectly for our family. The craftsmanship is flawless, the installation was smooth, and the communication outstanding. I couldn't recommend Karl and his team more highly.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">James R</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
-
-
-                <div class="testimonial-card">
-                    <img src="assets/images/nextlevelkitchens_photo_15.webp" alt="Kitchen Project for Sarah L" class="testimonial-photo">
-                    <div class="testimonial-rating">
-                        <span class="stars">★★★★★</span>
-                    </div>
-                    <div class="testimonial-text">
-                        From the very first consultation, I felt confident choosing Next Level Kitchens. They explained every detail clearly, provided transparent pricing, and delivered on every promise. The finished kitchen is both practical and stunning, exceeding my expectations. Karl and his team showed professionalism, dedication, and true craftsmanship at every stage of the project.
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-name">Sarah L</div>
-                        <div class="author-location">Auckland</div>
-                    </div>
-                </div>
+<!-- Testimonials Section -->
+<section class="testimonials-marquee section-padding">
+    <div class="container">
+        <div class="testimonials-header">
+            <div class="rating-badge">
+                <span class="star-icon">★</span>
+                <span class="rating-text">Rated 5/5 by over 500 happy homeowners</span>
+            </div>
+            <h2>What our clients say about their Next Level Kitchen transformation.</h2>
+        </div>
+        
+        <div class="marquee-container">
+            <div class="marquee-track">
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">Exceeded our expectations with a kitchen design that feels both beautiful and practical – we couldn’t be happier.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Samantha Johnson" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Samantha Johnson</h4>
+                            <p class="author-title">Auckland Homeowner</p>
                         </div>
                     </div>
-                    
-                    <div class="slider-nav">
-                        <button class="slider-dot active" data-slide="0"></button>
-                        <button class="slider-dot" data-slide="1"></button>
-                </div>
                 </div>
                 
-                <div class="testimonials-cta">
-                    <p>Join hundreds of satisfied customers</p>
-                    <div class="section-buttons">
-                        <a href="#quote-form" class="btn btn-primary">GET YOUR FREE ESTIMATE</a>
-                        <a href="tel:+64211012617" class="btn btn-phone">☎ Call (021) 101-2617</a>
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">The team worked with our budget and still delivered a kitchen that looks stunning and works perfectly for us.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_17.webp" alt="Isabella Rodriguez" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Isabella Rodriguez</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">We finally have the kitchen of our dreams. The workmanship and attention to detail are second to none.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_10.webp" alt="Gabrielle Williams" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Gabrielle Williams</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">Professional from start to finish. Great communication and a kitchen installation that was absolutely seamless.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_12.webp" alt="John Peter" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">John Peter</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">From the design consultation to the final install, everything was smooth, transparent, and really stress-free for us.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_13.webp" alt="Natalie Martinez" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Natalie Martinez</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">A refreshing experience – friendly team, great quality cabinets, and a kitchen that looks even better than expected.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_15.webp" alt="Victoria Thompson" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Victoria Thompson</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Duplicate cards for seamless loop -->
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">Exceeded our expectations with a kitchen design that feels both beautiful and practical – we couldn’t be happier.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Samantha Johnson" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Samantha Johnson</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">The team worked with our budget and still delivered a kitchen that looks stunning and works perfectly for us.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_17.webp" alt="Isabella Rodriguez" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Isabella Rodriguez</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card-marquee">
+                    <p class="testimonial-text">We finally have the kitchen of our dreams. The workmanship and attention to detail are second to none.</p>
+                    <div class="author-info">
+                        <img src="assets/images/nextlevelkitchens_photo_10.webp" alt="Gabrielle Williams" class="author-avatar">
+                        <div class="author-details">
+                            <h4 class="author-name">Gabrielle Williams</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
 
      <!-- Services Section -->
      <section class="services section-padding" id="services">
@@ -4070,7 +4459,7 @@
              <div class="services-grid">
                  <div class="service-card">
                      <div class="service-image-wrapper">
-                         <img src="assets/images/nextlevelkitchens_photo_01.webp" alt="Custom Kitchen Design Auckland" class="service-image">
+                         <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Design Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Custom Kitchen Design</div>
                          </div>
@@ -4193,225 +4582,116 @@
      </section>
 
 
-    <!-- Portfolio Section -->
-    <section class="portfolio section-padding" id="portfolio">
+    <!-- Gallery Section -->
+    <section class="gallery-marquee section-padding" id="gallery">
         <div class="container">
-            <div class="portfolio-header">
-                <h2>Our Work Speaks for Itself</h2>
-                <p class="portfolio-subtitle">Explore kitchens we've brought to life across Auckland. From stylish urban spaces to spacious family homes, our projects showcase creativity, craftsmanship, and attention to detail.</p>
-            </div>
+            <div class="gallery-header">
+                <h2>Our Kitchen Transformations</h2>
+                <p class="gallery-subtitle">Explore stunning kitchens we've crafted across Auckland. Each project showcases our commitment to quality, design, and exceptional craftsmanship.</p>
             </div>
             
-        <div class="portfolio-carousel">
-            <div class="portfolio-track">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Modern kitchen design with premium finishes - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Modern Kitchen Design</h3>
-                                <p>Contemporary kitchen with premium finishes and smart storage solutions</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Custom Design</span>
-                                    <span class="project-location">■ Auckland</span>
-                                </div>
+            <div class="gallery-marquee-container">
+                <div class="gallery-marquee-track">
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_01.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_01.webp" alt="Modern Kitchen Design Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Modern Design</h3>
+                                <p>Contemporary Excellence</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary kitchen design with sleek lines and functional layout - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Contemporary Design</h3>
-                                <p>Sleek lines and functional layout maximizing space</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ New Build</span>
-                                    <span class="project-location">■ Ponsonby</span>
-                                </div>
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Custom Design</h3>
+                                <p>Bespoke Craftsmanship</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_11.webp" alt="Classic elegant kitchen renovation with timeless design and modern functionality">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Classic Elegance</h3>
-                                <p>Timeless design with modern functionality</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Heritage Renovation</span>
-                                    <span class="project-location">■ Parnell</span>
-                                </div>
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Contemporary Style</h3>
+                                <p>Sleek & Functional</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_14.webp" alt="Luxury bespoke kitchen with premium materials and custom craftsmanship - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_04.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Family Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Family Kitchen</h3>
+                                <p>Perfect for Living</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_05.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_05.webp" alt="Luxury Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
                                 <h3>Luxury Kitchen</h3>
-                                <p>Premium materials and bespoke craftsmanship</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Designer Series</span>
-                                    <span class="project-location">■ Herne Bay</span>
-                                </div>
+                                <p>Premium Materials</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Open plan kitchen design seamlessly integrated with living spaces - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Open Plan Living</h3>
-                                <p>Seamless integration with living spaces</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Open Plan</span>
-                                    <span class="project-location">■ Devonport</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_17.webp" alt="Compact kitchen design maximizing functionality in smaller spaces - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Compact Excellence</h3>
-                                <p>Maximizing functionality in smaller spaces</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Space Optimization</span>
-                                    <span class="project-location">■ Grey Lynn</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Duplicate items for infinite scroll -->
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Modern family kitchen renovation with custom cabinetry and premium finishes - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Modern Family Kitchen</h3>
-                                <p>Complete transformation with custom cabinetry and premium finishes</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Full Renovation</span>
-                                    <span class="project-location">■ Remuera</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary kitchen design with sleek lines and functional layout - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Contemporary Design</h3>
-                                <p>Sleek lines and functional layout maximizing space</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ New Build</span>
-                                    <span class="project-location">■ Ponsonby</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_11.webp" alt="Classic elegant kitchen renovation with timeless design and modern functionality">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_06.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_06.webp" alt="Classic Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
                                 <h3>Classic Elegance</h3>
-                                <p>Timeless design with modern functionality</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Heritage Renovation</span>
-                                    <span class="project-location">■ Parnell</span>
-                                </div>
+                                <p>Timeless Design</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_14.webp" alt="Luxury bespoke kitchen with premium materials and custom craftsmanship - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Luxury Kitchen</h3>
-                                <p>Premium materials and bespoke craftsmanship</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Designer Series</span>
-                                    <span class="project-location">■ Herne Bay</span>
-                                </div>
+                    
+                    <!-- Duplicate items for seamless loop -->
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_01.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_01.webp" alt="Modern Kitchen Design Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Modern Design</h3>
+                                <p>Contemporary Excellence</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_16.webp" alt="Open plan kitchen design seamlessly integrated with living spaces - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Open Plan Living</h3>
-                                <p>Seamless integration with living spaces</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Open Plan</span>
-                                    <span class="project-location">■ Devonport</span>
-                                </div>
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Custom Design</h3>
+                                <p>Bespoke Craftsmanship</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/nextlevelkitchens_photo_17.webp" alt="Compact kitchen design maximizing functionality in smaller spaces - Auckland">
-                        <div class="portfolio-overlay">
-                            <div class="overlay-content">
-                                <h3>Compact Excellence</h3>
-                                <p>Maximizing functionality in smaller spaces</p>
-                                <div class="project-details">
-                                    <span class="project-type">■ Space Optimization</span>
-                                    <span class="project-location">■ Grey Lynn</span>
-                                </div>
-                                </div>
+                    
+                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
+                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Contemporary Style</h3>
+                                <p>Sleek & Functional</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-        <div class="container">
-            <div class="portfolio-cta">
-                <p>Ready to see your kitchen transformed?</p>
-                <div class="section-buttons">
-                    <a href="#quote-form" class="btn btn-primary">GET YOUR FREE ESTIMATE</a>
-                    <a href="tel:+64211012617" class="btn btn-phone">☎ Call (021) 101-2617</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Modal -->
-    <div id="portfolioModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <button class="modal-nav modal-prev">‹</button>
-            <button class="modal-nav modal-next">›</button>
-            <img id="modalImage" class="modal-image" src="" alt="">
-            <div class="modal-info">
-                <h3 id="modalTitle"></h3>
-                <p id="modalDescription"></p>
-                <div id="modalDetails"></div>
-            </div>
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <span class="gallery-modal-close">&times;</span>
+            <img id="galleryModalImage" class="gallery-modal-image" src="" alt="">
         </div>
     </div>
 
@@ -4602,7 +4882,7 @@
                 </div>
             
             <div class="section-buttons">
-                <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+                <a href="#quote-form" class="btn btn-primary">Get a Free Estimate</a>
                          <a href="tel:+64211012617" class="btn btn-phone">Call (021) 101-2617</a>
                 </div>
             </div>
@@ -4911,74 +5191,6 @@
         </div>
     </section>
 
-    <!-- Footer CTA Section -->
-    <section class="footer-cta section-padding" id="contact">
-        <div class="container">
-            <div class="footer-cta-content">
-                <div class="footer-cta-header">
-                    <h2>Ready to Transform Your Kitchen?</h2>
-                    <p class="footer-cta-subtitle">Speak directly with Karl Ross, our lead designer. Get expert advice and answers to all your kitchen renovation questions.</p>
-                </div>
-                
-                <div class="footer-cta-actions">
-                    <div class="cta-buttons">
-                        <a href="#quote-form" class="btn btn-primary btn-large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 2L11 13"/>
-                                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
-                            </svg>
-                            Get Free Consultation
-                        </a>
-                        <a href="tel:+64211012617" class="btn btn-phone btn-large">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            Call Karl Directly (021) 101-2617
-                        </a>
-                    </div>
-                    
-                    <div class="cta-features">
-                        <div class="cta-feature">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                            <span>No pressure, no sales pitch</span>
-                        </div>
-                        <div class="cta-feature">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                            <span>Honest expert advice</span>
-                        </div>
-                        <div class="cta-feature">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                            <span>Free consultation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="footer-cta-guarantee">
-                    <div class="guarantee-content">
-                        <div class="guarantee-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <div class="guarantee-text">
-                            <h4>Our Promise to You</h4>
-                            <p>Just honest advice from Auckland's trusted kitchen experts. No pressure, no sales pitch - just genuine help to make your dream kitchen a reality.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -4989,9 +5201,9 @@
                 </div>
                 <div class="footer-links">
                     <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
+                    <a href="#gallery">Gallery</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#quote-form">Contact</a>
                     <a href="#sitemap">Sitemap</a>
                 </div>
             </div>
@@ -5240,7 +5452,7 @@
          });
 
          // Observe elements for enhanced animations
-         const animateElements = document.querySelectorAll('.service-card, .process-step, .about-text, .portfolio-item, .testimonial-card, .pricing-card, .faq-item, .stat-item');
+         const animateElements = document.querySelectorAll('.service-card, .process-step, .about-text, .gallery-item, .pricing-card, .faq-item, .stat-item');
          animateElements.forEach(el => enhancedObserver.observe(el));
 
         // Parallax effect for hero background
@@ -5542,248 +5754,70 @@
         // Initialize typing effect when DOM is loaded
         document.addEventListener('DOMContentLoaded', initTypingEffect);
 
-        // Testimonials slider functionality
-        function initTestimonialsSlider() {
-            const slider = document.querySelector('.testimonials-slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            const prevBtn = document.querySelector('.slider-arrow-left');
-            const nextBtn = document.querySelector('.slider-arrow-right');
-            const cards = document.querySelectorAll('.testimonial-card');
-            
-            let currentSlide = 0;
-            const cardsPerSlide = 3;
-            const totalSlides = Math.ceil(cards.length / cardsPerSlide);
-            
-            // Update dots based on total slides
-            const sliderNav = document.querySelector('.slider-nav');
-            sliderNav.innerHTML = '';
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
-                dot.setAttribute('data-slide', i);
-                dot.addEventListener('click', () => goToSlide(i));
-                sliderNav.appendChild(dot);
-            }
-            
-            function updateSlider() {
-                const translateX = -currentSlide * 100;
-                slider.style.transform = `translateX(${translateX}%)`;
-                
-                // Update active dot
-                document.querySelectorAll('.slider-dot').forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentSlide);
-                });
-            }
-            
-            function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                updateSlider();
-            }
-            
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-            }
-            
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateSlider();
-            }
-            
-            // Event listeners
-            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-            
-            // Auto-rotate every 5 seconds
-            setInterval(nextSlide, 5000);
-        }
-        
-        // Initialize testimonials slider when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initTestimonialsSlider);
+        // Testimonials marquee functionality - no JavaScript needed as it's CSS-based
 
-        // Portfolio Modal functionality
-        function initPortfolioModal() {
-            const modal = document.getElementById('portfolioModal');
-            const modalImage = document.getElementById('modalImage');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalDescription = document.getElementById('modalDescription');
-            const modalDetails = document.getElementById('modalDetails');
-            const closeBtn = document.querySelector('.modal-close');
-            const prevBtn = document.querySelector('.modal-prev');
-            const nextBtn = document.querySelector('.modal-next');
+        // Gallery Modal functionality
+        function initGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            const modalImage = document.getElementById('galleryModalImage');
+            const closeBtn = document.querySelector('.gallery-modal-close');
+            const galleryItems = document.querySelectorAll('.gallery-item');
             
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            let currentIndex = 0;
-            
-            // Portfolio data - Curated high-quality images only
-            const portfolioData = [
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_01.webp',
-                    title: 'Modern Kitchen Design',
-                    description: 'Contemporary kitchen with premium finishes and smart storage solutions',
-                    type: 'Custom Design',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_02.webp',
-                    title: 'Elegant Renovation',
-                    description: 'Bespoke cabinetry and elegant finishes for a timeless look',
-                    type: 'Full Renovation',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_03.webp',
-                    title: 'Open Plan Living',
-                    description: 'Seamless integration with living spaces and modern functionality',
-                    type: 'Open Plan',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_04.webp',
-                    title: 'Luxury Kitchen',
-                    description: 'Premium materials and custom craftsmanship for the ultimate kitchen',
-                    type: 'Designer Series',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_03.webp',
-                    title: 'Space Optimization',
-                    description: 'Maximizing functionality in compact spaces with smart design',
-                    type: 'Space Optimization',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_14.webp',
-                    title: 'Family Kitchen',
-                    description: 'Practical design perfect for family living and entertaining',
-                    type: 'Family Design',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_16.webp',
-                    title: 'Contemporary Style',
-                    description: 'Modern design with clean lines and functional layout',
-                    type: 'Contemporary',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_17.webp',
-                    title: 'Bespoke Cabinetry',
-                    description: 'Custom cabinetry solutions designed for your unique space',
-                    type: 'Bespoke',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_10.webp',
-                    title: 'Premium Finishes',
-                    description: 'High-end materials and finishes for a luxurious kitchen experience',
-                    type: 'Premium',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_11.webp',
-                    title: 'Smart Storage',
-                    description: 'Innovative storage solutions maximizing every inch of space',
-                    type: 'Smart Design',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_12.webp',
-                    title: 'Modern Minimalist',
-                    description: 'Clean, minimalist design with focus on functionality',
-                    type: 'Minimalist',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_13.webp',
-                    title: 'Classic Elegance',
-                    description: 'Timeless design with modern functionality and premium materials',
-                    type: 'Classic',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_15.webp',
-                    title: 'Scandinavian Design',
-                    description: 'Light, airy design with natural materials and clean lines',
-                    type: 'Scandinavian',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_16.webp',
-                    title: 'Traditional Charm',
-                    description: 'Classic traditional design with modern amenities and functionality',
-                    type: 'Traditional',
-                    location: 'Auckland'
-                },
-                {
-                    image: 'assets/images/nextlevelkitchens_photo_18.webp',
-                    title: 'Urban Contemporary',
-                    description: 'Sleek urban design perfect for modern city living',
-                    type: 'Urban',
-                    location: 'Auckland'
-                }
-            ];
-            
-            function openModal(index) {
-                currentIndex = index;
-                const item = portfolioData[index];
-                
-                modalImage.src = item.image;
-                modalImage.alt = item.title;
-                modalTitle.textContent = item.title;
-                modalDescription.textContent = item.description;
-                modalDetails.innerHTML = `
-                    <span class="project-type">■ ${item.type}</span>
-                    <span class="project-location">■ ${item.location}</span>
-                `;
-                
+            function openModal(imageSrc, imageAlt) {
+                modalImage.src = imageSrc;
+                modalImage.alt = imageAlt || 'Kitchen Gallery Image';
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden';
+                
+                // Add fade-in animation
+                setTimeout(() => {
+                    modal.style.opacity = '1';
+                }, 10);
             }
             
             function closeModal() {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto';
+                modal.style.opacity = '0';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }, 300);
             }
             
-            function showNext() {
-                currentIndex = (currentIndex + 1) % portfolioData.length;
-                openModal(currentIndex);
-            }
-            
-            function showPrev() {
-                currentIndex = (currentIndex - 1 + portfolioData.length) % portfolioData.length;
-                openModal(currentIndex);
-            }
-            
-            // Event listeners
-            portfolioItems.forEach((item, index) => {
-                item.addEventListener('click', () => openModal(index % 15)); // Use modulo to handle duplicates
+            // Add click listeners to gallery items
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imageSrc = item.getAttribute('data-image');
+                    const imageAlt = item.querySelector('img').alt;
+                    openModal(imageSrc, imageAlt);
+                });
             });
             
-            closeBtn.addEventListener('click', closeModal);
-            nextBtn.addEventListener('click', showNext);
-            prevBtn.addEventListener('click', showPrev);
+            // Modal controls
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeModal);
+            }
             
-            // Close modal when clicking outside
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
+            // Close modal on background click
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal();
+                    }
+                });
+            }
             
             // Keyboard navigation
             document.addEventListener('keydown', (e) => {
-                if (modal.style.display === 'block') {
-                    if (e.key === 'Escape') closeModal();
-                    if (e.key === 'ArrowRight') showNext();
-                    if (e.key === 'ArrowLeft') showPrev();
+                if (modal && modal.style.display === 'block') {
+                    if (e.key === 'Escape') {
+                        closeModal();
+                    }
                 }
             });
         }
         
-        // Initialize portfolio modal when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initPortfolioModal);
+        // Initialize gallery modal when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initGalleryModal);
     </script>
 </body>
 </html>
