@@ -1195,32 +1195,34 @@
              border-color: var(--primary-color);
          }
 
-         .service-image-wrapper {
-             width: 100%;
-             height: 200px;
-             border-radius: 15px;
-             overflow: hidden;
-             margin-bottom: 2rem;
-             position: relative;
-             transition: all 0.3s ease;
-         }
+        .service-image-wrapper {
+            width: 100%;
+            height: 200px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+            background: #f8f9fa;
+        }
 
          .service-card:hover .service-image-wrapper {
              transform: scale(1.02);
              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
          }
 
-         .service-image {
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
-             transition: all 0.3s ease;
-         }
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            object-position: center;
+            transition: all 0.3s ease;
+            display: block;
+        }
 
-         .service-card:hover .service-image {
-             transform: scale(1.05);
-             filter: brightness(1.1);
-         }
+        .service-card:hover .service-image {
+            transform: translateX(0) scale(1.05);
+            filter: brightness(1.1);
+        }
 
          .service-image-overlay {
              position: absolute;
@@ -1566,8 +1568,8 @@
         .gallery-item {
             min-width: 350px;
             max-width: 350px;
-            height: 250px;
-            background: var(--white);
+            height: 300px;
+            background: #f8f9fa;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
@@ -1575,6 +1577,9 @@
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .gallery-item:hover {
@@ -1587,7 +1592,9 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
         }
 
         .gallery-item:hover img {
@@ -1600,13 +1607,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(14, 94, 164, 0.85), rgba(2, 23, 50, 0.85));
+            background: linear-gradient(135deg, rgba(14, 94, 164, 0.9), rgba(2, 23, 50, 0.9));
             color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
             opacity: 0;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 20px;
         }
 
         .gallery-item:hover .gallery-overlay {
@@ -1615,9 +1623,15 @@
 
         .gallery-overlay-content {
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             transform: translateY(20px);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .gallery-item:hover .gallery-overlay-content {
@@ -1702,7 +1716,7 @@
             .gallery-item {
                 min-width: 280px;
                 max-width: 280px;
-                height: 200px;
+                height: 240px;
             }
 
             .gallery-marquee-track {
@@ -1734,7 +1748,7 @@
             .gallery-item {
                 min-width: 250px;
                 max-width: 250px;
-                height: 180px;
+                height: 200px;
             }
 
             .gallery-marquee-track {
@@ -2088,7 +2102,7 @@
         }
 
         .review-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
             display: grid;
@@ -2129,13 +2143,20 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
         }
 
         .review-image img {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
+            height: 100%;
+            object-fit: fill;
+            object-position: center;
             display: block;
+            border-radius: 12px;
         }
 
         /* Responsive Design */
@@ -2154,7 +2175,7 @@
                 font-size: 1.25rem;
             }
 
-            .review-image img {
+            .review-image {
                 height: 400px;
             }
 
@@ -2267,7 +2288,7 @@
                 font-size: 0.9rem;
             }
 
-            .review-image img {
+            .review-image {
                 height: 300px;
             }
 
@@ -2449,6 +2470,14 @@
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pricing-icon img.animate {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .pricing-card:hover .pricing-icon {
@@ -4689,23 +4718,23 @@
         <div class="review-content">
             <div class="review-item">
                 <h3>Quality</h3>
-                <p>We are committed to deliver top of the line products and services that exceed your expectations. Your satisfaction is our priority.</p>
+                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
             </div>
             <div class="review-item">
                 <h3>Expertise</h3>
-                <p>Our team of experienced designers and consultants are here to provide guidance and assistance throughout your kitchen project.</p>
+                <p>Our experienced designers and consultants guide you through every step of the process.</p>
             </div>
             <div class="review-item">
                 <h3>Innovation</h3>
-                <p>Stay up to date with the latest kitchen trends and technology. We constantly update our product catalogues to bring you the best and most innovative products.</p>
+                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
             </div>
             <div class="review-item">
                 <h3>Affordability</h3>
-                <p>We believe that a beautiful kitchen shouldn't break the bank. Explore our range of options to suit every budget.</p>
+                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
             </div>
         </div>
         <div class="review-image">
-            <img src="assets/portfolio/Janice wong (2).webp" alt="Modern Kitchen Design Auckland">
+            <img src="assets/portfolio/kitchen.webp" alt="Modern Kitchen Design Auckland">
         </div>
     </div>
 </section>
@@ -4720,8 +4749,8 @@
              
              <div class="services-grid">
                  <div class="service-card">
-                     <div class="service-image-wrapper">
-                         <img src="assets/portfolio/cecilia david 3.webp" alt="Custom Kitchen Design Auckland" class="service-image">
+                    <div class="service-image-wrapper">
+                        <img src="assets/portfolio/custom.webp" alt="Custom Kitchen Design Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Custom Kitchen Design</div>
                          </div>
@@ -4737,8 +4766,8 @@
                      </div>
                  </div>
                  <div class="service-card">
-                     <div class="service-image-wrapper">
-                         <img src="assets/portfolio/bhula.webp" alt="Kitchen Renovation Auckland" class="service-image">
+                    <div class="service-image-wrapper">
+                        <img src="assets/portfolio/renovation.webp" alt="Kitchen Renovation Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Kitchen Renovations</div>
                          </div>
@@ -4754,8 +4783,8 @@
                      </div>
                  </div>
                  <div class="service-card">
-                     <div class="service-image-wrapper">
-                         <img src="assets/portfolio/charlie barker (5).webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                    <div class="service-image-wrapper">
+                        <img src="assets/portfolio/bespoke.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Bespoke Cabinetry</div>
                          </div>
@@ -6171,6 +6200,32 @@
         
         // Initialize gallery modal when DOM is loaded
         document.addEventListener('DOMContentLoaded', initGalleryModal);
+
+        // Pricing icon image animation
+        function initPricingIconAnimation() {
+            const pricingImages = document.querySelectorAll('.pricing-icon img');
+            
+            const pricingObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('animate');
+                        }, index * 200); // Stagger the animation
+                    }
+                });
+            }, {
+                threshold: 0.3,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            pricingImages.forEach(img => {
+                pricingObserver.observe(img);
+            });
+        }
+
+        // Initialize pricing icon animation
+        document.addEventListener('DOMContentLoaded', initPricingIconAnimation);
+
     </script>
 </body>
 </html>
