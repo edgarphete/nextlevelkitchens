@@ -2214,6 +2214,11 @@
                 width: 100%;
             }
 
+            /* Hide testimonials beyond the first 5 on mobile */
+            .testimonial-card-marquee:nth-child(n+6) {
+                display: none;
+            }
+
             .rating-badge {
                 padding: 0.4rem 0.8rem;
             }
@@ -2333,6 +2338,11 @@
                 max-width: none;
                 width: 100%;
                 padding: 1.25rem;
+            }
+
+            /* Hide testimonials beyond the first 5 on mobile */
+            .testimonial-card-marquee:nth-child(n+6) {
+                display: none;
             }
 
             .testimonial-card-marquee .testimonial-text {
@@ -3804,8 +3814,6 @@
             .hero h1 {
                 font-size: 2rem;
                 line-height: 1.1;
-                word-wrap: break-word;
-                hyphens: auto;
             }
 
             .typing-container {
@@ -4060,13 +4068,11 @@
              .nav {
                  padding: 0.5rem 1rem;
              }
-             .hero h1 {
-                 font-size: 1.8rem;
-                 line-height: 1.1;
-                 margin-bottom: 1rem;
-                 word-wrap: break-word;
-                 hyphens: auto;
-             }
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.1;
+                margin-bottom: 1rem;
+            }
 
              .typing-container {
                  min-width: 100px;
@@ -4558,6 +4564,7 @@
             .hero h1 {
                 font-size: 1.6rem;
                 margin-bottom: 0.75rem;
+                line-height: 1.1;
             }
 
             .typing-container {
@@ -4655,7 +4662,6 @@
         <div class="marquee-container">
             <div class="marquee-track">
                 <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
                     <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
                     <p class="testimonial-text">Exceeded our expectations with a kitchen design that feels both beautiful and practical – we couldn't be happier.</p>
                     <div class="author-info">
