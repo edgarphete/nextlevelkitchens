@@ -4592,7 +4592,7 @@
                     <img src="assets/images/nextlevelkitchens_logo_white.webp" alt="Next Level Kitchens - Custom Kitchen Design Auckland Logo">
                 </div>
                 <div class="header-phone">
-                    <a href="tel:+64211012617"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 4px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> 021 101-2617</a>
+                    <a href="tel:+64211012617"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 4px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> 021 101-2617</a>
                 </div>
                  <ul class="nav-menu">
                      <li><a href="index.html">Home</a></li>
@@ -4642,7 +4642,7 @@
                 
                 <div class="hero-cta">
                     <button class="btn btn-primary btn-pulse" onclick="openQuotePopup()">Get a free estimate →</button>
-                     <a href="tel:+64211012617" class="btn btn-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call Now 021 101-2617</a>
+                     <a href="tel:+64211012617" class="btn btn-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call Now 021 101-2617</a>
                 </div>
             </div>
         </div>
@@ -4779,112 +4779,24 @@
     <div class="review-container">
         <div class="review-content">
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
+                <h3>Quality</h3>
                 <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
+                <h3>Expertise</h3>
                 <p>Our experienced designers and consultants guide you through every step of the process.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
+                <h3>Innovation</h3>
                 <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
+                <h3>Affordability</h3>
                 <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
             </div>
         </div>
         <div class="review-image">
-            <!-- Option 1: Modern white kitchen with island -->
-            <img src="assets/portfolio/kitchen 2.webp" alt="Modern Kitchen Design Auckland" style="display: block;">
-            
-            <!-- Option 2: Dark contemporary kitchen -->
-            <!-- <img src="assets/portfolio/kitchen 3.webp" alt="Contemporary Kitchen Design Auckland" style="display: none;"> -->
-            
-            <!-- Option 3: Luxury kitchen with premium finishes -->
-            <!-- <img src="assets/portfolio/kitchen 4.webp" alt="Luxury Kitchen Design Auckland" style="display: none;"> -->
-        </div>
-    </div>
-</section>
-
-<!-- Review Section Version 2 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <img src="assets/portfolio/kitchen 3.webp" alt="Contemporary Kitchen Design Auckland">
-        </div>
-    </div>
-</section>
-
-<!-- Review Section Version 3 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <img src="assets/portfolio/kitchen 4.webp" alt="Luxury Kitchen Design Auckland">
-        </div>
-    </div>
-</section>
-
-<!-- Review Section Version 4 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <img src="assets/portfolio/kitchen 5.webp" alt="Modern Kitchen Design Auckland">
+            <img src="assets/portfolio/kitchen.webp" alt="Modern Kitchen Design Auckland">
         </div>
     </div>
 </section>
@@ -4955,7 +4867,7 @@
              <div class="services-cta">
                  <div class="section-buttons">
                      <a href="#quote-form" class="btn btn-primary">GET YOUR FREE ESTIMATE</a>
-                     <a href="tel:+64211012617" class="btn btn-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call 021 101-2617</a>
+                     <a href="tel:+64211012617" class="btn btn-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call 021 101-2617</a>
                  </div>
              </div>
          </div>
@@ -5010,7 +4922,7 @@
              <div class="process-cta">
                  <div class="section-buttons">
                      <a href="#quote-form" class="btn btn-primary">GET YOUR FREE ESTIMATE</a>
-                     <a href="tel:+64211012617" class="btn btn-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call 021 101-2617</a>
+                     <a href="tel:+64211012617" class="btn btn-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call 021 101-2617</a>
                  </div>
              </div>
          </div>
@@ -5251,31 +5163,31 @@
                     
                     <div class="pricing-features">
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Quality melamine cabinetry
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Soft-close doors & drawers
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Durable laminate countertops
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Standard handles & hardware
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Professional installation
@@ -5301,37 +5213,37 @@
                     
                     <div class="pricing-features">
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Premium engineered stone benchtops
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Blum premium hardware
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             LED under-cabinet lighting
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Custom handle selection
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Optimized storage solutions
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Extended warranty coverage
@@ -5357,37 +5269,37 @@
                     
                     <div class="pricing-features">
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Bespoke cabinetry design
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Natural stone benchtops
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Premium Blum mechanisms
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Advanced lighting systems
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Smart storage innovations
                         </div>
                         <div class="feature-item">
-                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20,6 9,17 4,12"/>
                             </svg>
                             Lifetime craftsmanship guarantee
@@ -5403,7 +5315,7 @@
             <div class="pricing-bottom">
                 <div class="pricing-guarantee">
                     <div class="guarantee-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                             <path d="M9 12l2 2 4-4"/>
                         </svg>
@@ -5436,7 +5348,7 @@
                     <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <circle cx="12" cy="12" r="10"/>
                                         <polyline points="12,6 12,12 16,14"/>
                                     </svg>
@@ -5444,7 +5356,7 @@
                                 <span>How long does a kitchen renovation take?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5467,14 +5379,14 @@
                     <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                     </svg>
                                 </div>
                                 <span>Do you offer custom designs?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5498,7 +5410,7 @@
                     <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <line x1="12" y1="1" x2="12" y2="23"/>
                                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                                     </svg>
@@ -5506,7 +5418,7 @@
                                 <span>Can you help me stay within budget?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5531,7 +5443,7 @@
                     <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                                         <polyline points="9,22 9,12 15,12 15,22"/>
                                     </svg>
@@ -5539,7 +5451,7 @@
                                 <span>Do you only do kitchens?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5564,7 +5476,7 @@
                         <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                         <path d="M9 12l2 2 4-4"/>
                                     </svg>
@@ -5572,7 +5484,7 @@
                                 <span>What warranty do you provide?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5597,7 +5509,7 @@
                         <div class="faq-question">
                             <div class="faq-question-content">
                                 <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                         <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
                                         <line x1="12" y1="22.08" x2="12" y2="12"/>
@@ -5606,7 +5518,7 @@
                                 <span>Do you handle permits and approvals?</span>
                             </div>
                             <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"/>
                                     <line x1="5" y1="12" x2="19" y2="12"/>
                                 </svg>
@@ -5660,7 +5572,7 @@
                         <h4>Prefer to Call?</h4>
                         <p>Speak directly with our design team</p>
                         <a href="tel:+64211012617" class="phone-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                             </svg>
                             021 101-2617
@@ -5682,7 +5594,7 @@
                         
                         <div class="form-group">
                             <label for="phone">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                                 </svg>
                                 Phone Number
@@ -5692,7 +5604,7 @@
                         
                         <div class="form-group">
                             <label for="email">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                     <polyline points="22,6 12,13 2,6"/>
                                 </svg>
@@ -5703,7 +5615,7 @@
                         
                         <div class="form-group">
                             <label for="message">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                                 </svg>
                                 Project Details
@@ -5712,7 +5624,7 @@
                         </div>
                         
                         <button type="submit" class="form-submit-btn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M22 2L11 13"/>
                                 <polygon points="22,2 15,22 11,13 2,9 22,2"/>
                             </svg>
@@ -5807,7 +5719,7 @@
                 
                 <div class="form-group">
                     <label for="popup-phone">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
                         Phone Number
@@ -5817,7 +5729,7 @@
                 
                 <div class="form-group">
                     <label for="popup-email">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                             <polyline points="22,6 12,13 2,6"/>
                         </svg>
@@ -5828,7 +5740,7 @@
                 
                 <div class="form-group">
                     <label for="popup-message">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                         </svg>
                         Project Details
@@ -5837,7 +5749,7 @@
                 </div>
                 
                 <button type="submit" class="form-submit-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 2L11 13"/>
                         <polygon points="22,2 15,22 11,13 2,9 22,2"/>
                     </svg>
