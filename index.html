@@ -4581,6 +4581,94 @@
                 padding: 0.5rem 0.75rem;
             }
         }
+
+        /* Enhanced FAQ Styling */
+        .faq-item-compact {
+            background: var(--white) !important;
+            border: 1px solid #e5e7eb !important;
+            border-radius: 16px !important;
+            margin-bottom: 20px !important;
+            overflow: hidden !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+        }
+
+        .faq-item-compact:hover {
+            border-color: var(--accent-orange) !important;
+            box-shadow: 0 8px 25px rgba(255, 102, 0, 0.12) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        .faq-question-compact {
+            width: 100% !important;
+            text-align: left !important;
+            background: none !important;
+            border: none !important;
+            padding: 24px !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: var(--secondary) !important;
+            cursor: pointer !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            font-family: 'Poppins', sans-serif !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .faq-question-compact:hover {
+            color: var(--accent-orange) !important;
+        }
+
+        .faq-icon-compact {
+            color: #007bff !important;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            transition: transform 0.3s ease !important;
+            width: 24px !important;
+            height: 24px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            border-radius: 50% !important;
+            background: rgba(0, 123, 255, 0.1) !important;
+        }
+
+        .faq-answer-compact {
+            max-height: 0;
+            overflow: hidden !important;
+            transition: max-height 0.4s ease, padding 0.4s ease !important;
+            background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important;
+            border-top: 1px solid #f1f5f9 !important;
+        }
+
+        .faq-answer-compact > div {
+            padding: 30px 32px 32px 32px !important;
+            color: var(--text-dark) !important;
+            font-size: 15px !important;
+            line-height: 1.6 !important;
+            font-weight: 400 !important;
+        }
+
+        .faq-answer-compact ul {
+            margin: 0 !important;
+            padding-left: 20px !important;
+            list-style-position: outside !important;
+        }
+
+        .faq-answer-compact li {
+            margin-bottom: 8px !important;
+            padding-left: 0 !important;
+            text-indent: 0 !important;
+        }
+
+        /* FAQ Section Responsive */
+        @media (max-width: 768px) {
+            .faq-grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4774,16 +4862,17 @@
     </div>
 </section>
 
+
 <!-- Review Section -->
 <section class="review-section">
     <div class="review-container">
         <div class="review-content">
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
+                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>Quality</h3>
                 <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
+                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Expertise</h3>
                 <p>Our experienced designers and consultants guide you through every step of the process.</p>
             </div>
             <div class="review-item">
@@ -4791,68 +4880,7 @@
                 <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <!-- Option 1: Modern white kitchen with island -->
-            <img src="assets/portfolio/kitchen 2.webp" alt="Modern Kitchen Design Auckland" style="display: block;">
-            
-            <!-- Option 2: Dark contemporary kitchen -->
-            <!-- <img src="assets/portfolio/kitchen 3.webp" alt="Contemporary Kitchen Design Auckland" style="display: none;"> -->
-            
-            <!-- Option 3: Luxury kitchen with premium finishes -->
-            <!-- <img src="assets/portfolio/kitchen 4.webp" alt="Luxury Kitchen Design Auckland" style="display: none;"> -->
-        </div>
-    </div>
-</section>
-
-<!-- Review Section Version 2 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <img src="assets/portfolio/kitchen 3.webp" alt="Contemporary Kitchen Design Auckland">
-        </div>
-    </div>
-</section>
-
-<!-- Review Section Version 3 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
+                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
                 <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
             </div>
         </div>
@@ -4862,32 +4890,6 @@
     </div>
 </section>
 
-<!-- Review Section Version 4 -->
-<section class="review-section">
-    <div class="review-container">
-        <div class="review-content">
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Quality</h3>
-                <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 12l2 2 4-4"/><path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/><path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/><path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"/><path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"/></svg>Expertise</h3>
-                <p>Our experienced designers and consultants guide you through every step of the process.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
-                <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
-            </div>
-            <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M12 1v6l4-4-4-4z"/><path d="M12 23v-6l4 4-4 4z"/><path d="M1 12h6l-4-4 4-4H1z"/><path d="M23 12h-6l4 4-4 4h6z"/><circle cx="12" cy="12" r="3"/></svg>Transparency</h3>
-                <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
-            </div>
-        </div>
-        <div class="review-image">
-            <img src="assets/portfolio/kitchen 5.webp" alt="Modern Kitchen Design Auckland">
-        </div>
-    </div>
-</section>
 
      <!-- Services Section -->
      <section class="services section-padding" id="services">
@@ -5423,35 +5425,28 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq section-padding">
+    <section class="section bg-white" style="padding: 80px 0;">
         <div class="container">
-            <div class="faq-header">
-            <h2>Frequently Asked Questions</h2>
-                <p class="faq-subtitle">Everything you need to know about our kitchen renovation process, pricing, and services.</p>
+            <div class="scroll-animate" style="text-align: center; margin-bottom: 60px;">
+                <h2 class="h2" style="margin-bottom: 24px;"><span class="text-orange">Frequently Asked Questions</span></h2>
+                <p class="body-large" style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Everything you need to know about our kitchen renovation process, pricing, and services.</p>
             </div>
             
-            <div class="faq-content">
-            <div class="faq-grid">
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"/>
-                                        <polyline points="12,6 12,12 16,14"/>
-                                    </svg>
-                                </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1000px; margin: 0 auto;" class="faq-grid">
+                <!-- Left Column -->
+                <div class="faq-column">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>How long does a kitchen renovation take?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                    </div>
-                    <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>Most projects take between 4–8 weeks from design approval to installation, depending on complexity. Here's our typical timeline:</p>
                                 <ul>
                                     <li><strong>Design & Planning:</strong> 1-2 weeks</li>
@@ -5463,25 +5458,18 @@
                     </div>
                 </div>
                 
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                    </svg>
-                                </div>
+                    <!-- FAQ 2 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>Do you offer custom designs?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                    </div>
-                    <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>Absolutely! Every kitchen we build is completely tailored to your lifestyle, architecture, and budget. Our process includes:</p>
                                 <ul>
                                     <li>In-home consultation and measurements</li>
@@ -5494,26 +5482,18 @@
                     </div>
                 </div>
                 
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <line x1="12" y1="1" x2="12" y2="23"/>
-                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                    </svg>
-                                </div>
+                    <!-- FAQ 3 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>Can you help me stay within budget?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                    </div>
-                    <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>Yes, we specialize in maximizing value within your budget. Our approach includes:</p>
                                 <ul>
                                     <li>Transparent pricing with no hidden costs</li>
@@ -5526,27 +5506,23 @@
                             </div>
                     </div>
                 </div>
-                
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                    <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                                        <polyline points="9,22 9,12 15,12 15,22"/>
-                                    </svg>
                                 </div>
+                
+                <!-- Right Column -->
+                <div class="faq-column">
+                
+                    <!-- FAQ 4 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>Do you only do kitchens?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                    </div>
-                    <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>While kitchens are our specialty, we offer a complete range of custom cabinetry services:</p>
                                 <ul>
                                     <li><strong>Custom Kitchens:</strong> Complete design and installation</li>
@@ -5560,26 +5536,18 @@
                         </div>
                     </div>
 
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                        <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                </div>
+                    <!-- FAQ 5 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>What warranty do you provide?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>We stand behind our work with comprehensive warranty coverage:</p>
                                 <ul>
                                     <li><strong>Workmanship:</strong> 5-year warranty on all installation</li>
@@ -5593,27 +5561,18 @@
                         </div>
                     </div>
 
-                    <div class="faq-item collapsed" onclick="toggleFaq(this)">
-                        <div class="faq-question">
-                            <div class="faq-question-content">
-                                <div class="faq-icon">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                                        <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
-                                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                                    </svg>
-                                </div>
+                    <!-- FAQ 6 -->
+                    <div class="faq-item-compact" style="background: var(--white) !important; border: 1px solid #e5e7eb !important; border-radius: 16px !important; margin-bottom: 20px !important; overflow: hidden !important; transition: all 0.3s ease !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;" 
+                         onmouseover="this.style.borderColor='var(--accent-orange)'; this.style.boxShadow='0 8px 25px rgba(255, 102, 0, 0.12)'; this.style.transform='translateY(-2px)'" 
+                         onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.04)'; this.style.transform='translateY(0)'">
+                        
+                        <button class="faq-question-compact" onclick="toggleFAQCompact(this)" style="width: 100% !important; text-align: left !important; background: none !important; border: none !important; padding: 24px !important; font-size: 16px !important; font-weight: 600 !important; color: var(--secondary) !important; cursor: pointer !important; display: flex !important; justify-content: space-between !important; align-items: center !important; font-family: 'Poppins', sans-serif !important; transition: all 0.2s ease !important;">
                                 <span>Do you handle permits and approvals?</span>
-                            </div>
-                            <div class="faq-toggle">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <line x1="12" y1="5" x2="12" y2="19"/>
-                                    <line x1="5" y1="12" x2="19" y2="12"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="faq-answer">
-                            <div class="faq-answer-content">
+                            <span class="faq-icon-compact" style="color: #007bff !important; font-size: 20px !important; font-weight: 700 !important; transition: transform 0.3s ease !important; width: 24px !important; height: 24px !important; display: flex !important; align-items: center !important; justify-content: center !important; border-radius: 50% !important; background: rgba(0, 123, 255, 0.1) !important;">+</span>
+                        </button>
+                        
+                        <div class="faq-answer-compact" style="max-height: 0; overflow: hidden !important; transition: max-height 0.4s ease, padding 0.4s ease !important; background: linear-gradient(135deg, #fafbfc 0%, #f8fafc 100%) !important; border-top: 1px solid #f1f5f9 !important;">
+                            <div style="padding: 30px 32px 32px 32px !important; color: var(--text-dark) !important; font-size: 15px !important; line-height: 1.6 !important; font-weight: 400 !important;">
                                 <p>Yes, we handle all necessary permits and approvals as part of our comprehensive service:</p>
                                 <ul>
                                     <li>Building consent applications (when required)</li>
@@ -5630,6 +5589,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Lead Capture Form Section -->
     <section class="quote-form-section section-padding" id="quote-form">
@@ -5648,7 +5608,7 @@
                             <span class="stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
                         </div>
                         <div class="testimonial-text">
-                            "Next Level Kitchens transformed our outdated kitchen into a modern masterpiece. The attention to detail and quality craftsmanship exceeded our expectations."
+                            Next Level Kitchens transformed our outdated kitchen into a modern masterpiece. The attention to detail and quality craftsmanship exceeded our expectations.
                         </div>
                         <div class="testimonial-author">
                             <div class="author-name" style="color: white;">Sarah M.</div>
@@ -5780,7 +5740,7 @@
                         <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
                     </label></p>
                     <p>
-                        <button type="submit" class="exit-popup-btn">CLAIM FREE CONSULTATION <span>→</span></button>
+                        <button type="submit" class="exit-popup-btn">GET A FREE ESTIMATE<span>→</span></button>
                     </p>
                     <div class="exit-form-guarantee">
                         <i class="fas fa-lock"></i>
@@ -6375,6 +6335,38 @@
 
         // Initialize pricing icon animation
         document.addEventListener('DOMContentLoaded', initPricingIconAnimation);
+
+        // Compact FAQ Toggle
+        function toggleFAQCompact(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.faq-icon-compact');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer-compact').forEach(faq => {
+                faq.style.maxHeight = '0px';
+                const otherIcon = faq.previousElementSibling.querySelector('.faq-icon-compact');
+                otherIcon.style.transform = 'rotate(0deg)';
+                otherIcon.textContent = '+';
+                otherIcon.style.background = 'rgba(0, 123, 255, 0.1)';
+                otherIcon.style.color = '#007bff';
+            });
+            
+            // Toggle current FAQ
+            if (!isOpen) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(45deg)';
+                icon.textContent = '×';
+                icon.style.background = '#007bff';
+                icon.style.color = 'white';
+            } else {
+                answer.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+                icon.textContent = '+';
+                icon.style.background = 'rgba(0, 123, 255, 0.1)';
+                icon.style.color = '#007bff';
+            }
+        }
 
     </script>
 </body>
