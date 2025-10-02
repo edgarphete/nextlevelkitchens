@@ -1196,7 +1196,7 @@
 
         .service-image-wrapper {
             width: 100%;
-            height: 200px;
+            height: 300px;
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 2rem;
@@ -1210,17 +1210,29 @@
          }
 
         .service-image {
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            object-position: center;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
             transition: all 0.3s ease;
-            display: block;
+            display: block !important;
+            image-rendering: auto !important;
+            -ms-interpolation-mode: bicubic !important;
+            backface-visibility: hidden;
+            max-width: none !important;
+            max-height: none !important;
         }
 
         .service-card:hover .service-image {
             transform: translateX(0) scale(1.05);
             filter: brightness(1.1);
+        }
+
+        /* High-DPI display optimization for service images */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .service-image {
+                image-rendering: auto;
+            }
         }
 
          .service-image-overlay {
@@ -1565,9 +1577,9 @@
         }
 
         .gallery-item {
-            min-width: 350px;
-            max-width: 350px;
-            height: 300px;
+            min-width: 400px;
+            max-width: 400px;
+            height: 350px;
             background: #f8f9fa;
             border-radius: 20px;
             overflow: hidden;
@@ -1713,9 +1725,9 @@
             }
 
             .gallery-item {
-                min-width: 280px;
-                max-width: 280px;
-                height: 240px;
+                min-width: 320px;
+                max-width: 320px;
+                height: 280px;
             }
 
             .gallery-marquee-track {
@@ -1745,9 +1757,9 @@
             }
 
             .gallery-item {
-                min-width: 250px;
-                max-width: 250px;
-                height: 200px;
+                min-width: 280px;
+                max-width: 280px;
+                height: 240px;
             }
 
             .gallery-marquee-track {
@@ -1764,9 +1776,13 @@
 
             .gallery-modal-close {
                 font-size: 30px;
-                width: 40px;
-                height: 40px;
-                top: -45px;
+                width: 50px;
+                height: 50px;
+                top: -60px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.8);
+                border: 2px solid white;
+                font-weight: bold;
             }
         }
 
@@ -1983,7 +1999,7 @@
             margin: 0 auto;
         }
 
-        .marquee-container {
+        .testimonials-slider-container {
             width: 100vw;
             overflow: hidden;
             position: relative;
@@ -1991,27 +2007,28 @@
             margin-left: calc(-50vw + 50%);
         }
 
-        .marquee-track {
+        .testimonials-slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .testimonials-slider-track {
             display: flex;
             gap: 2rem;
-            animation: marqueeScroll 60s linear infinite;
+            transition: transform 0.5s ease;
             width: max-content;
+            cursor: grab;
+            user-select: none;
+            transform: translateX(0);
         }
 
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes marqueeScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+        .testimonials-slider-track:active {
+            cursor: grabbing;
         }
 
         .testimonial-card-marquee {
+            flex: 0 0 auto;
             background: var(--white);
             border-radius: 20px;
             padding: 2rem;
@@ -2029,6 +2046,51 @@
         .testimonial-card-marquee:hover {
             transform: translateY(-8px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Navigation Controls */
+        .testimonials-navigation {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .testimonials-nav-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            pointer-events: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            color: var(--primary-color);
+        }
+
+        .testimonials-nav-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .testimonials-nav-btn:active {
+            transform: scale(0.95);
+        }
+
+        .testimonials-nav-btn svg {
+            width: 20px;
+            height: 20px;
         }
 
         .quote-icon {
@@ -2184,19 +2246,16 @@
                 font-size: 3rem;
             }
 
-            .marquee-container {
+            .testimonials-slider-container {
                 width: 100%;
                 margin-left: 0;
                 padding: 1rem 0;
             }
 
-            .marquee-track {
-                display: grid;
-                grid-template-columns: 1fr;
+            .testimonials-slider-track {
+                display: flex;
                 gap: 1.5rem;
-                animation: none;
-                width: 100%;
-                transform: none;
+                width: max-content;
             }
 
             .testimonial-card-marquee {
@@ -2309,19 +2368,16 @@
                 font-size: 1.75rem;
             }
 
-            .marquee-container {
+            .testimonials-slider-container {
                 width: 100%;
                 margin-left: 0;
                 padding: 1rem 0;
             }
 
-            .marquee-track {
-                display: grid;
-                grid-template-columns: 1fr;
+            .testimonials-slider-track {
+                display: flex;
                 gap: 1rem;
-                animation: none;
-                width: 100%;
-                transform: none;
+                width: max-content;
             }
 
             .testimonial-card-marquee {
@@ -2340,6 +2396,16 @@
                 font-size: 0.9rem;
             }
 
+            /* Hide navigation buttons on mobile */
+            .testimonials-navigation {
+                display: none;
+            }
+
+            /* Improve touch scrolling on mobile */
+            .testimonials-slider-track {
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
 
             .author-name {
                 font-size: 0.9rem;
@@ -2596,7 +2662,6 @@
         .pricing-guarantee {
             display: flex;
             align-items: center;
-            gap: 1rem;
             flex: 1;
             min-width: 300px;
         }
@@ -2604,19 +2669,21 @@
         .guarantee-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--success-green), #20c997);
+            background: linear-gradient(135deg, #22C55E, #16a34a);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
         }
 
         .guarantee-text h4 {
             margin: 0 0 0.5rem 0;
-            color: #000000;
+            color: #374151;
             font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .guarantee-text p {
@@ -2624,6 +2691,36 @@
             color: #000000;
             font-size: 0.9rem;
             line-height: 1.4;
+        }
+
+        .guarantee-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .guarantee-text li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .guarantee-text li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #22C55E;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .guarantee-text li strong {
+            color: #22C55E;
+            font-weight: 600;
         }
 
         /* FAQ Section */
@@ -3465,23 +3562,30 @@
                 justify-content: center;
                 text-align: center;
                 flex-direction: column;
-                gap: 1rem;
             }
 
             .guarantee-icon {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto;
+                box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
             }
 
             .guarantee-text h4 {
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
+                color: #374151;
+                font-weight: 700;
             }
 
             .guarantee-text p {
                 font-size: 1rem;
                 line-height: 1.5;
+            }
+
+            .guarantee-text li {
+                font-size: 1rem;
+                margin: 0.75rem 0;
             }
 
             .faq-question {
@@ -4805,7 +4909,7 @@
     <section class="hero hero-1" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland's #1 Rated Kitchen Specialists</div>
+                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland’s trusted kitchen specialists.</div>
                 <h1>Next Level <span class="hero-highlight"><span class="typing-container"><span class="typed-word" id="typed-word">Kitchens</span></span></span></h1>
                 <h2 class="hero-subtext">Join 100+ Auckland homeowners who trust Next Level Kitchens.<br>Enjoy transparent pricing, stunning designs & superb craftsmanship.</h2>
                 
@@ -4849,8 +4953,9 @@
             <h2>What our clients say about their <span style="color: #22C55E;">Next Level</span> Kitchen transformation.</h2>
         </div>
         
-        <div class="marquee-container">
-            <div class="marquee-track">
+        <div class="testimonials-slider-container">
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-slider-track" id="testimonialsSlider">
                 <div class="testimonial-card-marquee">
                     <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
                     <p class="testimonial-text">Next Level Kitchens renovated our kitchen and we couldn't be happier.</p>
@@ -4939,6 +5044,20 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
+            <!-- Navigation Controls -->
+            <div class="testimonials-navigation">
+                <button class="testimonials-nav-btn testimonials-prev" id="testimonialsPrev" aria-label="Previous testimonials" onclick="console.log('Prev button clicked')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15,18 9,12 15,6"></polyline>
+                    </svg>
+                </button>
+                <button class="testimonials-nav-btn testimonials-next" id="testimonialsNext" aria-label="Next testimonials" onclick="console.log('Next button clicked')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -4967,7 +5086,7 @@
             </div>
         </div>
         <div class="review-image">
-            <img src="assets/portfolio/kitchen 4.webp" alt="Luxury Kitchen Design Auckland">
+            <img src="assets/portfolio/kitchen 3.webp" alt="Luxury Kitchen Design Auckland">
         </div>
     </div>
 </section>
@@ -4984,48 +5103,48 @@
              <div class="services-grid">
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/custom.webp" alt="Custom Kitchen Design Auckland" class="service-image">
+                        <img src="assets/images/kitchen_01.webp" alt="Kitchens Auckland" class="service-image">
                          <div class="service-image-overlay">
-                             <div class="service-overlay-text">Custom Kitchen Design</div>
+                             <div class="service-overlay-text">Kitchens</div>
                          </div>
                      </div>
                      <div class="service-content">
-                         <h3>Custom Kitchen Design</h3>
-                         <p>Every kitchen we create is unique. Our designers work with you to develop a layout that complements your home and lifestyle.</p>
+                         <h3>Kitchens</h3>
+                         <p>Transform your home with bespoke kitchen design. Our expert designers create unique layouts that perfectly complement your lifestyle and maximize functionality.</p>
                          <div class="service-features">
-                             <span class="feature-tag">Personalised Design</span>
+                             <span class="feature-tag">Custom Design</span>
                              <span class="feature-tag">Premium Materials</span>
-                             <span class="feature-tag">Transparent Pricing</span>
+                             <span class="feature-tag">Expert Installation</span>
                          </div>
                      </div>
                  </div>
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/renovation.webp" alt="Kitchen Renovation Auckland" class="service-image">
+                        <img src="assets/images/Wardrobe_01.webp" alt="Wardrobes Auckland" class="service-image">
                          <div class="service-image-overlay">
-                             <div class="service-overlay-text">Kitchen Renovations</div>
+                             <div class="service-overlay-text">Wardrobes</div>
                          </div>
                      </div>
                      <div class="service-content">
-                         <h3>Kitchen Renovations</h3>
-                         <p>Transform your existing space into something extraordinary. We modernise layouts, maximise storage, and deliver finishes that stand the test of time.</p>
+                         <h3>Wardrobes</h3>
+                         <p>Maximize your storage potential with custom wardrobe solutions. We design and build wardrobes that perfectly fit your space and storage needs.</p>
                          <div class="service-features">
-                             <span class="feature-tag">Smart Layouts</span>
+                             <span class="feature-tag">Custom Storage</span>
+                             <span class="feature-tag">Space Optimization</span>
                              <span class="feature-tag">Quality Craftsmanship</span>
-                             <span class="feature-tag">10-Year Warranty</span>
                          </div>
                      </div>
                  </div>
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/bespoke.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                        <img src="assets/images/bespoke_02.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Bespoke Cabinetry</div>
                          </div>
                      </div>
                      <div class="service-content">
                          <h3>Bespoke Cabinetry</h3>
-                         <p>From statement islands to specialised storage, our custom cabinetry solutions are designed and built with precision to elevate your kitchen.</p>
+                         <p>From statement islands to specialized storage solutions, our custom cabinetry is designed and built with precision to elevate any space in your home.</p>
                          <div class="service-features">
                              <span class="feature-tag">Handcrafted</span>
                              <span class="feature-tag">Seamless Fit</span>
@@ -5123,52 +5242,164 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Custom Design</h3>
-                                <p>Bespoke Craftsmanship</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Contemporary Style</h3>
-                                <p>Sleek & Functional</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_04.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Family Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Family Kitchen</h3>
-                                <p>Perfect for Living</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_05.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_05.webp" alt="Luxury Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Luxury Kitchen</h3>
-                                <p>Premium Materials</p>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="gallery-item" data-image="assets/portfolio/charlotte kool (1).webp">
                         <img src="assets/portfolio/charlotte kool (1).webp" alt="Classic Kitchen Auckland">
                         <div class="gallery-overlay">
                             <div class="gallery-overlay-content">
                                 <h3>Classic Elegance</h3>
                                 <p>Timeless Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Charlie Barker Images -->
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (1).webp">
+                        <img src="assets/portfolio/charlie barker (1).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Modern Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (2).webp">
+                        <img src="assets/portfolio/charlie barker (2).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Contemporary Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (3).webp">
+                        <img src="assets/portfolio/charlie barker (3).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Luxury Kitchen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (4).webp">
+                        <img src="assets/portfolio/charlie barker (4).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Premium Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (5).webp">
+                        <img src="assets/portfolio/charlie barker (5).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Bespoke Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (6).webp">
+                        <img src="assets/portfolio/charlie barker (6).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Custom Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (7).webp">
+                        <img src="assets/portfolio/charlie barker (7).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Elegant Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (8).webp">
+                        <img src="assets/portfolio/charlie barker (8).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Modern Luxury</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Janice Wong Images -->
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (1).webp">
+                        <img src="assets/portfolio/Janice wong (1).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Contemporary Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (2).webp">
+                        <img src="assets/portfolio/Janice wong (2).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Modern Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (3).webp">
+                        <img src="assets/portfolio/Janice wong (3).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Luxury Kitchen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (4).webp">
+                        <img src="assets/portfolio/Janice wong (4).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Premium Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (5).webp">
+                        <img src="assets/portfolio/Janice wong (5).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Bespoke Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (6).webp">
+                        <img src="assets/portfolio/Janice wong (6).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Custom Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (7).webp">
+                        <img src="assets/portfolio/Janice wong (7).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Elegant Style</p>
                             </div>
                         </div>
                     </div>
@@ -5184,25 +5415,6 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Custom Design</h3>
-                                <p>Bespoke Craftsmanship</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Contemporary Style</h3>
-                                <p>Sleek & Functional</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
         </div>
     </section>
@@ -5237,16 +5449,6 @@
                     <div class="gallery-overlay-content">
                         <h3>Contemporary</h3>
                         <p>Clean & Modern</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-image="assets/portfolio/kitchen.webp">
-                <img src="assets/portfolio/kitchen.webp" alt="Custom Kitchen Auckland">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-content">
-                        <h3>Custom Build</h3>
-                        <p>Tailored Design</p>
                     </div>
                 </div>
             </div>
@@ -5327,7 +5529,7 @@
                             <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Standard Kitchen Package">
                         </div>
                     <div class="pricing-title">Everyday</div>
-                    <div class="pricing-price">$15K - $20K</div>
+                    <div class="pricing-price">$15K - $25K</div>
                     <div class="pricing-description">
                             Perfect for first-time renovators looking for quality and value
                     </div>
@@ -5486,15 +5688,13 @@
             
             <div class="pricing-bottom">
                 <div class="pricing-guarantee">
-                    <div class="guarantee-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                    </div>
                     <div class="guarantee-text">
                         <h4>Workmanship Guarantee</h4>
-                        <p>We'll match any comparable quote from licensed Auckland kitchen specialists</p>
+                        <ul>
+                            <li><strong>5-Year Workmanship &amp; Cabinetry</strong> – Covered against defects.</li>
+                            <li><strong>Blum Hardware: Lifetime</strong> – Backed by manufacturer guarantee.</li>
+                            <li><strong>Other Hardware: 10+ Years</strong> – Minimum manufacturer warranty.</li>
+                          </ul>
                     </div>
                 </div>
             
@@ -6480,6 +6680,199 @@
                 icon.style.color = '#007bff';
             }
         }
+
+        // Testimonials Slider Functionality
+        function initTestimonialsSlider() {
+            const slider = document.getElementById('testimonialsSlider');
+            const prevBtn = document.getElementById('testimonialsPrev');
+            const nextBtn = document.getElementById('testimonialsNext');
+            
+            if (!slider || !prevBtn || !nextBtn) {
+                console.log('Testimonials slider elements not found:', {
+                    slider: !!slider,
+                    prevBtn: !!prevBtn,
+                    nextBtn: !!nextBtn
+                });
+                return;
+            }
+            
+            console.log('Testimonials slider initialized successfully');
+            
+            const cards = slider.querySelectorAll('.testimonial-card-marquee');
+            let cardWidth = 400; // Base card width
+            let gap = 32; // 2rem gap
+            
+            let cardWidthWithGap = cardWidth + gap;
+            
+            // Update dimensions based on screen size
+            function updateDimensions() {
+                const isMobile = window.innerWidth <= 768;
+                cardWidth = isMobile ? slider.parentElement.offsetWidth : 400;
+                gap = isMobile ? 16 : 32; // 1rem on mobile, 2rem on desktop
+                cardWidthWithGap = cardWidth + gap;
+            }
+            
+            updateDimensions();
+            
+            let currentIndex = 0;
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            let initialTransform = 0;
+            
+            // Calculate how many cards to show based on screen width
+            function getCardsToShow() {
+                const containerWidth = slider.parentElement.offsetWidth;
+                return Math.floor(containerWidth / cardWidthWithGap);
+            }
+            
+            // Update slider position
+            function updateSlider() {
+                const translateX = -currentIndex * cardWidthWithGap;
+                slider.style.transform = `translateX(${translateX}px)`;
+                console.log('Slider updated:', { currentIndex, translateX, cardWidthWithGap });
+                
+                // Update button states
+                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+                nextBtn.style.opacity = currentIndex >= Math.max(0, cards.length - getCardsToShow()) ? '0.5' : '1';
+            }
+            
+            // Navigate to previous
+            function goToPrev() {
+                console.log('Previous clicked, currentIndex:', currentIndex);
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            }
+            
+            // Navigate to next
+            function goToNext() {
+                const maxIndex = Math.max(0, cards.length - getCardsToShow());
+                console.log('Next clicked, currentIndex:', currentIndex, 'maxIndex:', maxIndex);
+                if (currentIndex < maxIndex) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            }
+            
+            // Touch/Mouse event handlers
+            function handleStart(e) {
+                isDragging = true;
+                startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
+                initialTransform = currentIndex * cardWidthWithGap;
+                slider.style.transition = 'none';
+            }
+            
+            function handleMove(e) {
+                if (!isDragging) return;
+                
+                e.preventDefault();
+                currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
+                const diff = startX - currentX;
+                const newTransform = initialTransform - diff;
+                slider.style.transform = `translateX(${-newTransform}px)`;
+            }
+            
+            function handleEnd() {
+                if (!isDragging) return;
+                
+                isDragging = false;
+                slider.style.transition = 'transform 0.5s ease';
+                
+                const diff = startX - currentX;
+                const threshold = cardWidthWithGap / 3;
+                
+                if (Math.abs(diff) > threshold) {
+                    if (diff > 0) {
+                        goToNext(); // Swipe left = go to next
+                    } else {
+                        goToPrev(); // Swipe right = go to previous
+                    }
+                } else {
+                    updateSlider();
+                }
+            }
+            
+            // Event listeners
+            prevBtn.addEventListener('click', goToPrev);
+            nextBtn.addEventListener('click', goToNext);
+            
+            // Touch events
+            slider.addEventListener('touchstart', handleStart, { passive: false });
+            slider.addEventListener('touchmove', handleMove, { passive: false });
+            slider.addEventListener('touchend', handleEnd);
+            
+            // Mouse events
+            slider.addEventListener('mousedown', handleStart);
+            slider.addEventListener('mousemove', handleMove);
+            slider.addEventListener('mouseup', handleEnd);
+            slider.addEventListener('mouseleave', handleEnd);
+            
+            // Prevent default drag behavior
+            slider.addEventListener('dragstart', (e) => e.preventDefault());
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    goToPrev();
+                } else if (e.key === 'ArrowRight') {
+                    goToNext();
+                }
+            });
+            
+            // Initialize
+            updateSlider();
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                updateDimensions();
+                updateSlider();
+            });
+        }
+        
+        // Initialize testimonials slider when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing testimonials slider...');
+            initTestimonialsSlider();
+            
+            // Fallback: Simple click handlers if the main function fails
+            setTimeout(() => {
+                const prevBtn = document.getElementById('testimonialsPrev');
+                const nextBtn = document.getElementById('testimonialsNext');
+                const slider = document.getElementById('testimonialsSlider');
+                
+                if (prevBtn && nextBtn && slider) {
+                    console.log('Setting up fallback handlers');
+                    
+                    let currentSlide = 0;
+                    const cards = slider.querySelectorAll('.testimonial-card-marquee');
+                    const cardWidth = 400;
+                    const gap = 32;
+                    const cardWidthWithGap = cardWidth + gap;
+                    
+                    function moveSlider() {
+                        const translateX = -currentSlide * cardWidthWithGap;
+                        slider.style.transform = `translateX(${translateX}px)`;
+                        console.log('Fallback slider moved to:', translateX);
+                    }
+                    
+                    prevBtn.addEventListener('click', () => {
+                        if (currentSlide > 0) {
+                            currentSlide--;
+                            moveSlider();
+                        }
+                    });
+                    
+                    nextBtn.addEventListener('click', () => {
+                        if (currentSlide < cards.length - 1) {
+                            currentSlide++;
+                            moveSlider();
+                        }
+                    });
+                }
+            }, 1000);
+        });
 
     </script>
 </body>

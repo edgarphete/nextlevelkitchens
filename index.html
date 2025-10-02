@@ -1196,7 +1196,7 @@
 
         .service-image-wrapper {
             width: 100%;
-            height: 200px;
+            height: 300px;
             border-radius: 15px;
             overflow: hidden;
             margin-bottom: 2rem;
@@ -1210,17 +1210,29 @@
          }
 
         .service-image {
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-            object-position: center;
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
             transition: all 0.3s ease;
-            display: block;
+            display: block !important;
+            image-rendering: auto !important;
+            -ms-interpolation-mode: bicubic !important;
+            backface-visibility: hidden;
+            max-width: none !important;
+            max-height: none !important;
         }
 
         .service-card:hover .service-image {
             transform: translateX(0) scale(1.05);
             filter: brightness(1.1);
+        }
+
+        /* High-DPI display optimization for service images */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .service-image {
+                image-rendering: auto;
+            }
         }
 
          .service-image-overlay {
@@ -1565,9 +1577,9 @@
         }
 
         .gallery-item {
-            min-width: 350px;
-            max-width: 350px;
-            height: 300px;
+            min-width: 400px;
+            max-width: 400px;
+            height: 350px;
             background: #f8f9fa;
             border-radius: 20px;
             overflow: hidden;
@@ -1713,9 +1725,9 @@
             }
 
             .gallery-item {
-                min-width: 280px;
-                max-width: 280px;
-                height: 240px;
+                min-width: 320px;
+                max-width: 320px;
+                height: 280px;
             }
 
             .gallery-marquee-track {
@@ -1745,9 +1757,9 @@
             }
 
             .gallery-item {
-                min-width: 250px;
-                max-width: 250px;
-                height: 200px;
+                min-width: 280px;
+                max-width: 280px;
+                height: 240px;
             }
 
             .gallery-marquee-track {
@@ -1764,9 +1776,13 @@
 
             .gallery-modal-close {
                 font-size: 30px;
-                width: 40px;
-                height: 40px;
-                top: -45px;
+                width: 50px;
+                height: 50px;
+                top: -60px;
+                right: 10px;
+                background: rgba(0, 0, 0, 0.8);
+                border: 2px solid white;
+                font-weight: bold;
             }
         }
 
@@ -2596,7 +2612,6 @@
         .pricing-guarantee {
             display: flex;
             align-items: center;
-            gap: 1rem;
             flex: 1;
             min-width: 300px;
         }
@@ -2604,19 +2619,21 @@
         .guarantee-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, var(--success-green), #20c997);
+            background: linear-gradient(135deg, #22C55E, #16a34a);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--white);
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
         }
 
         .guarantee-text h4 {
             margin: 0 0 0.5rem 0;
-            color: #000000;
+            color: #374151;
             font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .guarantee-text p {
@@ -2624,6 +2641,36 @@
             color: #000000;
             font-size: 0.9rem;
             line-height: 1.4;
+        }
+
+        .guarantee-text ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .guarantee-text li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #374151;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .guarantee-text li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #22C55E;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .guarantee-text li strong {
+            color: #22C55E;
+            font-weight: 600;
         }
 
         /* FAQ Section */
@@ -3465,23 +3512,30 @@
                 justify-content: center;
                 text-align: center;
                 flex-direction: column;
-                gap: 1rem;
             }
 
             .guarantee-icon {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto;
+                box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
             }
 
             .guarantee-text h4 {
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
+                color: #374151;
+                font-weight: 700;
             }
 
             .guarantee-text p {
                 font-size: 1rem;
                 line-height: 1.5;
+            }
+
+            .guarantee-text li {
+                font-size: 1rem;
+                margin: 0.75rem 0;
             }
 
             .faq-question {
@@ -4805,7 +4859,7 @@
     <section class="hero hero-1" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland's #1 Rated Kitchen Specialists</div>
+                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland’s trusted kitchen specialists.</div>
                 <h1>Next Level <span class="hero-highlight"><span class="typing-container"><span class="typed-word" id="typed-word">Kitchens</span></span></span></h1>
                 <h2 class="hero-subtext">Join 100+ Auckland homeowners who trust Next Level Kitchens.<br>Enjoy transparent pricing, stunning designs & superb craftsmanship.</h2>
                 
@@ -4967,7 +5021,7 @@
             </div>
         </div>
         <div class="review-image">
-            <img src="assets/portfolio/kitchen 4.webp" alt="Luxury Kitchen Design Auckland">
+            <img src="assets/portfolio/kitchen 3.webp" alt="Luxury Kitchen Design Auckland">
         </div>
     </div>
 </section>
@@ -4984,48 +5038,48 @@
              <div class="services-grid">
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/custom.webp" alt="Custom Kitchen Design Auckland" class="service-image">
+                        <img src="assets/images/kitchen_01.webp" alt="Kitchens Auckland" class="service-image">
                          <div class="service-image-overlay">
-                             <div class="service-overlay-text">Custom Kitchen Design</div>
+                             <div class="service-overlay-text">Kitchens</div>
                          </div>
                      </div>
                      <div class="service-content">
-                         <h3>Custom Kitchen Design</h3>
-                         <p>Every kitchen we create is unique. Our designers work with you to develop a layout that complements your home and lifestyle.</p>
+                         <h3>Kitchens</h3>
+                         <p>Transform your home with bespoke kitchen design. Our expert designers create unique layouts that perfectly complement your lifestyle and maximize functionality.</p>
                          <div class="service-features">
-                             <span class="feature-tag">Personalised Design</span>
+                             <span class="feature-tag">Custom Design</span>
                              <span class="feature-tag">Premium Materials</span>
-                             <span class="feature-tag">Transparent Pricing</span>
+                             <span class="feature-tag">Expert Installation</span>
                          </div>
                      </div>
                  </div>
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/renovation.webp" alt="Kitchen Renovation Auckland" class="service-image">
+                        <img src="assets/images/Wardrobe_01.webp" alt="Wardrobes Auckland" class="service-image">
                          <div class="service-image-overlay">
-                             <div class="service-overlay-text">Kitchen Renovations</div>
+                             <div class="service-overlay-text">Wardrobes</div>
                          </div>
                      </div>
                      <div class="service-content">
-                         <h3>Kitchen Renovations</h3>
-                         <p>Transform your existing space into something extraordinary. We modernise layouts, maximise storage, and deliver finishes that stand the test of time.</p>
+                         <h3>Wardrobes</h3>
+                         <p>Maximize your storage potential with custom wardrobe solutions. We design and build wardrobes that perfectly fit your space and storage needs.</p>
                          <div class="service-features">
-                             <span class="feature-tag">Smart Layouts</span>
+                             <span class="feature-tag">Custom Storage</span>
+                             <span class="feature-tag">Space Optimization</span>
                              <span class="feature-tag">Quality Craftsmanship</span>
-                             <span class="feature-tag">10-Year Warranty</span>
                          </div>
                      </div>
                  </div>
                  <div class="service-card">
                     <div class="service-image-wrapper">
-                        <img src="assets/portfolio/bespoke.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                        <img src="assets/images/bespoke_02.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
                          <div class="service-image-overlay">
                              <div class="service-overlay-text">Bespoke Cabinetry</div>
                          </div>
                      </div>
                      <div class="service-content">
                          <h3>Bespoke Cabinetry</h3>
-                         <p>From statement islands to specialised storage, our custom cabinetry solutions are designed and built with precision to elevate your kitchen.</p>
+                         <p>From statement islands to specialized storage solutions, our custom cabinetry is designed and built with precision to elevate any space in your home.</p>
                          <div class="service-features">
                              <span class="feature-tag">Handcrafted</span>
                              <span class="feature-tag">Seamless Fit</span>
@@ -5123,52 +5177,164 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Custom Design</h3>
-                                <p>Bespoke Craftsmanship</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Contemporary Style</h3>
-                                <p>Sleek & Functional</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_04.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Family Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Family Kitchen</h3>
-                                <p>Perfect for Living</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_05.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_05.webp" alt="Luxury Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Luxury Kitchen</h3>
-                                <p>Premium Materials</p>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <div class="gallery-item" data-image="assets/portfolio/charlotte kool (1).webp">
                         <img src="assets/portfolio/charlotte kool (1).webp" alt="Classic Kitchen Auckland">
                         <div class="gallery-overlay">
                             <div class="gallery-overlay-content">
                                 <h3>Classic Elegance</h3>
                                 <p>Timeless Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Charlie Barker Images -->
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (1).webp">
+                        <img src="assets/portfolio/charlie barker (1).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Modern Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (2).webp">
+                        <img src="assets/portfolio/charlie barker (2).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Contemporary Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (3).webp">
+                        <img src="assets/portfolio/charlie barker (3).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Luxury Kitchen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (4).webp">
+                        <img src="assets/portfolio/charlie barker (4).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Premium Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (5).webp">
+                        <img src="assets/portfolio/charlie barker (5).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Bespoke Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (6).webp">
+                        <img src="assets/portfolio/charlie barker (6).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Custom Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (7).webp">
+                        <img src="assets/portfolio/charlie barker (7).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Elegant Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/charlie barker (8).webp">
+                        <img src="assets/portfolio/charlie barker (8).webp" alt="Charlie Barker Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Charlie Barker</h3>
+                                <p>Modern Luxury</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Janice Wong Images -->
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (1).webp">
+                        <img src="assets/portfolio/Janice wong (1).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Contemporary Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (2).webp">
+                        <img src="assets/portfolio/Janice wong (2).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Modern Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (3).webp">
+                        <img src="assets/portfolio/Janice wong (3).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Luxury Kitchen</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (4).webp">
+                        <img src="assets/portfolio/Janice wong (4).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Premium Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (5).webp">
+                        <img src="assets/portfolio/Janice wong (5).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Bespoke Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (6).webp">
+                        <img src="assets/portfolio/Janice wong (6).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Custom Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/Janice wong (7).webp">
+                        <img src="assets/portfolio/Janice wong (7).webp" alt="Janice Wong Kitchen Auckland">
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Janice Wong</h3>
+                                <p>Elegant Style</p>
                             </div>
                         </div>
                     </div>
@@ -5184,25 +5350,6 @@
                         </div>
                     </div>
                     
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_02.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_02.webp" alt="Custom Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Custom Design</h3>
-                                <p>Bespoke Craftsmanship</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="gallery-item" data-image="assets/images/nextlevelkitchens_photo_03.webp">
-                        <img src="assets/images/nextlevelkitchens_photo_03.webp" alt="Contemporary Kitchen Auckland">
-                        <div class="gallery-overlay">
-                            <div class="gallery-overlay-content">
-                                <h3>Contemporary Style</h3>
-                                <p>Sleek & Functional</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
         </div>
     </section>
@@ -5237,16 +5384,6 @@
                     <div class="gallery-overlay-content">
                         <h3>Contemporary</h3>
                         <p>Clean & Modern</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-item" data-image="assets/portfolio/kitchen.webp">
-                <img src="assets/portfolio/kitchen.webp" alt="Custom Kitchen Auckland">
-                <div class="gallery-overlay">
-                    <div class="gallery-overlay-content">
-                        <h3>Custom Build</h3>
-                        <p>Tailored Design</p>
                     </div>
                 </div>
             </div>
@@ -5327,7 +5464,7 @@
                             <img src="assets/images/nextlevelkitchens_photo_04.webp" alt="Standard Kitchen Package">
                         </div>
                     <div class="pricing-title">Everyday</div>
-                    <div class="pricing-price">$15K - $20K</div>
+                    <div class="pricing-price">$15K - $25K</div>
                     <div class="pricing-description">
                             Perfect for first-time renovators looking for quality and value
                     </div>
@@ -5486,15 +5623,13 @@
             
             <div class="pricing-bottom">
                 <div class="pricing-guarantee">
-                    <div class="guarantee-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                    </div>
                     <div class="guarantee-text">
                         <h4>Workmanship Guarantee</h4>
-                        <p>We'll match any comparable quote from licensed Auckland kitchen specialists</p>
+                        <ul>
+                            <li><strong>5-Year Workmanship &amp; Cabinetry</strong> – Covered against defects.</li>
+                            <li><strong>Blum Hardware: Lifetime</strong> – Backed by manufacturer guarantee.</li>
+                            <li><strong>Other Hardware: 10+ Years</strong> – Minimum manufacturer warranty.</li>
+                          </ul>
                     </div>
                 </div>
             
