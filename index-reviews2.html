@@ -2020,10 +2020,25 @@
             width: max-content;
             cursor: grab;
             user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
             transform: translateX(0);
+            touch-action: pan-y;
+        }
+
+        .testimonials-slider-track * {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .testimonials-slider-track:active {
+            cursor: grabbing;
+        }
+
+        .testimonials-slider-track.grabbing {
             cursor: grabbing;
         }
 
@@ -2431,6 +2446,466 @@
         @media (prefers-reduced-motion: reduce) {
             .marquee-track {
                 animation-duration: 120s;
+            }
+        }
+
+        /* Testimonial Section 1 - Horizontal Swipe Cards */
+        .testimonials-swipe {
+            background: var(--white);
+            color: var(--text-color);
+            overflow: hidden;
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .testimonials-swipe .testimonials-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-swipe .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--light-grey);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-swipe-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .swipe-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            color: var(--primary-color);
+        }
+
+        .swipe-nav-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .swipe-nav-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .swipe-prev {
+            left: 1rem;
+        }
+
+        .swipe-next {
+            right: 1rem;
+        }
+
+        .swipe-nav-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .testimonials-swipe-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .testimonials-swipe-track {
+            display: flex;
+            gap: 2rem;
+            cursor: grab;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            touch-action: pan-y;
+        }
+
+        .testimonials-swipe-track * {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            pointer-events: none;
+        }
+
+        .testimonials-swipe-track::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .testimonials-swipe-track:active {
+            cursor: grabbing;
+        }
+
+        .testimonials-swipe-track.active {
+            cursor: grabbing;
+        }
+
+        .testimonial-swipe-card {
+            flex: 0 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            min-width: 400px;
+            max-width: 400px;
+            color: var(--text-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-swipe-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-swipe-card .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .testimonial-swipe-card .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #000000;
+            margin-bottom: 2rem;
+            font-style: normal;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-swipe-card .author-info {
+            text-align: center;
+        }
+
+        .testimonial-swipe-card .author-name {
+            font-weight: 600;
+            color: var(--dark-grey);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-swipe-card .author-title {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Testimonial Section 2 - Vertical Scroll Cards */
+        .testimonials-vertical {
+            background: var(--white);
+            color: var(--text-color);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .testimonials-vertical .testimonials-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-vertical .testimonials-header h2 {
+            color: var(--dark-grey);
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+
+        .testimonials-vertical .testimonials-header p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .testimonials-vertical-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            padding: 0 2rem;
+        }
+
+        .testimonials-vertical-track {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            animation: verticalScroll 20s linear infinite;
+            transform: translateY(0);
+        }
+
+        @keyframes verticalScroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        .testimonial-vertical-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .testimonial-vertical-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-vertical-card .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            gap: 2px;
+        }
+
+        .testimonial-vertical-card .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-vertical-card .author-info {
+            text-align: right;
+        }
+
+        .testimonial-vertical-card .author-name {
+            font-weight: 600;
+            color: var(--dark-grey);
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-vertical-card .author-title {
+            color: var(--text-color);
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Testimonial Section 3 - Grid Layout */
+        .testimonials-grid {
+            background: var(--white);
+            color: var(--text-color);
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .testimonials-grid .testimonials-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-grid .testimonials-header h2 {
+            color: var(--dark-grey);
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 1rem 0;
+        }
+
+        .testimonials-grid .testimonials-header p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .testimonials-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 100%;
+            margin: 0;
+            padding: 0 2rem;
+        }
+
+        .testimonial-grid-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-grid-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #22C55E, #16a34a);
+        }
+
+        .testimonial-grid-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-grid-card .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 2px;
+        }
+
+        .testimonial-grid-card .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-grid-card .author-info {
+            text-align: left;
+        }
+
+        .testimonial-grid-card .author-name {
+            font-weight: 600;
+            color: var(--dark-grey);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-grid-card .author-title {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+
+        /* Responsive Design for New Testimonial Sections */
+        @media (max-width: 768px) {
+            .testimonial-swipe-card {
+                min-width: 300px;
+                max-width: 300px;
+                padding: 1.5rem;
+            }
+
+            .testimonials-vertical-container {
+                height: 300px;
+            }
+
+            .testimonial-vertical-card {
+                padding: 1.25rem;
+                min-height: 100px;
+            }
+
+            .testimonials-grid-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .testimonial-grid-card {
+                padding: 1.5rem;
+            }
+
+            .testimonials-swipe-container {
+                padding: 0 1rem;
+            }
+
+            .swipe-nav-btn {
+                display: none;
+            }
+
+            .testimonials-swipe .testimonials-header h2,
+            .testimonials-vertical .testimonials-header h2,
+            .testimonials-grid .testimonials-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-swipe-card {
+                min-width: 280px;
+                max-width: 280px;
+                padding: 1.25rem;
+            }
+
+            .testimonials-vertical-container {
+                height: 250px;
+            }
+
+            .testimonial-vertical-card {
+                padding: 1rem;
+                min-height: 80px;
+            }
+
+            .testimonial-grid-card {
+                padding: 1.25rem;
+            }
+
+            .testimonials-swipe-container {
+                padding: 0 0.5rem;
+            }
+
+            .testimonials-grid-container {
+                padding: 0 0.5rem;
+            }
+
+            .testimonials-swipe .testimonials-header h2,
+            .testimonials-vertical .testimonials-header h2,
+            .testimonials-grid .testimonials-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .testimonials-swipe .testimonials-header p,
+            .testimonials-vertical .testimonials-header p,
+            .testimonials-grid .testimonials-header p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Reduced motion support for new sections */
+        @media (prefers-reduced-motion: reduce) {
+            .testimonials-vertical-track {
+                animation: none;
+            }
+            
+            .testimonials-swipe-track,
+            .testimonials-carousel-track {
+                transition: none;
             }
         }
 
@@ -5063,6 +5538,229 @@
     </div>
 </section>
 
+<!-- Testimonial Section 1 - Horizontal Swipe Cards -->
+<section class="testimonials-swipe section-padding">
+    <div class="container">
+        <div class="testimonials-header">
+            <div class="rating-badge">
+                <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
+                <span class="rating-text">Rated 5/5 by over 100+ happy homeowners</span>
+            </div>
+            <h2>What our clients say about their <span style="color: #22C55E;">Next Level</span> Kitchen transformation.</h2>
+        </div>
+    </div>
+        
+        <div class="testimonials-swipe-container">
+            <button class="swipe-nav-btn swipe-prev" id="swipePrev" aria-label="Previous testimonials">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15,18 9,12 15,6"></polyline>
+                </svg>
+            </button>
+            <button class="swipe-nav-btn swipe-next" id="swipeNext" aria-label="Next testimonials">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9,18 15,12 9,6"></polyline>
+                </svg>
+            </button>
+            <div class="testimonials-swipe-wrapper">
+                <div class="testimonials-swipe-track" id="testimonialsSwipe">
+                    <div class="testimonial-swipe-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        </div>
+                        <p class="testimonial-text">"Next Level Kitchens transformed our kitchen beyond our expectations. The attention to detail and quality craftsmanship is outstanding."</p>
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Johnson</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-swipe-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        </div>
+                        <p class="testimonial-text">"Professional service from start to finish. They listened to our needs and delivered exactly what we wanted."</p>
+                        <div class="author-info">
+                            <h4 class="author-name">Mike Chen</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-swipe-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        </div>
+                        <p class="testimonial-text">"The design process was collaborative and fun. Our new kitchen is the heart of our home now."</p>
+                        <div class="author-info">
+                            <h4 class="author-name">Emma Wilson</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-swipe-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        </div>
+                        <p class="testimonial-text">"Value for money is exceptional. We got a premium kitchen that fits our budget perfectly."</p>
+                        <div class="author-info">
+                            <h4 class="author-name">David Brown</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-swipe-card">
+                        <div class="testimonial-stars">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        </div>
+                        <p class="testimonial-text">"Installation was smooth and on time. The team was professional and left everything spotless."</p>
+                        <div class="author-info">
+                            <h4 class="author-name">Lisa Taylor</h4>
+                            <p class="author-title">Auckland Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section 2 - Vertical Scroll Cards -->
+<section class="testimonials-vertical section-padding">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2>Client Success Stories</h2>
+            <p>Discover how we've transformed kitchens across Auckland</p>
+        </div>
+        
+        <div class="testimonials-vertical-container">
+            <div class="testimonials-vertical-track" id="testimonialsVertical">
+                <div class="testimonial-vertical-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="testimonial-text">"The transformation was incredible. Our old kitchen is now a modern, functional space that we love spending time in."</p>
+                    <div class="author-info">
+                        <h4 class="author-name">Rachel Green</h4>
+                        <p class="author-title">Auckland Homeowner</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-vertical-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="testimonial-text">"Excellent communication throughout the project. They kept us informed every step of the way."</p>
+                    <div class="author-info">
+                        <h4 class="author-name">James Smith</h4>
+                        <p class="author-title">Auckland Homeowner</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-vertical-card">
+                    <div class="testimonial-stars">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    </div>
+                    <p class="testimonial-text">"The quality of materials and workmanship exceeded our expectations. Worth every penny."</p>
+                    <div class="author-info">
+                        <h4 class="author-name">Anna Davis</h4>
+                        <p class="author-title">Auckland Homeowner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section 3 - Grid Layout -->
+<section class="testimonials-grid section-padding">
+    <div class="container">
+        <div class="testimonials-header">
+            <h2>What Our Clients Say</h2>
+            <p>Real testimonials from real customers</p>
+        </div>
+    </div>
+        
+        <div class="testimonials-grid-container">
+            <div class="testimonial-grid-card">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                </div>
+                <p class="testimonial-text">"Amazing service from start to finish. Highly recommend Next Level Kitchens!"</p>
+                <div class="author-info">
+                    <h4 class="author-name">Tom Wilson</h4>
+                    <p class="author-title">Auckland Homeowner</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-grid-card">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                </div>
+                <p class="testimonial-text">"Professional team, excellent workmanship, and beautiful results."</p>
+                <div class="author-info">
+                    <h4 class="author-name">Maria Garcia</h4>
+                    <p class="author-title">Auckland Homeowner</p>
+                </div>
+            </div>
+            
+            <div class="testimonial-grid-card">
+                <div class="testimonial-stars">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
+                </div>
+                <p class="testimonial-text">"The design process was collaborative and the end result exceeded our expectations."</p>
+                <div class="author-info">
+                    <h4 class="author-name">Chris Lee</h4>
+                    <p class="author-title">Auckland Homeowner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <!-- Review Section -->
 <section class="review-section">
@@ -6681,65 +7379,56 @@
             }
         }
 
-        // Testimonials Slider Functionality
+        // Testimonials Slider Functionality - Fixed Version
         function initTestimonialsSlider() {
             const slider = document.getElementById('testimonialsSlider');
             const prevBtn = document.getElementById('testimonialsPrev');
             const nextBtn = document.getElementById('testimonialsNext');
             
             if (!slider || !prevBtn || !nextBtn) {
-                console.log('Testimonials slider elements not found:', {
-                    slider: !!slider,
-                    prevBtn: !!prevBtn,
-                    nextBtn: !!nextBtn
-                });
+                console.log('Testimonials slider elements not found');
                 return;
             }
             
             console.log('Testimonials slider initialized successfully');
             
             const cards = slider.querySelectorAll('.testimonial-card-marquee');
-            let cardWidth = 400; // Base card width
-            let gap = 32; // 2rem gap
-            
-            let cardWidthWithGap = cardWidth + gap;
-            
-            // Update dimensions based on screen size
-            function updateDimensions() {
-                const isMobile = window.innerWidth <= 768;
-                cardWidth = isMobile ? slider.parentElement.offsetWidth : 400;
-                gap = isMobile ? 16 : 32; // 1rem on mobile, 2rem on desktop
-                cardWidthWithGap = cardWidth + gap;
-            }
-            
-            updateDimensions();
-            
             let currentIndex = 0;
             let isDragging = false;
             let startX = 0;
             let currentX = 0;
             let initialTransform = 0;
             
-            // Calculate how many cards to show based on screen width
+            // Get card width including gap
+            function getCardWidth() {
+                const firstCard = cards[0];
+                if (!firstCard) return 400;
+                const cardRect = firstCard.getBoundingClientRect();
+                const gap = 32; // 2rem gap
+                return cardRect.width + gap;
+            }
+            
+            // Calculate how many cards to show
             function getCardsToShow() {
                 const containerWidth = slider.parentElement.offsetWidth;
-                return Math.floor(containerWidth / cardWidthWithGap);
+                const cardWidth = getCardWidth();
+                return Math.floor(containerWidth / cardWidth);
             }
             
             // Update slider position
             function updateSlider() {
-                const translateX = -currentIndex * cardWidthWithGap;
+                const cardWidth = getCardWidth();
+                const translateX = -currentIndex * cardWidth;
                 slider.style.transform = `translateX(${translateX}px)`;
-                console.log('Slider updated:', { currentIndex, translateX, cardWidthWithGap });
                 
                 // Update button states
+                const maxIndex = Math.max(0, cards.length - getCardsToShow());
                 prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-                nextBtn.style.opacity = currentIndex >= Math.max(0, cards.length - getCardsToShow()) ? '0.5' : '1';
+                nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
             }
             
             // Navigate to previous
             function goToPrev() {
-                console.log('Previous clicked, currentIndex:', currentIndex);
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateSlider();
@@ -6749,7 +7438,6 @@
             // Navigate to next
             function goToNext() {
                 const maxIndex = Math.max(0, cards.length - getCardsToShow());
-                console.log('Next clicked, currentIndex:', currentIndex, 'maxIndex:', maxIndex);
                 if (currentIndex < maxIndex) {
                     currentIndex++;
                     updateSlider();
@@ -6760,8 +7448,11 @@
             function handleStart(e) {
                 isDragging = true;
                 startX = e.type === 'mousedown' ? e.clientX : e.touches[0].clientX;
-                initialTransform = currentIndex * cardWidthWithGap;
+                initialTransform = currentIndex * getCardWidth();
                 slider.style.transition = 'none';
+                slider.style.cursor = 'grabbing';
+                slider.classList.add('grabbing');
+                e.preventDefault(); // Prevent text selection
             }
             
             function handleMove(e) {
@@ -6770,24 +7461,27 @@
                 e.preventDefault();
                 currentX = e.type === 'mousemove' ? e.clientX : e.touches[0].clientX;
                 const diff = startX - currentX;
-                const newTransform = initialTransform - diff;
+                const cardWidth = getCardWidth();
+                const newTransform = (initialTransform + diff);
                 slider.style.transform = `translateX(${-newTransform}px)`;
             }
             
-            function handleEnd() {
+            function handleEnd(e) {
                 if (!isDragging) return;
                 
                 isDragging = false;
                 slider.style.transition = 'transform 0.5s ease';
+                slider.style.cursor = 'grab';
+                slider.classList.remove('grabbing');
                 
                 const diff = startX - currentX;
-                const threshold = cardWidthWithGap / 3;
+                const threshold = getCardWidth() / 3;
                 
                 if (Math.abs(diff) > threshold) {
                     if (diff > 0) {
-                        goToNext(); // Swipe left = go to next
+                        goToNext(); // Drag left = go to next
                     } else {
-                        goToPrev(); // Swipe right = go to previous
+                        goToPrev(); // Drag right = go to previous
                     }
                 } else {
                     updateSlider();
@@ -6812,21 +7506,59 @@
             // Prevent default drag behavior
             slider.addEventListener('dragstart', (e) => e.preventDefault());
             
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    goToPrev();
-                } else if (e.key === 'ArrowRight') {
-                    goToNext();
+            // Auto-play functionality
+            let autoPlayInterval;
+            const autoPlayDelay = 4000; // 4 seconds
+            
+            function startAutoPlay() {
+                stopAutoPlay(); // Clear any existing interval
+                autoPlayInterval = setInterval(() => {
+                    const maxIndex = Math.max(0, cards.length - getCardsToShow());
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        updateSlider();
+                    } else {
+                        // Loop back to beginning
+                        currentIndex = 0;
+                        updateSlider();
+                    }
+                }, autoPlayDelay);
+            }
+            
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
                 }
+            }
+            
+            // Pause auto-play on hover
+            slider.addEventListener('mouseenter', stopAutoPlay);
+            slider.addEventListener('mouseleave', startAutoPlay);
+            
+            // Pause auto-play on touch/drag
+            slider.addEventListener('touchstart', stopAutoPlay);
+            slider.addEventListener('mousedown', stopAutoPlay);
+            
+            // Resume auto-play after touch/drag ends
+            slider.addEventListener('touchend', () => {
+                setTimeout(startAutoPlay, 1000); // Resume after 1 second
+            });
+            slider.addEventListener('mouseup', () => {
+                setTimeout(startAutoPlay, 1000); // Resume after 1 second
             });
             
             // Initialize
             updateSlider();
             
+            // Check for reduced motion preference
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!prefersReducedMotion) {
+                startAutoPlay(); // Start auto-play only if user doesn't prefer reduced motion
+            }
+            
             // Handle window resize
             window.addEventListener('resize', () => {
-                updateDimensions();
                 updateSlider();
             });
         }
@@ -6872,6 +7604,139 @@
                     });
                 }
             }, 1000);
+        });
+
+        // Testimonial Section 1 - Horizontal Swipe Cards
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        const swipeTrack = document.getElementById('testimonialsSwipe');
+
+        if (swipeTrack) {
+            // Mouse events
+            swipeTrack.addEventListener('mousedown', (e) => {
+                isDown = true;
+                swipeTrack.classList.add('active');
+                swipeTrack.style.cursor = 'grabbing';
+                startX = e.pageX - swipeTrack.offsetLeft;
+                scrollLeft = swipeTrack.scrollLeft;
+                swipeTrack.style.scrollBehavior = 'auto'; // Disable smooth scroll during drag
+                e.preventDefault();
+            });
+
+            swipeTrack.addEventListener('mouseleave', () => {
+                isDown = false;
+                swipeTrack.classList.remove('active');
+                swipeTrack.style.cursor = 'grab';
+                swipeTrack.style.scrollBehavior = 'smooth';
+            });
+
+            swipeTrack.addEventListener('mouseup', () => {
+                isDown = false;
+                swipeTrack.classList.remove('active');
+                swipeTrack.style.cursor = 'grab';
+                swipeTrack.style.scrollBehavior = 'smooth';
+            });
+
+            swipeTrack.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - swipeTrack.offsetLeft;
+                const walk = (x - startX) * 3; // Increased multiplier for better responsiveness
+                swipeTrack.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch events for mobile
+            let startTouch = null;
+            let isDragging = false;
+
+            swipeTrack.addEventListener('touchstart', (e) => {
+                startTouch = e.touches[0].pageX;
+                isDragging = true;
+                swipeTrack.classList.add('active');
+            }, { passive: false });
+
+            swipeTrack.addEventListener('touchmove', (e) => {
+                if (!isDragging || !startTouch) return;
+                e.preventDefault();
+                const currentTouch = e.touches[0].pageX;
+                const diff = startTouch - currentTouch;
+                swipeTrack.scrollLeft += diff;
+                startTouch = currentTouch;
+            }, { passive: false });
+
+            swipeTrack.addEventListener('touchend', () => {
+                isDragging = false;
+                startTouch = null;
+                swipeTrack.classList.remove('active');
+            });
+
+            // Prevent default touch behavior
+            swipeTrack.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+            }, { passive: false });
+
+            // Navigation buttons
+            const prevBtn = document.getElementById('swipePrev');
+            const nextBtn = document.getElementById('swipeNext');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    swipeTrack.scrollBy({
+                        left: -400, // Scroll by one card width
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    swipeTrack.scrollBy({
+                        left: 400, // Scroll by one card width
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        }
+
+        // Testimonial Section 2 - Vertical Scroll Cards (Auto-play)
+        const verticalTrack = document.getElementById('testimonialsVertical');
+        if (verticalTrack) {
+            // Pause animation on hover
+            verticalTrack.addEventListener('mouseenter', () => {
+                verticalTrack.style.animationPlayState = 'paused';
+            });
+
+            verticalTrack.addEventListener('mouseleave', () => {
+                verticalTrack.style.animationPlayState = 'running';
+            });
+        }
+
+        // Testimonial Section 3 - Grid Layout (Hover Effects)
+        const gridCards = document.querySelectorAll('.testimonial-grid-card');
+        gridCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+
+        // Initialize all testimonial sections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize swipe functionality
+            if (swipeTrack) {
+                swipeTrack.style.cursor = 'grab';
+            }
+
+            // Initialize vertical scroll
+            if (verticalTrack) {
+                verticalTrack.style.animationPlayState = 'running';
+            }
+
         });
 
     </script>
