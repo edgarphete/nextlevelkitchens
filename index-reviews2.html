@@ -2001,16 +2001,19 @@
 
         .testimonials-slider-container {
             width: 100vw;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: visible;
             position: relative;
-            padding: 2rem 0;
+            padding: 3rem 0;
             margin-left: calc(-50vw + 50%);
         }
 
         .testimonials-slider-wrapper {
             position: relative;
             width: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: visible;
+            padding: 1rem 0;
         }
 
         .testimonials-slider-track {
@@ -2050,7 +2053,6 @@
             min-width: 400px;
             max-width: 400px;
             color: var(--text-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 1px solid #f0f0f0;
             transition: all 0.3s ease;
             position: relative;
@@ -2060,7 +2062,6 @@
 
         .testimonial-card-marquee:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         /* Navigation Controls */
@@ -2264,7 +2265,9 @@
             .testimonials-slider-container {
                 width: 100%;
                 margin-left: 0;
-                padding: 1rem 0;
+                padding: 2rem 0;
+                overflow-x: hidden;
+                overflow-y: visible;
             }
 
             .testimonials-slider-track {
@@ -2386,7 +2389,9 @@
             .testimonials-slider-container {
                 width: 100%;
                 margin-left: 0;
-                padding: 1rem 0;
+                padding: 2rem 0;
+                overflow-x: hidden;
+                overflow-y: visible;
             }
 
             .testimonials-slider-track {
@@ -2572,7 +2577,6 @@
             min-width: 400px;
             max-width: 400px;
             color: var(--text-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             border: 1px solid #f0f0f0;
             transition: all 0.3s ease;
             position: relative;
@@ -2581,7 +2585,6 @@
 
         .testimonial-swipe-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         .testimonial-swipe-card .testimonial-stars {
@@ -2672,7 +2675,6 @@
             background: #f8f9fa;
             border-radius: 15px;
             padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             border: 1px solid #e9ecef;
             transition: all 0.3s ease;
             min-height: 120px;
@@ -2683,7 +2685,6 @@
 
         .testimonial-vertical-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .testimonial-vertical-card .testimonial-stars {
@@ -2759,7 +2760,6 @@
             background: var(--white);
             border-radius: 15px;
             padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             border: 1px solid #f0f0f0;
             transition: all 0.3s ease;
             position: relative;
@@ -2778,7 +2778,6 @@
 
         .testimonial-grid-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
         .testimonial-grid-card .testimonial-stars {
@@ -7379,7 +7378,7 @@
             }
         }
 
-        // Testimonials Slider Functionality - Fixed Version
+        // Testimonials Slider Functionality - Infinite Loop Version
         function initTestimonialsSlider() {
             const slider = document.getElementById('testimonialsSlider');
             const prevBtn = document.getElementById('testimonialsPrev');
@@ -7392,7 +7391,15 @@
             
             console.log('Testimonials slider initialized successfully');
             
-            const cards = slider.querySelectorAll('.testimonial-card-marquee');
+            // Clone all cards and append them to create infinite loop
+            const originalCards = Array.from(slider.querySelectorAll('.testimonial-card-marquee'));
+            originalCards.forEach(card => {
+                const clone = card.cloneNode(true);
+                slider.appendChild(clone);
+            });
+            
+            const allCards = slider.querySelectorAll('.testimonial-card-marquee');
+            const totalOriginalCards = originalCards.length;
             let currentIndex = 0;
             let isDragging = false;
             let startX = 0;
@@ -7401,7 +7408,7 @@
             
             // Get card width including gap
             function getCardWidth() {
-                const firstCard = cards[0];
+                const firstCard = allCards[0];
                 if (!firstCard) return 400;
                 const cardRect = firstCard.getBoundingClientRect();
                 const gap = 32; // 2rem gap
@@ -7415,33 +7422,45 @@
                 return Math.floor(containerWidth / cardWidth);
             }
             
-            // Update slider position
-            function updateSlider() {
+            // Update slider position with seamless loop
+            function updateSlider(instant = false) {
                 const cardWidth = getCardWidth();
                 const translateX = -currentIndex * cardWidth;
+                
+                if (instant) {
+                    slider.style.transition = 'none';
+                } else {
+                    slider.style.transition = 'transform 0.5s ease';
+                }
+                
                 slider.style.transform = `translateX(${translateX}px)`;
                 
-                // Update button states
-                const maxIndex = Math.max(0, cards.length - getCardsToShow());
-                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-                nextBtn.style.opacity = currentIndex >= maxIndex ? '0.5' : '1';
+                // Seamlessly loop when reaching cloned section
+                if (currentIndex >= totalOriginalCards) {
+                    setTimeout(() => {
+                        slider.style.transition = 'none';
+                        currentIndex = currentIndex - totalOriginalCards;
+                        slider.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+                    }, 500);
+                } else if (currentIndex < 0) {
+                    setTimeout(() => {
+                        slider.style.transition = 'none';
+                        currentIndex = totalOriginalCards + currentIndex;
+                        slider.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+                    }, 500);
+                }
             }
             
             // Navigate to previous
             function goToPrev() {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
+                currentIndex--;
+                updateSlider();
             }
             
             // Navigate to next
             function goToNext() {
-                const maxIndex = Math.max(0, cards.length - getCardsToShow());
-                if (currentIndex < maxIndex) {
-                    currentIndex++;
-                    updateSlider();
-                }
+                currentIndex++;
+                updateSlider();
             }
             
             // Touch/Mouse event handlers
@@ -7506,22 +7525,15 @@
             // Prevent default drag behavior
             slider.addEventListener('dragstart', (e) => e.preventDefault());
             
-            // Auto-play functionality
+            // Auto-play functionality with infinite loop
             let autoPlayInterval;
-            const autoPlayDelay = 4000; // 4 seconds
+            const autoPlayDelay = 3000; // 3 seconds
             
             function startAutoPlay() {
                 stopAutoPlay(); // Clear any existing interval
                 autoPlayInterval = setInterval(() => {
-                    const maxIndex = Math.max(0, cards.length - getCardsToShow());
-                    if (currentIndex < maxIndex) {
-                        currentIndex++;
-                        updateSlider();
-                    } else {
-                        // Loop back to beginning
-                        currentIndex = 0;
-                        updateSlider();
-                    }
+                    currentIndex++;
+                    updateSlider();
                 }, autoPlayDelay);
             }
             
@@ -7567,43 +7579,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, initializing testimonials slider...');
             initTestimonialsSlider();
-            
-            // Fallback: Simple click handlers if the main function fails
-            setTimeout(() => {
-                const prevBtn = document.getElementById('testimonialsPrev');
-                const nextBtn = document.getElementById('testimonialsNext');
-                const slider = document.getElementById('testimonialsSlider');
-                
-                if (prevBtn && nextBtn && slider) {
-                    console.log('Setting up fallback handlers');
-                    
-                    let currentSlide = 0;
-                    const cards = slider.querySelectorAll('.testimonial-card-marquee');
-                    const cardWidth = 400;
-                    const gap = 32;
-                    const cardWidthWithGap = cardWidth + gap;
-                    
-                    function moveSlider() {
-                        const translateX = -currentSlide * cardWidthWithGap;
-                        slider.style.transform = `translateX(${translateX}px)`;
-                        console.log('Fallback slider moved to:', translateX);
-                    }
-                    
-                    prevBtn.addEventListener('click', () => {
-                        if (currentSlide > 0) {
-                            currentSlide--;
-                            moveSlider();
-                        }
-                    });
-                    
-                    nextBtn.addEventListener('click', () => {
-                        if (currentSlide < cards.length - 1) {
-                            currentSlide++;
-                            moveSlider();
-                        }
-                    });
-                }
-            }, 1000);
         });
 
         // Testimonial Section 1 - Horizontal Swipe Cards
