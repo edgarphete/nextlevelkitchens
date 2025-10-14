@@ -14,13 +14,13 @@
     <meta name="author" content="Next Level Kitchens">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.nextlevelkitchens.co.nz/">
+    <link rel="canonical" href="https://www.nextlevelkitchens.co.nz/about.html">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextlevelkitchens.co.nz/">
-    <meta property="og:title" content="Custom Kitchens Auckland | Next Level Kitchens NZ">
-    <meta property="og:description" content="Transform your home with bespoke kitchen design by Next Level Kitchens. Expert craftsmanship, transparent pricing & flawless installation in Auckland. Free consultation.">
+    <meta property="og:url" content="https://www.nextlevelkitchens.co.nz/about.html">
+    <meta property="og:title" content="About Next Level Kitchens | Custom Kitchen Makers Auckland">
+    <meta property="og:description" content="Discover Next Level Kitchens, Auckland's trusted custom kitchen specialists. From design to installation, we create bespoke kitchens and cabinetry with quality craftsmanship and transparent pricing.">
     <meta property="og:image" content="https://www.nextlevelkitchens.co.nz/assets/portfolio/cecilia david 2.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,9 +30,9 @@
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.nextlevelkitchens.co.nz/">
-    <meta property="twitter:title" content="Custom Kitchens Auckland | Next Level Kitchens NZ">
-    <meta property="twitter:description" content="Transform your home with bespoke kitchen design by Next Level Kitchens. Expert craftsmanship, transparent pricing & flawless installation in Auckland. Free consultation.">
+    <meta property="twitter:url" content="https://www.nextlevelkitchens.co.nz/about.html">
+    <meta property="twitter:title" content="About Next Level Kitchens | Custom Kitchen Makers Auckland">
+    <meta property="twitter:description" content="Discover Next Level Kitchens, Auckland's trusted custom kitchen specialists. From design to installation, we create bespoke kitchens and cabinetry with quality craftsmanship and transparent pricing.">
     <meta property="twitter:image" content="https://www.nextlevelkitchens.co.nz/assets/portfolio/cecilia david 2.webp">
     <meta property="twitter:image:alt" content="Next Level Kitchens - Custom Kitchen Design Auckland">
     
@@ -4792,7 +4792,110 @@
                 gap: 20px !important;
             }
         }
+
+        /* Splide Testimonial Slider Styles */
+        .testimonials-splide {
+            background: var(--white);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .testimonials-splide .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .splide-testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .splide-testimonials-header h2 {
+            color: var(--dark-grey);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .splide-full-width {
+            width: 100vw;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .splide__slide {
+            padding: 0 1rem;
+        }
+
+        .testimonial-card-splide {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card-splide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card-splide .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card-splide .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card-splide .author-name {
+            font-weight: 700;
+            color: var(--dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-card-splide .author-title {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .splide__track {
+            cursor: grab;
+        }
+
+        .splide__track:active {
+            cursor: grabbing;
+        }
+
+        @media (max-width: 768px) {
+            .splide-testimonials-header h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card-splide {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .splide-testimonials-header h2 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
+
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -4902,9 +5005,9 @@
     </section>
 
 <!-- Testimonials Section -->
-<section class="testimonials-marquee section-padding">
+<section class="testimonials-splide section-padding">
     <div class="container">
-        <div class="testimonials-header">
+        <div class="splide-testimonials-header">
             <div class="rating-badge">
                 <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
                 <span class="rating-text">Rated 5/5 by over 100+ happy homeowners</span>
@@ -4912,101 +5015,105 @@
             <h2>What our clients say about their <span style="color: #22C55E;">Next Level</span> Kitchen transformation.</h2>
         </div>
         
-        <div class="marquee-container">
-            <div class="marquee-track">
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">Next Level Kitchens renovated our kitchen and we couldn't be happier.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Tracy Manu</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">Great service and value!</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Roshni B.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">Communication throughout the process was fantastic and we highly recommend them.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Tracy M.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">I couldn't be happier with the end result. The whole process was seamless. I would highly recommend them to anyone.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Jen B.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">They went through the design in detail with me and answered my many questions.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Des W.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">The project was installed on time and on budget. We highly recommend Next Level Kitchens.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Stuart & Karin H.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Duplicate cards for seamless loop -->
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">For the longest time I would stand outside my kitchen and imagine what it would look like.</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">CAROL V</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card-marquee">
-                    <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">Next Level Kitchen renovated our</p>
-                    <div class="author-info">
-                        <div class="author-details">
-                            <h4 class="author-name">Tracy M.</h4>
-                            <p class="author-title">Auckland Homeowner</p>
-                        </div>
-                    </div>
+        <div class="splide-full-width">
+            <div class="splide" id="testimonial-splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                    
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">Next Level Kitchens renovated our kitchen and we couldn't be happier. The attention to detail and quality craftsmanship exceeded our expectations.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Tracy Manu</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">Great service and value! The team was professional, on time, and delivered exactly what we wanted. Highly recommend!</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Roshni B.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">Communication throughout the process was fantastic and we highly recommend them. They made our dream kitchen a reality.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Tracy M.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">I couldn't be happier with the end result. The whole process was seamless. I would highly recommend them to anyone considering a kitchen renovation.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Jen B.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">They went through the design in detail with me and answered my many questions. Outstanding workmanship and customer service.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Des W.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">For the longest time I would stand outside my kitchen and imagine what it would look like. They made my vision come true!</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Carol V.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">The project was installed on time and on budget. We highly recommend Next Level Kitchens for anyone looking for quality work.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Stuart & Karin H.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="splide__slide">
+                            <div class="testimonial-card-splide">
+                                <span class="testimonial-stars">★★★★★</span>
+                                <p class="testimonial-text">Transparent, communicative, and customer-focused. We knew exactly what we were getting for our budget — and the end result was better than imagined.</p>
+                                <div class="author-info">
+                                    <h4 class="author-name">Sarah K.</h4>
+                                    <p class="author-title">Auckland Homeowner</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 
      <!-- Process Section -->
@@ -5050,20 +5157,12 @@
                      <div class="step-number">5</div>
                      <div class="step-content">
                          <h3>Installation</h3>
-                         <p>Our expert installers bring your kitchen to life with precision workmanship, seamless finishes, and on-time delivery.</p>
+                         <p>Our expert installers bring your vision to life with precision and care, ensuring every detail meets our high standards.</p>
                      </div>
-                 </div>
-             </div>
-             
-             <div class="process-cta">
-                 <div class="section-buttons">
-                     <button class="btn btn-primary" onclick="openQuotePopup()">GET YOUR FREE ESTIMATE</button>
-                     <a href="tel:+64211012617" class="btn btn-phone"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call Now 021 101-2617</a>
                  </div>
              </div>
          </div>
      </section>
-
 
     <!-- Gallery Modal -->
     <div id="galleryModal" class="gallery-modal">
@@ -6016,6 +6115,71 @@
             }
         }
 
+    </script>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Splide AutoScroll Extension -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    
+    <!-- Initialize Splide Testimonial Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var testimonialSplide = new Splide('#testimonial-splide', {
+                type: 'loop',           // Loop the slides
+                drag: 'free',          // Free drag mode
+                focus: 'center',       // Focus on center
+                perPage: 4,            // Show 4 slides at once on desktop
+                gap: '2rem',           // Gap between slides
+                pagination: false,     // Hide pagination dots
+                arrows: false,         // Hide arrows
+                autoScroll: {
+                    speed: 1,          // Auto scroll speed (pixels per frame)
+                    pauseOnHover: true, // Pause when hovering
+                    pauseOnFocus: true  // Pause when focused
+                },
+                breakpoints: {
+                    1200: {
+                        perPage: 3,    // 3 slides on smaller desktops
+                        gap: '1.5rem'
+                    },
+                    1024: {
+                        perPage: 2,    // 2 slides on tablets
+                        gap: '1.5rem'
+                    },
+                    768: {
+                        perPage: 1,    // 1 slide on mobile
+                        gap: '1rem'
+                    }
+                }
+            });
+
+            // Mount with AutoScroll extension
+            testimonialSplide.mount(window.splide.Extensions);
+
+            // Optional: Add intersection observer to pause/resume when out of viewport
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            // Resume auto scroll when visible
+                            if (testimonialSplide.Components.AutoScroll) {
+                                testimonialSplide.Components.AutoScroll.play();
+                            }
+                        } else {
+                            // Pause auto scroll when not visible
+                            if (testimonialSplide.Components.AutoScroll) {
+                                testimonialSplide.Components.AutoScroll.pause();
+                            }
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // Trigger when 10% of element is visible
+                });
+
+                observer.observe(document.getElementById('testimonial-splide'));
+            }
+        });
     </script>
 </body>
 </html>
