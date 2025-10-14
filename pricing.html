@@ -6035,40 +6035,80 @@
 
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        // Fallback in case CDN fails
+        if (typeof Splide === 'undefined') {
+            console.error('Splide failed to load from CDN');
+        }
+    </script>
     
     <!-- Initialize Splide Testimonial Slider -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var testimonialSplide = new Splide('#testimonial-splide', {
-                type: 'loop',           // Loop the slides
-                drag: 'free',          // Free drag mode
-                focus: 'center',       // Focus on center
-                perPage: 4,            // Show 4 slides at once on desktop
-                gap: '2rem',           // Gap between slides
-                pagination: false,     // Hide pagination dots
-                arrows: false,         // Hide arrows
-                autoplay: true,        // Enable autoplay
-                interval: 3000,       // 3 seconds between slides
-                pauseOnHover: true,    // Pause when hovering
-                breakpoints: {
-                    1200: {
-                        perPage: 3,    // 3 slides on smaller desktops
-                        gap: '1.5rem'
-                    },
-                    1024: {
-                        perPage: 2,    // 2 slides on tablets
-                        gap: '1.5rem'
-                    },
-                    768: {
-                        perPage: 1,    // 1 slide on mobile
-                        gap: '1rem'
+        function initSplideSlider() {
+            console.log('Initializing Splide testimonial slider...');
+            
+            // Check if Splide is loaded
+            if (typeof Splide === 'undefined') {
+                console.error('Splide is not loaded!');
+                return;
+            }
+            
+            // Check if element exists
+            const splideElement = document.getElementById('testimonial-splide');
+            if (!splideElement) {
+                console.error('testimonial-splide element not found!');
+                return;
+            }
+            
+            console.log('Splide element found:', splideElement);
+            
+            try {
+                var testimonialSplide = new Splide('#testimonial-splide', {
+                    type: 'loop',           // Loop the slides
+                    drag: 'free',          // Free drag mode
+                    focus: 'center',       // Focus on center
+                    perPage: 4,            // Show 4 slides at once on desktop
+                    gap: '2rem',           // Gap between slides
+                    pagination: false,     // Hide pagination dots
+                    arrows: false,         // Hide arrows
+                    autoplay: true,        // Enable autoplay
+                    interval: 3000,       // 3 seconds between slides
+                    pauseOnHover: true,    // Pause when hovering
+                    breakpoints: {
+                        1200: {
+                            perPage: 3,    // 3 slides on smaller desktops
+                            gap: '1.5rem'
+                        },
+                        1024: {
+                            perPage: 2,    // 2 slides on tablets
+                            gap: '1.5rem'
+                        },
+                        768: {
+                            perPage: 1,    // 1 slide on mobile
+                            gap: '1rem'
+                        }
                     }
-                }
-            });
+                });
 
-            // Mount the slider
-            testimonialSplide.mount();
+                // Mount the slider
+                testimonialSplide.mount();
+                console.log('Splide testimonial slider mounted successfully!');
+            } catch (error) {
+                console.error('Error creating/mounting Splide slider:', error);
+            }
+        }
+
+        // Try multiple initialization methods
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(initSplideSlider, 100);
         });
+        
+        // Fallback initialization
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initSplideSlider);
+        } else {
+            initSplideSlider();
+        }
     </script>
 </body>
 </html>
