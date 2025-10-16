@@ -1950,11 +1950,12 @@
 
         /* Testimonials Marquee Section */
         .testimonials-marquee {
-            background: var(--white);
+            background: #f8f9fa;
             color: var(--text-color);
             overflow: hidden;
             position: relative;
         }
+
 
 
         .testimonials-marquee .container {
@@ -2003,7 +2004,7 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
-            padding: 2rem 0;
+            padding: 2rem 0 6rem 0;
             margin-left: calc(-50vw + 50%);
         }
 
@@ -2034,8 +2035,7 @@
             min-width: 400px;
             max-width: 400px;
             color: var(--text-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f0f0f0;
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -2043,8 +2043,8 @@
 
 
         .testimonial-card-marquee:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            border-color: #22C55E;
         }
 
         .quote-icon {
@@ -2609,68 +2609,131 @@
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .pricing-guarantee {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            min-width: 300px;
+
+
+        /* Light Guarantee Section */
+        .guarantee-light-section {
+            background: #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
 
-        .guarantee-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #22C55E, #16a34a);
+        .guarantee-light {
+            background: none;
+            border-radius: 0;
+            padding: 2.5rem 0;
+            margin: 0;
+            position: relative;
+            overflow: visible;
+            box-shadow: none;
+            border: none;
+        }
+
+        .guarantee-light-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .guarantee-light-header {
+            margin-bottom: 2rem;
+        }
+
+        .guarantee-light-text h4 {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .guarantee-light-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guarantee-light-feature {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .guarantee-light-feature:hover {
+            background: var(--white);
+            transform: translateY(-5px);
+            border-color: #22C55E;
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15);
+        }
+
+        .guarantee-light-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(34, 197, 94, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+            color: #22C55E;
+            margin: 0 auto 1rem auto;
+            border: 2px solid rgba(34, 197, 94, 0.2);
         }
 
-        .guarantee-text h4 {
-            margin: 0 0 0.5rem 0;
-            color: #374151;
-            font-size: 1.1rem;
-            font-weight: 700;
+        .guarantee-light-feature-title {
+            color: var(--dark-grey);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
-        .guarantee-text p {
-            margin: 0;
-            color: #000000;
+        .guarantee-light-feature-desc {
+            color: var(--text-light);
             font-size: 0.9rem;
             line-height: 1.4;
-        }
-
-        .guarantee-text ul {
-            list-style: none;
-            padding: 0;
             margin: 0;
         }
 
-        .guarantee-text li {
-            margin: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #374151;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
+        /* Mobile responsiveness for light guarantee section */
+        @media (max-width: 768px) {
+            .guarantee-light {
+                padding: 2rem 0;
+            }
 
-        .guarantee-text li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #22C55E;
-            font-weight: bold;
-            font-size: 1rem;
-        }
+            .guarantee-light-content {
+                padding: 0 1.5rem;
+            }
 
-        .guarantee-text li strong {
-            color: #22C55E;
-            font-weight: 600;
+            .guarantee-light-text h4 {
+                font-size: 1.6rem;
+                letter-spacing: 0.5px;
+            }
+
+            .guarantee-light-features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .guarantee-light-feature {
+                padding: 1.5rem;
+            }
+
+            .guarantee-light-feature-icon {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         /* FAQ Section */
@@ -4825,7 +4888,113 @@
                 gap: 20px !important;
             }
         }
+
+        /* Splide Testimonial Slider Styles */
+        .testimonials-splide {
+            background: var(--white);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .testimonials-splide .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .splide-testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Full width splide container */
+        .splide-full-width {
+            width: 100vw;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .splide-testimonials-header h2 {
+            color: var(--dark-grey);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .splide__slide {
+            padding: 0 1rem;
+        }
+
+        .testimonial-card-splide {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card-splide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card-splide .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card-splide .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card-splide .author-name {
+            font-weight: 700;
+            color: var(--dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-card-splide .author-title {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Splide drag cursor */
+        .splide__track {
+            cursor: grab;
+        }
+
+        .splide__track:active {
+            cursor: grabbing;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .splide-testimonials-header h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card-splide {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .splide-testimonials-header h2 {
+                font-size: 1.75rem;
+            }
+        }
     </style>
+
+    <!-- Splide CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -4892,8 +5061,8 @@
         </div>
     </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials-marquee section-padding">
+<!-- OLD Testimonials Section - TO BE REMOVED -->
+<section class="testimonials-marquee section-padding" style="display: none;">
     <div class="container">
         <div class="testimonials-header">
             <div class="rating-badge">
@@ -4907,10 +5076,10 @@
             <div class="marquee-track">
                 <div class="testimonial-card-marquee">
                     <span class="testimonial-stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                    <p class="testimonial-text">Next Level Kitchens renovated our kitchen and we couldn't be happier.</p>
+                    <p class="testimonial-text">During renos we had two kitchen companies come thru but they couldn't come up with a design.</p>
                     <div class="author-info">
                         <div class="author-details">
-                            <h4 class="author-name">Tracy Manu</h4>
+                            <h4 class="author-name">Evan Pahina</h4>
                             <p class="author-title">Auckland Homeowner</p>
                         </div>
                     </div>
@@ -4998,6 +5167,116 @@
     </div>
 </section>
 
+<!-- Testimonials Section -->
+<section class="testimonials-splide section-padding">
+    <div class="container">
+        <div class="splide-testimonials-header">
+            <div class="rating-badge">
+                <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
+                <span class="rating-text">Rated 5/5 by over 100+ happy homeowners</span>
+            </div>
+            <h2>What our clients say about their <span style="color: #22C55E;">Next Level</span> Kitchen transformation.</h2>
+        </div>
+        
+        <div class="splide-full-width">
+            <div class="splide" id="testimonial-splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                    
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">During renos we had two kitchen companies come thru but they couldn't come up with a design.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Evan Pahina</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">Great service and value! The team was professional, on time, and delivered exactly what we wanted. Highly recommend!</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Roshni B.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">Communication throughout the process was fantastic and we highly recommend them. They made our dream kitchen a reality.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Tracy M.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">I couldn't be happier with the end result. The whole process was seamless. I would highly recommend them to anyone considering a kitchen renovation.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Jen B.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">They went through the design in detail with me and answered my many questions. Outstanding workmanship and customer service.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Des W.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">For the longest time I would stand outside my kitchen and imagine what it would look like. They made my vision come true!</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Carol V.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">The project was installed on time and on budget. We highly recommend Next Level Kitchens for anyone looking for quality work.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Stuart & Karin H.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="testimonial-card-splide">
+                            <span class="testimonial-stars">★★★★★</span>
+                            <p class="testimonial-text">Transparent, communicative, and customer-focused. We knew exactly what we were getting for our budget — and the end result was better than imagined.</p>
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah K.</h4>
+                                <p class="author-title">Auckland Homeowner</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Review Section -->
 <section class="review-section">
@@ -5022,8 +5301,8 @@
         </div>
         <div class="review-image">
             <picture>
-                            <source type="image/webp" srcset="assets/portfolio/kitchen 3.webp" sizes="(max-width: 768px) 100vw, 400px">
-                            <img src="assets/portfolio/kitchen 3.webp" width="400" height="350" alt="Luxury Kitchen Design Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09446-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09446-HDR.webp" width="400" height="350" alt="Contemporary Kitchen Design Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
                         </picture>
         </div>
     </div>
@@ -5058,7 +5337,7 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/370/wardrobe_1560.webp" alt="Wardrobes Auckland" class="service-image">
+                       <img src="assets/images/wardrobe.webp" alt="Wardrobes Auckland" class="service-image">
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Wardrobes</div>
                         </div>
@@ -5075,7 +5354,7 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/370/beskpoke_1560.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                       <img src="assets/images/cabinetry.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Bespoke Cabinetry</div>
                         </div>
@@ -5393,6 +5672,293 @@
                         </div>
                     </div>
                     
+                    <!-- New Portfolio Images -->
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09293-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09293-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09293-HDR.webp" width="400" height="350" alt="New Kitchen Design Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>New Design</h3>
+                                <p>Latest Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09311-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09311-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09311-HDR.webp" width="400" height="350" alt="Modern Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Modern Style</h3>
+                                <p>Contemporary Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09314-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09314-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09314-HDR.webp" width="400" height="350" alt="Luxury Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Luxury Design</h3>
+                                <p>Premium Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09377.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09377.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09377.webp" width="400" height="350" alt="Bespoke Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Bespoke Design</h3>
+                                <p>Custom Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09395-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09395-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09395-HDR.webp" width="400" height="350" alt="Elegant Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Elegant Style</h3>
+                                <p>Sophisticated Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09446-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09446-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09446-HDR.webp" width="400" height="350" alt="Contemporary Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Contemporary</h3>
+                                <p>Modern Excellence</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09470.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09470.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09470.webp" width="400" height="350" alt="Premium Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Premium Design</h3>
+                                <p>Luxury Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09473-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09473-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09473-HDR.webp" width="400" height="350" alt="Stylish Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Stylish Design</h3>
+                                <p>Modern Aesthetics</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09476.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09476.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09476.webp" width="400" height="350" alt="Quality Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Quality Design</h3>
+                                <p>Exceptional Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09485.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09485.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09485.webp" width="400" height="350" alt="Custom Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Custom Design</h3>
+                                <p>Personalized Style</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09503-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09503-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09503-HDR.webp" width="400" height="350" alt="Innovative Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Innovative Design</h3>
+                                <p>Creative Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09506-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09506-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09506-HDR.webp" width="400" height="350" alt="Refined Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Refined Design</h3>
+                                <p>Elegant Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09536.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09536.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09536.webp" width="400" height="350" alt="Professional Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Professional Design</h3>
+                                <p>Expert Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09566-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09566-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09566-HDR.webp" width="400" height="350" alt="Timeless Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Timeless Design</h3>
+                                <p>Classic Beauty</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09572-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09572-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09572-HDR.webp" width="400" height="350" alt="Sophisticated Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Sophisticated Design</h3>
+                                <p>Refined Elegance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09620.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09620.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09620.webp" width="400" height="350" alt="Artistic Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Artistic Design</h3>
+                                <p>Creative Vision</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09683-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09683-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09683-HDR.webp" width="400" height="350" alt="Exquisite Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Exquisite Design</h3>
+                                <p>Fine Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09707.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09707.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09707.webp" width="400" height="350" alt="Masterful Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Masterful Design</h3>
+                                <p>Expert Artistry</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09728-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09728-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09728-HDR.webp" width="400" height="350" alt="Distinguished Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Distinguished Design</h3>
+                                <p>Outstanding Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09797-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09797-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09797-HDR.webp" width="400" height="350" alt="Exceptional Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Exceptional Design</h3>
+                                <p>Superior Craftsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09815-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09815-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09815-HDR.webp" width="400" height="350" alt="Remarkable Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Remarkable Design</h3>
+                                <p>Outstanding Results</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-image="assets/portfolio/new/DSC09977-HDR.webp">
+                        <picture>
+                            <source type="image/webp" srcset="assets/portfolio/new/DSC09977-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                            <img src="assets/portfolio/new/DSC09977-HDR.webp" width="400" height="350" alt="Stunning Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                        </picture>
+                        <div class="gallery-overlay">
+                            <div class="gallery-overlay-content">
+                                <h3>Stunning Design</h3>
+                                <p>Breathtaking Beauty</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Duplicate items for seamless loop -->
                     <div class="gallery-item" data-image="assets/portfolio/cecilia david 2.webp">
                         <picture>
@@ -5516,6 +6082,72 @@
                     <div class="gallery-overlay-content">
                         <h3>Contemporary</h3>
                         <p>Clean & Modern</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional New Portfolio Images -->
+            <div class="gallery-item" data-image="assets/portfolio/new/DSC09293-HDR.webp">
+                <picture>
+                    <source type="image/webp" srcset="assets/portfolio/new/DSC09293-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                    <img src="assets/portfolio/new/DSC09293-HDR.webp" width="400" height="350" alt="New Kitchen Design Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                </picture>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-content">
+                        <h3>New Design</h3>
+                        <p>Latest Excellence</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-image="assets/portfolio/new/DSC09311-HDR.webp">
+                <picture>
+                    <source type="image/webp" srcset="assets/portfolio/new/DSC09311-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                    <img src="assets/portfolio/new/DSC09311-HDR.webp" width="400" height="350" alt="Modern Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                </picture>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-content">
+                        <h3>Modern Style</h3>
+                        <p>Contemporary Design</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-image="assets/portfolio/new/DSC09314-HDR.webp">
+                <picture>
+                    <source type="image/webp" srcset="assets/portfolio/new/DSC09314-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                    <img src="assets/portfolio/new/DSC09314-HDR.webp" width="400" height="350" alt="Luxury Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                </picture>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-content">
+                        <h3>Luxury Design</h3>
+                        <p>Premium Quality</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-image="assets/portfolio/new/DSC09377.webp">
+                <picture>
+                    <source type="image/webp" srcset="assets/portfolio/new/DSC09377.webp" sizes="(max-width: 768px) 100vw, 400px">
+                    <img src="assets/portfolio/new/DSC09377.webp" width="400" height="350" alt="Bespoke Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                </picture>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-content">
+                        <h3>Bespoke Design</h3>
+                        <p>Custom Craftsmanship</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-image="assets/portfolio/new/DSC09395-HDR.webp">
+                <picture>
+                    <source type="image/webp" srcset="assets/portfolio/new/DSC09395-HDR.webp" sizes="(max-width: 768px) 100vw, 400px">
+                    <img src="assets/portfolio/new/DSC09395-HDR.webp" width="400" height="350" alt="Elegant Kitchen Auckland - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
+                </picture>
+                <div class="gallery-overlay">
+                    <div class="gallery-overlay-content">
+                        <h3>Elegant Style</h3>
+                        <p>Sophisticated Design</p>
                     </div>
                 </div>
             </div>
@@ -5711,21 +6343,53 @@
             </div>
             </div>
             
-            <div class="pricing-bottom">
-                <div class="pricing-guarantee">
-                    <div class="guarantee-text">
+            </div>
+        </div>
+    </section>
+
+    <!-- Workmanship Guarantee Section -->
+    <section class="guarantee-light-section">
+        <div class="guarantee-light">
+            <div class="guarantee-light-content">
+                <div class="guarantee-light-header">
+                    <div class="guarantee-light-text">
                         <h4>Workmanship Guarantee</h4>
-                        <ul>
-                            <li><strong>5-Year Workmanship &amp; Cabinetry</strong> – Covered against defects.</li>
-                            <li><strong>Blum Hardware: Lifetime</strong> – Backed by manufacturer guarantee.</li>
-                            <li><strong>Other Hardware: 10+ Years</strong> – Minimum manufacturer warranty.</li>
-                          </ul>
                     </div>
                 </div>
-            
-            <div class="section-buttons">
-                <button class="btn btn-primary" onclick="openQuotePopup()">Get a Free Estimate</button>
-                         <a href="tel:+64211012617" class="btn btn-phone">Call Now 021 101-2617</a>
+                
+                <div class="guarantee-light-features">
+                    <div class="guarantee-light-feature">
+                        <div class="guarantee-light-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                        </div>
+                        <div class="guarantee-light-feature-title">5-Year Workmanship &amp; Cabinetry</div>
+                        <p class="guarantee-light-feature-desc">Covered against defects in materials and craftsmanship</p>
+                    </div>
+                    
+                    <div class="guarantee-light-feature">
+                        <div class="guarantee-light-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <div class="guarantee-light-feature-title">Blum Hardware: Lifetime</div>
+                        <p class="guarantee-light-feature-desc">Backed by manufacturer guarantee for peace of mind</p>
+                    </div>
+                    
+                    <div class="guarantee-light-feature">
+                        <div class="guarantee-light-feature-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div class="guarantee-light-feature-title">Other Hardware: 10+ Years</div>
+                        <p class="guarantee-light-feature-desc">Minimum manufacturer warranty on all components</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -6706,6 +7370,71 @@
             }
         }
 
+    </script>
+
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Splide AutoScroll Extension -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    
+    <!-- Initialize Splide Testimonial Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var testimonialSplide = new Splide('#testimonial-splide', {
+                type: 'loop',           // Loop the slides
+                drag: 'free',          // Free drag mode
+                focus: 'center',       // Focus on center
+                perPage: 4,            // Show 4 slides at once on desktop
+                gap: '2rem',           // Gap between slides
+                pagination: false,     // Hide pagination dots
+                arrows: false,         // Hide arrows
+                autoScroll: {
+                    speed: 1,          // Auto scroll speed (pixels per frame)
+                    pauseOnHover: true, // Pause when hovering
+                    pauseOnFocus: true  // Pause when focused
+                },
+                breakpoints: {
+                    1200: {
+                        perPage: 3,    // 3 slides on smaller desktops
+                        gap: '1.5rem'
+                    },
+                    1024: {
+                        perPage: 2,    // 2 slides on tablets
+                        gap: '1.5rem'
+                    },
+                    768: {
+                        perPage: 1,    // 1 slide on mobile
+                        gap: '1rem'
+                    }
+                }
+            });
+
+            // Mount with AutoScroll extension
+            testimonialSplide.mount(window.splide.Extensions);
+
+            // Optional: Add intersection observer to pause/resume when out of viewport
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            // Resume auto scroll when visible
+                            if (testimonialSplide.Components.AutoScroll) {
+                                testimonialSplide.Components.AutoScroll.play();
+                            }
+                        } else {
+                            // Pause auto scroll when not visible
+                            if (testimonialSplide.Components.AutoScroll) {
+                                testimonialSplide.Components.AutoScroll.pause();
+                            }
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // Trigger when 10% of element is visible
+                });
+
+                observer.observe(document.getElementById('testimonial-splide'));
+            }
+        });
     </script>
 </body>
 </html>
