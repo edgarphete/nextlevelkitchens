@@ -1611,57 +1611,46 @@
             line-height: 1.6;
         }
 
-        .gallery-marquee-container {
-            width: 100vw;
-            overflow: hidden;
-            position: relative;
-            padding: 2rem 0;
-            margin-left: calc(-50vw + 50%);
+        .gallery-grid-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        .gallery-marquee-track {
-            display: flex;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
-            animation: galleryScroll 40s linear infinite;
-            width: max-content;
+            margin-bottom: 3rem;
         }
 
-        .gallery-marquee-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes galleryScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
+        /* Responsive grid */
+        @media (max-width: 1200px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
             }
         }
 
-        .gallery-marquee-track-reverse {
-            display: flex;
-            gap: 2rem;
-            animation: galleryScrollReverse 40s linear infinite;
-            width: max-content;
-        }
-
-        .gallery-marquee-track-reverse:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes galleryScrollReverse {
-            0% {
-                transform: translateX(-50%);
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
             }
-            100% {
-                transform: translateX(0);
+            
+            .gallery-grid-container {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
 
         .gallery-item {
-            min-width: 350px;
-            max-width: 350px;
+            width: 100%;
             height: 300px;
             background: #f8f9fa;
             border-radius: 20px;
@@ -1808,17 +1797,7 @@
             }
 
             .gallery-item {
-                min-width: 280px;
-                max-width: 280px;
                 height: 240px;
-            }
-
-            .gallery-marquee-track {
-                gap: 1.5rem;
-            }
-
-            .gallery-marquee-track-reverse {
-                gap: 1.5rem;
             }
 
             .gallery-overlay-content {
@@ -1840,17 +1819,7 @@
             }
 
             .gallery-item {
-                min-width: 250px;
-                max-width: 250px;
                 height: 200px;
-            }
-
-            .gallery-marquee-track {
-                gap: 1rem;
-            }
-
-            .gallery-marquee-track-reverse {
-                gap: 1rem;
             }
 
             .gallery-overlay-content {
@@ -4825,7 +4794,7 @@
     <section class="hero hero-1" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland's #1 Rated Kitchen Specialists</div>
+                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland's trusted kitchen specialists.</div>
                 <h1>Our Kitchen Portfolio</h1>
                 <h2 class="hero-subtext">Discover the kitchens we've brought to life across Auckland — each one designed around our clients' homes, lifestyles, and vision.</h2>
                 
@@ -4847,8 +4816,8 @@
             </div>
         </div>
         
-        <div class="gallery-marquee-container">
-                <div class="gallery-marquee-track">
+        <div class="gallery-grid-container">
+            <div class="gallery-grid">
                     <!-- Shakeela Eason Project -->
                     <div class="gallery-item" data-image="assets/portfolio/top/01 Shakeela Eason.webp">
                         <picture>
@@ -6041,8 +6010,8 @@
 
     <!-- Second Gallery Section -->
     <section class="gallery-marquee">
-        <div class="gallery-marquee-container">
-        <div class="gallery-marquee-track-reverse">
+        <div class="gallery-grid-container">
+            <div class="gallery-grid">
             <!-- Suzanne Brown TV Unit -->
             <div class="gallery-item" data-image="assets/portfolio/bottom/01 Suzanne Brown - TV Unit.webp">
                 <picture>
