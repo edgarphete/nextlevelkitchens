@@ -175,108 +175,6 @@
     </script>
     
     <style>
-        /* Splide Testimonial Slider Styles */
-        .testimonials-splide {
-            background: var(--white);
-            padding: 4rem 0;
-            overflow: hidden; /* Added for full width */
-        }
-
-        .testimonials-splide .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .splide-testimonials-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .splide-testimonials-header h2 {
-            color: #22C55E;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* Full width splide container */
-        .splide-full-width {
-            width: 100vw;
-            position: relative;
-            margin-left: calc(-50vw + 50%);
-        }
-
-        .splide__slide {
-            padding: 0 1rem;
-        }
-
-        .testimonial-card-splide {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f0f0f0;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card-splide:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .testimonial-card-splide .testimonial-stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-card-splide .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-card-splide .author-name {
-            font-weight: 700;
-            color: #22C55E;
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .testimonial-card-splide .author-title {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* Splide drag cursor */
-        .splide__track {
-            cursor: grab;
-        }
-
-        .splide__track:active {
-            cursor: grabbing;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .splide-testimonials-header h2 {
-                font-size: 2rem;
-            }
-
-            .testimonial-card-splide {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .splide-testimonials-header h2 {
-                font-size: 1.75rem;
-            }
-        }
 
         /* CSS Reset and Base Styles */
         * {
@@ -2116,211 +2014,8 @@
         }
 
 
-        /* Testimonials Marquee Section */
-        .testimonials-marquee {
-            background: var(--white);
-            color: var(--text-color);
-            overflow: hidden;
-            position: relative;
-        }
 
 
-        .testimonials-marquee .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonials-marquee .testimonials-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .rating-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--light-grey);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            margin-bottom: 2rem;
-            border: 1px solid #e0e0e0;
-        }
-
-        .star-icon {
-            color: var(--accent);
-            font-size: 1.2rem;
-        }
-
-        .rating-text {
-            color: var(--text-color);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .testimonials-marquee h2 {
-            color: #22C55E;
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin: 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .marquee-container {
-            width: 100vw;
-            overflow: hidden;
-            position: relative;
-            padding: 2rem 0;
-            margin-left: calc(-50vw + 50%);
-        }
-
-        .marquee-track {
-            display: flex;
-            gap: 2rem;
-            animation: marqueeScroll 60s linear infinite;
-            width: max-content;
-        }
-
-        .marquee-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes marqueeScroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .testimonial-card-marquee {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2rem;
-            min-width: 400px;
-            max-width: 400px;
-            color: var(--text-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-
-        .testimonial-card-marquee:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .quote-icon {
-            font-size: 4rem;
-            color: var(--primary-color);
-            font-family: serif;
-            line-height: 1;
-            margin-bottom: 1rem;
-            opacity: 0.7;
-        }
-
-        .testimonial-card-marquee .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #000000;
-            margin-bottom: 2rem;
-            font-style: normal;
-            position: relative;
-            z-index: 2;
-        }
-
-        .testimonial-stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            text-align: center;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        .author-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-
-        .author-details {
-            flex: 1;
-        }
-
-        .author-name {
-            font-weight: 600;
-            font-size: 1rem;
-            color: #000000;
-            margin: 0 0 0.25rem 0;
-        }
-
-        .author-title {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin: 0;
-            opacity: 0.8;
-        }
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-
-            .testimonials-marquee h2 {
-                font-size: 2rem;
-            }
-
-            .testimonial-card-marquee {
-                min-width: 320px;
-                max-width: 320px;
-                padding: 1.5rem;
-            }
-
-            .quote-icon {
-                font-size: 3rem;
-            }
-
-            .marquee-container {
-                width: 100%;
-                margin-left: 0;
-                padding: 1rem 0;
-            }
-
-            .marquee-track {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-                animation: none;
-                width: 100%;
-                transform: none;
-            }
-
-            .testimonial-card-marquee {
-                min-width: auto;
-                max-width: none;
-                width: 100%;
-            }
-
-            /* Hide testimonials beyond the first 5 on mobile */
-            .testimonial-card-marquee:nth-child(n+6) {
-                display: none;
-            }
-
-            .rating-badge {
-                padding: 0.4rem 0.8rem;
-            }
-
-            .rating-text {
-                font-size: 0.8rem;
-            }
-        }
 
         @media (max-width: 390px) {
             /* Mobile Header Fix for 375px and 390px */
@@ -2389,49 +2084,6 @@
 
 
 
-            .testimonials-marquee h2 {
-                font-size: 1.75rem;
-            }
-
-            .marquee-container {
-                width: 100%;
-                margin-left: 0;
-                padding: 1rem 0;
-            }
-
-            .marquee-track {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                animation: none;
-                width: 100%;
-                transform: none;
-            }
-
-            .testimonial-card-marquee {
-                min-width: auto;
-                max-width: none;
-                width: 100%;
-                padding: 1.25rem;
-            }
-
-            /* Hide testimonials beyond the first 5 on mobile */
-            .testimonial-card-marquee:nth-child(n+6) {
-                display: none;
-            }
-
-            .testimonial-card-marquee .testimonial-text {
-                font-size: 0.9rem;
-            }
-
-
-            .author-name {
-                font-size: 0.9rem;
-            }
-
-            .author-title {
-                font-size: 0.8rem;
-            }
         }
 
         /* Cross-browser compatibility */
@@ -2478,7 +2130,7 @@
         }
 
         .pricing h2 {
-            color: #22C55E;
+            color: var(--dark-grey);
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -2640,7 +2292,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            color: #22C55E;
+            color: var(--dark-grey);
             font-size: 0.95rem;
             line-height: 1.4;
         }
@@ -2670,18 +2322,21 @@
             margin-top: 2rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            flex-direction: column;
             flex-wrap: wrap;
             gap: 2rem;
             padding: 2rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
         }
 
         .pricing-guarantee {
             display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
             align-items: center;
-            flex: 1;
-            min-width: 300px;
         }
 
         .guarantee-icon {
@@ -4964,296 +4619,190 @@
         </div>
     </section>
 
-        <!-- Pricing Section -->
-        <section class="pricing section-padding" id="pricing">
-            <div class="container">
-                <div class="pricing-header">
-                <h2>Transparent Pricing That Fits Your Budget</h2>
-                <p class="pricing-subtitle">We believe in clarity from day one. Our pricing tiers help you choose a kitchen that matches your style, needs, and budget.</p>
-                </div>
-                
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div class="pricing-header-content">
-                            <div class="pricing-icon">
-                                <picture>
+    <!-- Pricing Section -->
+    <section class="pricing section-padding" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+            <h2>Transparent Pricing That Fits Your Budget</h2>
+            <p class="pricing-subtitle">We believe in clarity from day one. Our pricing tiers help you choose a kitchen that matches your style, needs, and budget.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header-content">
+                        <div class="pricing-icon">
+                            <picture>
                             <source type="image/webp" srcset="assets/370/Everyday.webp" sizes="(max-width: 768px) 100vw, 50vw">
                             <img src="assets/370/Everyday.webp" width="600" height="400" alt="Standard Kitchen Package" class="img-cover" decoding="async" loading="lazy">
                         </picture>
-                            </div>
-                        <div class="pricing-title">Everyday</div>
-                        <div class="pricing-price">$15K - $25K</div>
-                        <div class="pricing-description">
-                                Perfect for first-time renovators looking for quality and value
                         </div>
+                    <div class="pricing-title">Everyday</div>
+                    <div class="pricing-price">$15K - $25K</div>
+                    <div class="pricing-description">
+                            Perfect for first-time renovators looking for quality and value
+                    </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Quality melamine cabinetry
                         </div>
-                        
-                        <div class="pricing-features">
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Quality melamine cabinetry
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Soft-close doors & drawers
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Durable laminate countertops
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Standard handles & hardware
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Professional installation
-                            </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Soft-close doors & drawers
                         </div>
-                        
-                        <div class="pricing-cta">
-                        <button class="btn btn-outline" onclick="openQuotePopup()">Get a free estimate</button>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Durable laminate countertops
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Standard handles & hardware
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Professional installation
                         </div>
                     </div>
                     
-                    <div class="pricing-card featured">
-                        <div class="pricing-header-content">
-                            <div class="pricing-icon">
-                                <picture>
+                    <div class="pricing-cta">
+                    <button class="btn btn-outline" onclick="openQuotePopup()">Get a free estimate</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-header-content">
+                        <div class="pricing-icon">
+                            <picture>
                             <source type="image/webp" srcset="assets/370/Stylish.webp" sizes="(max-width: 768px) 100vw, 400px">
                             <img src="assets/370/Stylish.webp" width="400" height="350" alt="Upgrade Kitchen Package - Quality craftsmanship by Next Level Kitchens" class="img-cover" decoding="async" loading="lazy">
                         </picture>
-                            </div>
-                        <div class="pricing-title">Stylish</div>
-                        <div class="pricing-price">$25K - $35K</div>
-                        <div class="pricing-description">
-                                Enhanced features and premium materials for the discerning homeowner
                         </div>
+                    <div class="pricing-title">Stylish</div>
+                    <div class="pricing-price">$25K - $35K</div>
+                    <div class="pricing-description">
+                            Enhanced features and premium materials for the discerning homeowner
+                    </div>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Premium engineered stone benchtops
                         </div>
-                        
-                        <div class="pricing-features">
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Premium engineered stone benchtops
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Blum premium hardware
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                LED under-cabinet lighting
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Custom handle selection
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Optimized storage solutions
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Extended warranty coverage
-                            </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Blum premium hardware
                         </div>
-                        
-                        <div class="pricing-cta">
-                        <button class="btn btn-primary" onclick="openQuotePopup()">Get a free estimate</button>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            LED under-cabinet lighting
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Custom handle selection
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Optimized storage solutions
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Extended warranty coverage
                         </div>
                     </div>
                     
-                    <div class="pricing-card">
-                        <div class="pricing-header-content">
-                            <div class="pricing-icon">
-                                <picture>
+                    <div class="pricing-cta">
+                    <button class="btn btn-primary" onclick="openQuotePopup()">Get a free estimate</button>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header-content">
+                        <div class="pricing-icon">
+                            <picture>
                             <source type="image/webp" srcset="assets/370/Showpiece.webp" sizes="(max-width: 768px) 100vw, 50vw">
                             <img src="assets/370/Showpiece.webp" width="600" height="400" alt="Designer Kitchen Package" class="img-cover" decoding="async" loading="lazy">
                         </picture>
-                            </div>
-                        <div class="pricing-title">Showpiece</div>
-                        <div class="pricing-price">$35K+</div>
-                        <div class="pricing-description">
-                                Luxury bespoke solutions with premium materials and advanced features
                         </div>
-                        </div>
-                        
-                        <div class="pricing-features">
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Bespoke cabinetry design
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Natural stone benchtops
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Premium Blum mechanisms
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Advanced lighting systems
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Smart storage innovations
-                            </div>
-                            <div class="feature-item">
-                                <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
-                                    <path d="M20 6L9 17l-5-5"/>
-                                </svg>
-                                Lifetime craftsmanship guarantee
-                            </div>
-                        </div>
-                        
-                        <div class="pricing-cta">
-                        <button class="btn btn-outline" onclick="openQuotePopup()">Get a free estimate</button>
+                    <div class="pricing-title">Showpiece</div>
+                    <div class="pricing-price">$35K+</div>
+                    <div class="pricing-description">
+                            Luxury bespoke solutions with premium materials and advanced features
                     </div>
-                </div>
-                </div>
-                
-                <div class="pricing-bottom">
-                    <div class="pricing-guarantee">
-                        <div class="guarantee-text">
-                            <h4>Workmanship Guarantee</h4>
-                            <p>We'll match any comparable quote from licensed Auckland kitchen specialists</p>
+                    </div>
+                    
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Bespoke cabinetry design
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Natural stone benchtops
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Premium Blum mechanisms
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Advanced lighting systems
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Smart storage innovations
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                            Lifetime craftsmanship guarantee
                         </div>
                     </div>
-                
-                <div class="section-buttons">
-                    <button class="btn btn-primary" onclick="openQuotePopup()">Get a Free Estimate</button>
-                             <a href="tel:+64211012617" class="btn btn-phone">Call Now 021 101-2617</a>
-                    </div>
+                    
+                    <div class="pricing-cta">
+                    <button class="btn btn-outline" onclick="openQuotePopup()">Get a free estimate</button>
                 </div>
+            </div>
+            </div>
+            
+          
             </div>
         </section>    
-
-<!-- Testimonials Section -->
-<section class="testimonials-splide section-padding">
-    <div class="container">
-        <div class="splide-testimonials-header">
-            <div class="rating-badge">
-                <span class="star-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                <span class="rating-text">Rated 5/5 by over 100+ happy homeowners</span>
-            </div>
-            <h2>What our clients say about their <span style="color: #22C55E;">Next Level</span> Kitchen transformation.</h2>
-        </div>
-        
-        <div class="splide-full-width">
-            <div class="splide" id="testimonial-splide">
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">During renos we had two kitchen companies come thru but they couldn't come up with a design.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Evan Pahina</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">Great service and value! The team was professional and delivered exactly what we wanted.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Roshni B.</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">Communication throughout the process was fantastic and we highly recommend them.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Tracy M.</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">I couldn't be happier with the end result. The whole process was seamless. I would highly recommend them to anyone.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Jen B.</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">They went through the design in detail with me and answered my many questions.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Des W.</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                        
-                        <li class="splide__slide">
-                            <div class="testimonial-card-splide">
-                                <span class="testimonial-stars">★★★★★</span>
-                                <p class="testimonial-text">The project was installed on time and on budget. We highly recommend Next Level Kitchens.</p>
-                                <div class="author-info">
-                                    <h4 class="author-name">Stuart & Karin H.</h4>
-                                    <p class="author-title">Auckland Homeowner</p>
-                                </div>
-                            </div>
-                        </li>
-                
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
     <!-- Lead Capture Form Section -->
     <section class="quote-form-section section-padding" id="quote-form">
@@ -6042,73 +5591,5 @@
         }
     </script>
     
-    <!-- Initialize Splide Testimonial Slider -->
-    <script>
-        function initSplideSlider() {
-            console.log('Initializing Splide testimonial slider...');
-            
-            // Check if Splide is loaded
-            if (typeof Splide === 'undefined') {
-                console.error('Splide is not loaded!');
-                return;
-            }
-            
-            // Check if element exists
-            const splideElement = document.getElementById('testimonial-splide');
-            if (!splideElement) {
-                console.error('testimonial-splide element not found!');
-                return;
-            }
-            
-            console.log('Splide element found:', splideElement);
-            
-            try {
-                var testimonialSplide = new Splide('#testimonial-splide', {
-                    type: 'loop',           // Loop the slides
-                    drag: 'free',          // Free drag mode
-                    focus: 'center',       // Focus on center
-                    perPage: 4,            // Show 4 slides at once on desktop
-                    gap: '2rem',           // Gap between slides
-                    pagination: false,     // Hide pagination dots
-                    arrows: false,         // Hide arrows
-                    autoplay: true,        // Enable autoplay
-                    interval: 3000,       // 3 seconds between slides
-                    pauseOnHover: true,    // Pause when hovering
-                    breakpoints: {
-                        1200: {
-                            perPage: 3,    // 3 slides on smaller desktops
-                            gap: '1.5rem'
-                        },
-                        1024: {
-                            perPage: 2,    // 2 slides on tablets
-                            gap: '1.5rem'
-                        },
-                        768: {
-                            perPage: 1,    // 1 slide on mobile
-                            gap: '1rem'
-                        }
-                    }
-                });
-
-                // Mount the slider
-                testimonialSplide.mount();
-                console.log('Splide testimonial slider mounted successfully!');
-            } catch (error) {
-                console.error('Error creating/mounting Splide slider:', error);
-            }
-        }
-
-        // Try multiple initialization methods
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(initSplideSlider, 100);
-        });
-        
-        // Fallback initialization
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initSplideSlider);
-        } else {
-            initSplideSlider();
-        }
-    </script>
 </body>
 </html>
