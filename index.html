@@ -1694,6 +1694,97 @@
             transform: translateY(0);
         } */
 
+        /* New hover effect with brightness and magnifying glass */
+        .gallery-item:hover img {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 11;
+        }
+
+        .gallery-item:hover::after,
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        /* Smaller desktop screens (13-14 inch laptops) */
+        @media (max-width: 1440px) and (min-width: 1200px) {
+            .service-card p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            .feature-tag {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.6rem;
+            }
+            
+            /* Testimonial cards font size reduction */
+            .testimonial-card-splide .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .testimonial-card-splide .author-name {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+            
+            .testimonial-card-splide .author-title {
+                font-size: 0.8rem;
+            }
+            
+            .testimonial-card-marquee .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .testimonial-card-marquee .author-name {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+            
+            .author-title {
+                font-size: 0.8rem;
+            }
+        }
+
         .gallery-overlay-content h3 {
             font-size: 1.3rem;
             font-weight: 700;
