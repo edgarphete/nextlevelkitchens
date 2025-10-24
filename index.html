@@ -1168,11 +1168,56 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-bottom: 4rem;
             position: relative;
             z-index: 2;
+        }
+
+        /* Desktop: 4 columns in one row */
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Tablet: 2 columns */
+        @media (max-width: 1199px) and (min-width: 769px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 column */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Services section - minimal horizontal spacing for maximum card width */
+        .services .container {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        /* Desktop: minimal spacing for maximum width utilization */
+        @media (min-width: 1200px) {
+            .services .container {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
+        }
+
+        /* Large desktop: almost no spacing for full width utilization */
+        @media (min-width: 1400px) {
+            .services .container {
+                padding-left: 0.125rem;
+                padding-right: 0.125rem;
+                max-width: 1600px;
+            }
         }
 
          .service-card {
@@ -1539,7 +1584,7 @@
         .gallery-marquee-track {
             display: flex;
             gap: 2rem;
-            animation: galleryScroll 80s linear infinite;
+            animation: galleryScroll 120s linear infinite;
             width: max-content;
         }
 
@@ -1559,7 +1604,7 @@
         .gallery-marquee-track-reverse {
             display: flex;
             gap: 2rem;
-            animation: galleryScrollReverse 80s linear infinite;
+            animation: galleryScrollReverse 120s linear infinite;
             width: max-content;
         }
 
@@ -1796,10 +1841,10 @@
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
             .gallery-marquee-track {
-                animation-duration: 80s;
+                animation-duration: 180s;
             }
             .gallery-marquee-track-reverse {
-                animation-duration: 80s;
+                animation-duration: 180s;
             }
         }
 
@@ -3515,10 +3560,6 @@
                  gap: 1rem;
              }
 
-             .services-grid {
-                 grid-template-columns: repeat(2, 1fr);
-             }
-
              .process-grid {
                  grid-template-columns: repeat(2, 1fr);
              }
@@ -3988,10 +4029,6 @@
             }
 
 
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -4078,10 +4115,6 @@
             .about-stats {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
             }
 
             .process-grid {
@@ -4343,11 +4376,6 @@
                  grid-template-columns: 1fr;
                  gap: 1rem;
                  margin-top: 2rem;
-             }
-
-             .services-grid {
-                 grid-template-columns: 1fr;
-                 gap: 1.5rem;
              }
 
              .process-grid {
@@ -5003,6 +5031,9 @@
         }
     </style>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 </head>
@@ -5297,15 +5328,15 @@
                 <p>We deliver kitchens built with premium materials and meticulous craftsmanship.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Expertise</h3>
+                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: text-top; margin-top: -2px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Expertise</h3>
                 <p>Our experienced designers and consultants guide you through every step of the process.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
+                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: text-top; margin-top: -2px;"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>Innovation</h3>
                 <p>We stay ahead of the curve with the latest design trends, hardware, and technology.</p>
             </div>
             <div class="review-item">
-                <h3><svg width="24" height="24" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="margin-right: 8px; vertical-align: middle;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Pricing</h3>
+                <h3><i class="fas fa-dollar-sign" style="margin-right: 8px; color: #007bff; font-size: 20px; vertical-align: text-top; margin-top: -2px;"></i>Pricing</h3>
                 <p>A dream kitchen doesn't have to be out of reach. With transparent pricing and flexible options, we create beautiful spaces tailored to suit a variety of budgets.</p>
             </div>
         </div>
@@ -5324,7 +5355,7 @@
          <div class="container">
              <div class="services-header">
                  <h2>What We Do</h2>
-                 <p class="services-subtitle">From first sketch to final installation, we design and build bespoke kitchens with precision, craftsmanship, and functionality tailored to your lifestyle.</p>
+                 <p class="services-subtitle">From first sketch to final installation, we design and build bespoke kitchens, laundries, wardrobes with precision, craftsmanship, and functionality tailored to your lifestyle.</p>
              </div>
              
              <div class="services-grid">
@@ -5347,7 +5378,24 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/images/wardrobe.webp" alt="Wardrobes Auckland" class="service-image">
+                       <img src="assets/images/cabinetry2.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                        <div class="service-image-overlay">
+                            <div class="service-overlay-text">Bespoke Cabinetry</div>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Bespoke Cabinetry</h3>
+                         <p>From statement islands to specialized storage solutions, our custom cabinetry is designed and built with precision to elevate any space in your home.</p>
+                         <div class="service-features">
+                             <span class="feature-tag">Handcrafted</span>
+                             <span class="feature-tag">Seamless Fit</span>
+                             <span class="feature-tag">Built to Last</span>
+                         </div>
+                     </div>
+                 </div>
+                <div class="service-card">
+                   <div class="service-image-wrapper">
+                       <img src="assets/images/wardrobe2.webp" alt="Wardrobes Auckland" class="service-image">
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Wardrobes</div>
                         </div>
@@ -5364,18 +5412,18 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/images/cabinetry.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                       <img src="assets/images/laundries.webp" alt="Laundries Auckland" class="service-image">
                         <div class="service-image-overlay">
-                            <div class="service-overlay-text">Bespoke Cabinetry</div>
+                            <div class="service-overlay-text">Laundries</div>
                         </div>
                     </div>
                     <div class="service-content">
-                        <h3>Bespoke Cabinetry</h3>
-                         <p>From statement islands to specialized storage solutions, our custom cabinetry is designed and built with precision to elevate any space in your home.</p>
+                        <h3>Laundries</h3>
+                         <p>Create a functional and stylish laundry space that makes household chores a pleasure. Our custom laundry designs maximize efficiency while maintaining beautiful aesthetics.</p>
                          <div class="service-features">
-                             <span class="feature-tag">Handcrafted</span>
-                             <span class="feature-tag">Seamless Fit</span>
-                             <span class="feature-tag">Built to Last</span>
+                             <span class="feature-tag">Smart Storage</span>
+                             <span class="feature-tag">Efficient Layout</span>
+                             <span class="feature-tag">Durable Finishes</span>
                          </div>
                      </div>
                  </div>
@@ -5404,7 +5452,7 @@
                      <div class="step-number">1</div>
                      <div class="step-content">
                          <h3>Consultation</h3>
-                         <p>We start by listening — understanding your lifestyle, style preferences, and budget so we can lay the foundation for your dream kitchen.</p>
+                         <p>We start by listening & understanding your lifestyle, style preferences, and budget so we can lay the foundation for your dream kitchen.</p>
                      </div>
                  </div>
                  <div class="process-step">
