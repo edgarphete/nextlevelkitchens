@@ -3960,7 +3960,59 @@
 
             .exit-form-control {
                 font-size: 0.9rem;
-                padding: 10px 12px;
+            }
+
+            /* Mobile-optimized close buttons */
+            .quote-popup-close {
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .quote-popup-close:hover,
+            .quote-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
+            }
+
+            .exit-popup-close {
+                top: 10px;
+                right: 10px;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .exit-popup-close:hover,
+            .exit-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
             }
 
             .exit-popup-btn {
@@ -7714,10 +7766,10 @@
         <div class="container">
             <div class="about-content" style="display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
                 <div class="about-text">
-                    <h2 style="color: var(--dark-grey); margin-bottom: 2rem; font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Meet Karl</h2>
+                    <h2 style="color: var(--dark-grey); margin-bottom: 2rem; font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Hi, I'm Karl</h2>
                     <div style="color: var(--text-light); font-size: 1rem; line-height: 1.7;">
-                        <p style="margin-bottom: 1.5rem;">Hi, I'm Karl and I'm here to bring your kitchen dream to reality.</p>
-                        <p style="margin-bottom: 1.5rem;">With more than 20 years in the kitchen industry — from cabinet making to design - I've learned what really matters: quality craftsmanship, smart functionality, and kitchens built for real life.</p>
+                        <p style="margin-bottom: 1.5rem;">I'm here to bring your kitchen dream to reality.</p>
+                        <p style="margin-bottom: 1.5rem;">With more than 20 years in the kitchen industry - from cabinet making to design - I've learned what really matters: quality craftsmanship, smart functionality, and kitchens built for real life.</p>
                         <p style="margin-bottom: 1.5rem;">I founded Next Level Kitchens to offer Kiwis NZ-made kitchens tailored to your budget, without cutting corners. Whether it's a high-end custom design or a practical everyday solution, you'll work directly with me from start to finish: no middlemen, just a smooth process and a result you'll love.</p>
                         <p style="margin-bottom: 1.5rem;">Outside of work, you'll find me outdoors, working around the house, or spending time with friends and family. I bring that same hands-on, down-to-earth approach to every kitchen I create.</p>
                         <p style="margin-bottom: 0; font-weight: 600; color: var(--secondary-color);">Let's build something great together.</p>
@@ -7973,7 +8025,7 @@
                             </label>
                             <select id="budget" name="budget" required>
                                 <option value="">Select your budget range</option>
-                                <option value="$15K - $20K">$15K - $20K (Everyday)</option>
+                                <option value="$15K - $25K">$15K - $25K (Everyday)</option>
                                 <option value="$25K - $35K">$25K - $35K (Stylish)</option>
                                 <option value="$35K+">$35K+ (Showpiece)</option>
                                 <option value="Not sure yet">Not sure yet</option>
@@ -8055,6 +8107,15 @@
                             <input type="tel" name="phone" placeholder="Your Phone" class="exit-form-control" required>
                         </label></p>
                     </div>
+                    <p><label>Budget Range:
+                        <select name="budget" class="exit-form-control" required>
+                            <option value="">Select your budget range</option>
+                            <option value="$15K - $25K">$15K - $25K (Everyday)</option>
+                            <option value="$25K - $35K">$25K - $35K (Stylish)</option>
+                            <option value="$35K+">$35K+ (Showpiece)</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </label></p>
                     <p><label>Message:
                         <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
                     </label></p>
@@ -8112,7 +8173,7 @@
                     </label>
                     <select id="popup-budget" name="budget" required>
                         <option value="">Select your budget range</option>
-                        <option value="$15K - $20K">$15K - $20K (Everyday)</option>
+                        <option value="$15K - $25K">$15K - $25K (Everyday)</option>
                         <option value="$25K - $35K">$25K - $35K (Stylish)</option>
                         <option value="$35K+">$35K+ (Showpiece)</option>
                         <option value="Not sure yet">Not sure yet</option>

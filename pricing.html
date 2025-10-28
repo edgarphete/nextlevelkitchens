@@ -4572,6 +4572,59 @@
                 grid-template-columns: 1fr !important;
                 gap: 20px !important;
             }
+
+            /* Mobile-optimized close buttons */
+            .quote-popup-close {
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .quote-popup-close:hover,
+            .quote-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
+            }
+
+            .exit-popup-close {
+                top: 10px;
+                right: 10px;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .exit-popup-close:hover,
+            .exit-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
+            }
         }
     </style>
 </head>
@@ -4874,6 +4927,20 @@
                         </div>
                         
                         <div class="form-group">
+                            <label for="budget">
+                                <i class="fas fa-dollar-sign" style="color: #007bff; font-size: 16px; margin-right: 8px;"></i>
+                                Budget Range
+                            </label>
+                            <select id="budget" name="budget" required>
+                                <option value="">Select your budget range</option>
+                                <option value="$15K - $25K">$15K - $25K (Everyday)</option>
+                                <option value="$25K - $35K">$25K - $35K (Stylish)</option>
+                                <option value="$35K+">$35K+ (Showpiece)</option>
+                                <option value="Not sure yet">Not sure yet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
                             <label for="message">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
                                     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -4948,6 +5015,15 @@
                             <input type="tel" name="phone" placeholder="Your Phone" class="exit-form-control" required>
                         </label></p>
                     </div>
+                    <p><label>Budget Range:
+                        <select name="budget" class="exit-form-control" required>
+                            <option value="">Select your budget range</option>
+                            <option value="$15K - $25K">$15K - $25K (Everyday)</option>
+                            <option value="$25K - $35K">$25K - $35K (Stylish)</option>
+                            <option value="$35K+">$35K+ (Showpiece)</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </label></p>
                     <p><label>Message:
                         <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
                     </label></p>
@@ -4996,6 +5072,20 @@
                         Email Address
                     </label>
                     <input type="email" id="popup-email" name="email" placeholder="Enter your email address" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="popup-budget">
+                        <i class="fas fa-dollar-sign" style="color: #007bff; font-size: 16px; margin-right: 8px;"></i>
+                        Budget Range
+                    </label>
+                    <select id="popup-budget" name="budget" required>
+                        <option value="">Select your budget range</option>
+                        <option value="$15K - $25K">$15K - $25K (Everyday)</option>
+                        <option value="$25K - $35K">$25K - $35K (Stylish)</option>
+                        <option value="$35K+">$35K+ (Showpiece)</option>
+                        <option value="Not sure yet">Not sure yet</option>
+                    </select>
                 </div>
                 
                 <div class="form-group">

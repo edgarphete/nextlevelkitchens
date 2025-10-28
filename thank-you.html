@@ -4848,6 +4848,59 @@
             .link-item {
                 padding: 1.5rem;
             }
+
+            /* Mobile-optimized close buttons */
+            .quote-popup-close {
+                top: 0.5rem;
+                right: 0.5rem;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .quote-popup-close:hover,
+            .quote-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
+            }
+
+            .exit-popup-close {
+                top: 10px;
+                right: 10px;
+                font-size: 2.5rem;
+                color: #333;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                z-index: 10001;
+                padding: 0;
+                min-width: 44px;
+                min-height: 44px;
+            }
+
+            .exit-popup-close:hover,
+            .exit-popup-close:active {
+                background: rgba(255, 255, 255, 1);
+                color: #000;
+                transform: scale(1.05);
+            }
         }
     </style>
 </head>
@@ -5467,7 +5520,7 @@
                         </picture>
                         </div>
                     <div class="pricing-title">Everyday</div>
-                    <div class="pricing-price">$15K - $20K</div>
+                    <div class="pricing-price">$15K - $25K</div>
                     <div class="pricing-description">
                             Perfect for first-time renovators looking for quality and value
                     </div>
@@ -5963,6 +6016,15 @@
                             <input type="tel" name="phone" placeholder="Your Phone" class="exit-form-control" required>
                         </label></p>
                     </div>
+                    <p><label>Budget Range:
+                        <select name="budget" class="exit-form-control" required>
+                            <option value="">Select your budget range</option>
+                            <option value="$15K - $25K">$15K - $25K (Everyday)</option>
+                            <option value="$25K - $35K">$25K - $35K (Stylish)</option>
+                            <option value="$35K+">$35K+ (Showpiece)</option>
+                            <option value="Not sure yet">Not sure yet</option>
+                        </select>
+                    </label></p>
                     <p><label>Message:
                         <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
                     </label></p>
