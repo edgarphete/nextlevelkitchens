@@ -1621,11 +1621,25 @@
             }
         }
 
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         .gallery-item {
             min-width: 400px;
             max-width: 400px;
             height: 350px;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
+            background-size: 400% 400%;
+            animation: shimmer 2s ease-in-out infinite;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
@@ -1651,6 +1665,16 @@
             object-position: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: block;
+            opacity: 0;
+        }
+
+        .gallery-item img.loaded {
+            opacity: 1;
+        }
+
+        .gallery-item.image-loaded {
+            animation: none;
+            background: transparent;
         }
 
         /* .gallery-item:hover img {
@@ -8464,6 +8488,9 @@
 
          // Initialize on page load
          document.addEventListener('DOMContentLoaded', function() {
+             // Initialize enhanced lazy loading
+             initEnhancedLazyLoading();
+             
              // Enhanced hero entrance animation
              setTimeout(() => {
                  const heroContent = document.querySelector('.hero-content');
@@ -8686,6 +8713,52 @@
         document.addEventListener('DOMContentLoaded', initTypingEffect);
 
         // Testimonials marquee functionality - no JavaScript needed as it's CSS-based
+
+        // Enhanced lazy loading for gallery images
+        function initEnhancedLazyLoading() {
+            const galleryImages = document.querySelectorAll('.gallery-item img[loading="lazy"]');
+            
+            // Create intersection observer with larger root margin for mobile
+            const isMobile = window.innerWidth <= 768;
+            const rootMargin = isMobile ? '200px' : '100px';
+            
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        const galleryItem = img.closest('.gallery-item');
+                        
+                        // Remove lazy loading attribute and load image
+                        img.removeAttribute('loading');
+                        
+                        // Handle image load
+                        img.onload = () => {
+                            img.classList.add('loaded');
+                            galleryItem.classList.add('image-loaded');
+                        };
+                        
+                        // Handle image error
+                        img.onerror = () => {
+                            galleryItem.classList.add('image-loaded');
+                        };
+                        
+                        // If image is already cached, trigger load immediately
+                        if (img.complete) {
+                            img.onload();
+                        }
+                        
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: rootMargin,
+                threshold: 0.1
+            });
+            
+            galleryImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
 
         // Gallery Modal functionality
         function initGalleryModal() {
