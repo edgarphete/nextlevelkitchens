@@ -1935,17 +1935,23 @@
             }
 
             .gallery-modal-close {
-                font-size: 2.2rem;
-                width: 50px;
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 1.2rem;
+                width: 120px;
                 height: 50px;
-                top: -60px;
-                right: 10px;
                 background: rgb(0, 0, 0);
                 color: white;
-                border: 3px solid white;
+                border: 2px solid white;
+                border-radius: 25px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
                 z-index: 10003;
                 font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -2339,14 +2345,16 @@
 
             .review-content {
                 gap: 2rem;
+                order: 2;
+            }
+
+            .review-image {
+                order: 1;
+                height: 400px;
             }
 
             .review-item h3 {
                 font-size: 1.25rem;
-            }
-
-            .review-image {
-                height: 400px;
             }
 
             .testimonials-marquee h2 {
@@ -3617,6 +3625,9 @@
             .hero-subtext {
                 font-size: 1rem;
                 line-height: 1.4;
+                word-break: keep-all;
+                overflow-wrap: break-word;
+                hyphens: none;
             }
 
             .hero-cta {
