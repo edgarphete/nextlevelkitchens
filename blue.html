@@ -2983,8 +2983,8 @@
 
         .quote-popup-close {
             position: absolute;
-            top: 1rem;
-            right: 1.5rem;
+            top: -10px;
+            right: -10px;
             background: rgba(0, 0, 0, 0.8);
             border: none;
             font-size: 2rem;
@@ -3089,8 +3089,8 @@
 
         .exit-popup-close {
             position: absolute;
-            top: 15px;
-            right: 20px;
+            top: -10px;
+            right: -10px;
             background: rgba(0, 0, 0, 0.8);
             border: none;
             font-size: 28px;
@@ -3559,7 +3559,9 @@
             .quote-form-container {
                 grid-template-columns: 1fr;
                 gap: 2rem;
-                padding: 0 1rem;
+                padding: 0 2.5%;
+                width: 95%;
+                margin: 0 auto;
             }
 
             .form-wrapper {
@@ -4804,11 +4806,11 @@
 
             /* Mobile-optimized close buttons - Extra visible and unmistakable */
             .quote-popup-close {
-                top: 0.5rem;
-                right: 0.5rem;
+                top: -5px;
+                right: -5px;
                 font-size: 2.2rem;
                 color: white;
-                background: rgba(220, 38, 38, 0.95);
+                background: rgba(0, 0, 0, 0.9);
                 border: 3px solid white;
                 border-radius: 50%;
                 width: 50px;
@@ -4826,18 +4828,18 @@
 
             .quote-popup-close:hover,
             .quote-popup-close:active {
-                background: rgba(220, 38, 38, 1);
-                border-color: #fef2f2;
+                background: rgba(0, 0, 0, 1);
+                border-color: #f0f0f0;
                 transform: scale(1.1);
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             }
 
             .exit-popup-close {
-                top: 8px;
-                right: 8px;
+                top: -5px;
+                right: -5px;
                 font-size: 2.2rem;
                 color: white;
-                background: rgba(220, 38, 38, 0.95);
+                background: rgba(0, 0, 0, 0.9);
                 border: 3px solid white;
                 border-radius: 50%;
                 width: 50px;
@@ -4855,8 +4857,8 @@
 
             .exit-popup-close:hover,
             .exit-popup-close:active {
-                background: rgba(220, 38, 38, 1);
-                border-color: #fef2f2;
+                background: rgba(0, 0, 0, 1);
+                border-color: #f0f0f0;
                 transform: scale(1.1);
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             }
@@ -5872,7 +5874,7 @@
                                 <path d="M22 2L11 13"/>
                                 <polygon points="22,2 15,22 11,13 2,9 22,2"/>
                             </svg>
-                            GET A FREE ESTIMATE
+                            GET ESTIMATE
                         </button>
                     </form>
                 </div>
@@ -5945,7 +5947,7 @@
                         <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
                     </label></p>
                     <p>
-                        <button type="submit" class="exit-popup-btn">GET A FREE ESTIMATE<span>→</span></button>
+                        <button type="submit" class="exit-popup-btn">GET ESTIMATE<span>→</span></button>
                     </p>
                     <div class="exit-form-guarantee">
                         <i class="fas fa-lock"></i>
