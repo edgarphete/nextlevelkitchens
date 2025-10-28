@@ -3012,8 +3012,15 @@
         }
 
         .quote-popup-inner {
-            max-height: calc(85vh - 3rem);
-            overflow-y: auto;
+            max-height: none;
+            overflow-y: visible;
+        }
+
+        @media (max-width: 768px) {
+            .quote-popup-inner {
+                max-height: none;
+                overflow-y: visible;
+            }
         }
 
         .quote-popup-header {
@@ -3095,6 +3102,13 @@
             padding: 40px 30px 30px;
             max-height: calc(90vh - 40px);
             overflow-y: auto;
+        }
+
+        @media (max-width: 768px) {
+            .exit-popup-content {
+                max-height: none;
+                overflow-y: visible;
+            }
         }
 
         .exit-popup-close {
