@@ -1916,7 +1916,7 @@
                 height: 50px;
                 top: -60px;
                 right: 10px;
-                background: rgba(0, 0, 0, 0.8);
+                background: rgb(0, 0, 0);
                 border: 2px solid white;
                 font-weight: bold;
             }
@@ -2013,7 +2013,7 @@
         }
 
         .modal-close:hover {
-            background: rgba(0, 0, 0, 0.8);
+            background: rgb(0, 0, 0);
             transform: scale(1.1);
         }
 
@@ -3221,7 +3221,7 @@
             max-width: 480px;
             width: 100%;
             max-height: 85vh;
-            overflow-y: auto;
+            overflow: visible;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             animation: popupSlideIn 0.3s ease-out;
         }
@@ -3241,7 +3241,7 @@
             position: absolute;
             top: -10px;
             right: -10px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgb(0, 0, 0);
             border: none;
             font-size: 2rem;
             color: white;
@@ -3255,13 +3255,18 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            z-index: 10002;
+            z-index: 10005;
         }
 
         .quote-popup-close:hover {
             background: rgba(0, 0, 0, 1);
             transform: scale(1.1);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .quote-popup-inner {
+            max-height: calc(85vh - 3rem);
+            overflow-y: auto;
         }
 
         .quote-popup-header {
@@ -3322,7 +3327,7 @@
             max-width: 500px;
             width: 90%;
             max-height: 90vh;
-            overflow-y: auto;
+            overflow: visible;
             position: relative;
             animation: slideUp .3s ease-out;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
@@ -3341,13 +3346,15 @@
 
         .exit-popup-content {
             padding: 40px 30px 30px;
+            max-height: calc(90vh - 40px);
+            overflow-y: auto;
         }
 
         .exit-popup-close {
             position: absolute;
             top: -10px;
             right: -10px;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgb(0, 0, 0);
             border: none;
             font-size: 28px;
             color: white;
@@ -3362,7 +3369,7 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            z-index: 10002;
+            z-index: 10005;
         }
 
         .exit-popup-close:hover {
@@ -3995,7 +4002,7 @@
                 right: -5px;
                 font-size: 2.2rem;
                 color: white;
-                background: rgba(0, 0, 0, 0.9);
+                background: rgb(0, 0, 0);
                 border: 3px solid white;
                 border-radius: 50%;
                 width: 50px;
@@ -4004,7 +4011,7 @@
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-                z-index: 10003;
+                z-index: 10005;
                 padding: 0;
                 min-width: 50px;
                 min-height: 50px;
@@ -4024,7 +4031,7 @@
                 right: -5px;
                 font-size: 2.2rem;
                 color: white;
-                background: rgba(0, 0, 0, 0.9);
+                background: rgb(0, 0, 0);
                 border: 3px solid white;
                 border-radius: 50%;
                 width: 50px;
@@ -4033,7 +4040,7 @@
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
-                z-index: 10003;
+                z-index: 10005;
                 padding: 0;
                 min-width: 50px;
                 min-height: 50px;
@@ -8169,11 +8176,12 @@
         <div class="quote-popup-overlay"></div>
         <div class="quote-popup-content">
             <button class="quote-popup-close" id="quote-popup-close">&times;</button>
-            <div class="quote-popup-header">
-                <h2>Get Free Quote</h2>
-                <p>Transform your kitchen with our expert design and installation services</p>
-            </div>
-            <form name="quote-popup" method="POST" netlify action="/thank-you" class="quote-form" id="quotePopupForm">
+            <div class="quote-popup-inner">
+                <div class="quote-popup-header">
+                    <h2>Get Free Quote</h2>
+                    <p>Transform your kitchen with our expert design and installation services</p>
+                </div>
+                <form name="quote-popup" method="POST" netlify action="/thank-you" class="quote-form" id="quotePopupForm">
                 <p hidden>
                     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                 </p>
@@ -8230,7 +8238,8 @@
                     </svg>
                     GET ESTIMATE
                 </button>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 
