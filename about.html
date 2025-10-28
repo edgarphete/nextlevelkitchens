@@ -2981,17 +2981,27 @@
             position: absolute;
             top: 1rem;
             right: 1.5rem;
-            background: none;
+            background: rgba(0, 0, 0, 0.8);
             border: none;
             font-size: 2rem;
-            color: var(--text-color);
+            color: white;
             cursor: pointer;
             line-height: 1;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 10002;
         }
 
         .quote-popup-close:hover {
-            color: var(--primary-color);
+            background: rgba(0, 0, 0, 1);
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
 
         .quote-popup-header {
@@ -3077,18 +3087,28 @@
             position: absolute;
             top: 15px;
             right: 20px;
-            background: none;
+            background: rgba(0, 0, 0, 0.8);
             border: none;
-            font-size: 32px;
-            color: #999;
+            font-size: 28px;
+            color: white;
             cursor: pointer;
             line-height: 1;
-            padding: 5px;
-            transition: color 0.3s ease;
+            padding: 0;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 10002;
         }
 
         .exit-popup-close:hover {
-            color: #333;
+            background: rgba(0, 0, 0, 1);
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
 
         .exit-popup-header {
@@ -3712,57 +3732,63 @@
                 padding: 12px 20px;
             }
 
-            /* Mobile-optimized close buttons */
+            /* Mobile-optimized close buttons - Extra visible and unmistakable */
             .quote-popup-close {
                 top: 0.5rem;
                 right: 0.5rem;
-                font-size: 2.5rem;
-                color: #333;
-                background: rgba(255, 255, 255, 0.9);
+                font-size: 2.2rem;
+                color: white;
+                background: rgba(220, 38, 38, 0.95);
+                border: 3px solid white;
                 border-radius: 50%;
-                width: 44px;
-                height: 44px;
+                width: 50px;
+                height: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                z-index: 10001;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+                z-index: 10003;
                 padding: 0;
-                min-width: 44px;
-                min-height: 44px;
+                min-width: 50px;
+                min-height: 50px;
+                font-weight: bold;
             }
 
             .quote-popup-close:hover,
             .quote-popup-close:active {
-                background: rgba(255, 255, 255, 1);
-                color: #000;
-                transform: scale(1.05);
+                background: rgba(220, 38, 38, 1);
+                border-color: #fef2f2;
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             }
 
             .exit-popup-close {
-                top: 10px;
-                right: 10px;
-                font-size: 2.5rem;
-                color: #333;
-                background: rgba(255, 255, 255, 0.9);
+                top: 8px;
+                right: 8px;
+                font-size: 2.2rem;
+                color: white;
+                background: rgba(220, 38, 38, 0.95);
+                border: 3px solid white;
                 border-radius: 50%;
-                width: 44px;
-                height: 44px;
+                width: 50px;
+                height: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                z-index: 10001;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+                z-index: 10003;
                 padding: 0;
-                min-width: 44px;
-                min-height: 44px;
+                min-width: 50px;
+                min-height: 50px;
+                font-weight: bold;
             }
 
             .exit-popup-close:hover,
             .exit-popup-close:active {
-                background: rgba(255, 255, 255, 1);
-                color: #000;
-                transform: scale(1.05);
+                background: rgba(220, 38, 38, 1);
+                border-color: #fef2f2;
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             }
         }
 
@@ -3995,6 +4021,11 @@
                 font-size: 1rem;
                 line-height: 1.4;
                 margin-bottom: 1.5rem;
+            }
+
+            .hero-subtext {
+                font-size: 1rem;
+                line-height: 1.4;
             }
 
             .hero-cta {
@@ -4972,7 +5003,7 @@
                      <li><a href="contact.html">Contact</a></li>
                  </ul>
                 <div class="nav-right">
-                    <button class="btn btn-primary btn-small" onclick="openQuotePopup()">Get a free estimate</button>
+                    <button class="btn btn-primary btn-small" onclick="openQuotePopup()">GET QUOTE</button>
                     <button class="mobile-menu-toggle" id="mobile-menu-toggle">
                         ☰
                     </button>
@@ -5580,7 +5611,7 @@
         <div class="quote-popup-content">
             <button class="quote-popup-close" id="quote-popup-close">&times;</button>
             <div class="quote-popup-header">
-                <h2>Get Your Free Quote Today</h2>
+                <h2>Get Free Quote</h2>
                 <p>Transform your kitchen with our expert design and installation services</p>
             </div>
             <form name="quote-popup" method="POST" netlify action="/thank-you" class="quote-form" id="quotePopupForm">
