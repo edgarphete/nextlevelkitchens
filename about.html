@@ -5053,25 +5053,146 @@
     </header>
 
     <!-- About Karl Section -->
-    <section class="about section-padding" style="background: var(--white); padding: 140px 0 80px 0; border-bottom: 1px solid #e9ecef;">
+    <style>
+        .about-karl-v3 {
+            background: #ffffff;
+            padding: 140px 0 80px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .about-karl-v3 .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .about-karl-v3__wrapper {
+            max-width: 900px;
+        }
+        
+        .about-karl-v3__header-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+        }
+        
+        .about-karl-v3__image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+        }
+        
+        .about-karl-v3__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: scale(1.1);
+        }
+        
+        .about-karl-v3__header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .about-karl-v3__title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .about-karl-v3__subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .about-karl-v3__text {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .about-karl-v3__text p {
+            margin: 0;
+        }
+        
+        .about-karl-v3__cta {
+            font-weight: 600;
+            color: #475569;
+            margin-top: 8px;
+        }
+        
+        .about-karl-v3__signature {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px solid #475569;
+        }
+        
+        .about-karl-v3__signature-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 4px 0;
+        }
+        
+        .about-karl-v3__signature-title {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .about-karl-v3__header-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-karl-v3__title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+    <section class="about-karl-v3">
         <div class="container">
-            <div class="about-content" style="display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;">
-                <div class="about-text">
-                    <h2 style="color: var(--dark-grey); margin-bottom: 2rem; font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700;">Meet Karl</h2>
-                    <div style="color: var(--text-light); font-size: 0.95rem; line-height: 1.7;">
-                        <p style="margin-bottom: 1.5rem;">I'm here to bring your kitchen dream to reality.</p>
-                        <p style="margin-bottom: 1.5rem;">With more than 20 years in the kitchen industry - from cabinet making to design - I've learned what really matters: quality craftsmanship, smart functionality, and kitchens built for real life.</p>
-                        <p style="margin-bottom: 1.5rem;">I founded Next Level Kitchens to offer Kiwis NZ-made kitchens tailored to your budget, without cutting corners. Whether it's a high-end custom design or a practical everyday solution, you'll work directly with me from start to finish: no middlemen, just a smooth process and a result you'll love.</p>
-                        <p style="margin-bottom: 1.5rem;">Outside of work, you'll find me outdoors, working around the house, or spending time with friends and family. I bring that same hands-on, down-to-earth approach to every kitchen I create.</p>
-                        <p style="margin-bottom: 0; font-weight: 600; color: var(--secondary-color);">Let's build something great together.</p>
-                        <div style="margin-top: 2rem;">
-                            <p style="margin: 0 0 0.25rem 0; font-weight: 700; font-size: 1.1rem; color: var(--dark-grey);">Karl Ross</p>
-                            <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">Founder of Next Level Kitchens</p>
-                        </div>
+            <div class="about-karl-v3__wrapper">
+                <div class="about-karl-v3__header-row">
+                    <div class="about-karl-v3__image">
+                        <img src="assets/images/karl2.png" alt="Karl Ross - Founder of Next Level Kitchens">
+                    </div>
+                    
+                    <div class="about-karl-v3__header">
+                        <h2 class="about-karl-v3__title">Meet Karl</h2>
+                        <p class="about-karl-v3__subtitle">Founder of Next Level Kitchens</p>
                     </div>
                 </div>
-                <div class="about-image" style="position: relative; overflow: hidden; border-radius: 50%; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); width: 400px; height: 400px;">
-                    <img src="assets/images/karl2.png" alt="Karl - Founder of Next Level Kitchens" style="width: 100%; height: 100%; object-fit: cover; object-position: center center; transform: scale(1.1);">
+                
+                <div class="about-karl-v3__text">
+                    <p>I'm here to bring your kitchen dream to reality.</p>
+                    
+                    <p>With more than 20 years in the kitchen industry - from cabinet making to design - I've learned what really matters: quality craftsmanship, smart functionality, and kitchens built for real life.</p>
+                    
+                    <p>I founded Next Level Kitchens to offer Kiwis NZ-made kitchens tailored to your budget, without cutting corners. Whether it's a high-end custom design or a practical everyday solution, you'll work directly with me from start to finish: no middlemen, just a smooth process and a result you'll love.</p>
+                    
+                    <p>Outside of work, you'll find me outdoors, working around the house, or spending time with friends and family. I bring that same hands-on, down-to-earth approach to every kitchen I create.</p>
+                    
+                    <p class="about-karl-v3__cta">Let's build something great together.</p>
+                </div>
+                
+                <div class="about-karl-v3__signature">
+                    <p class="about-karl-v3__signature-name">Karl Ross</p>
+                    <p class="about-karl-v3__signature-title">Founder of Next Level Kitchens</p>
                 </div>
             </div>
         </div>
