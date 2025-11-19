@@ -48,15 +48,13 @@
     <meta name="msapplication-TileImage" content="assets/favicons/NLK Logo Icon White.webp">
     <meta name="theme-color" content="#021732">
     
-    <!-- Preload hero image for LCP optimization -->
-    <link rel="preload" as="image" href="assets/images/nextlevelkitchens_photo_13.webp" fetchpriority="high">
+    <!-- Preload hero image for LCP optimization - Mobile version for faster mobile LCP -->
+    <link rel="preload" as="image" href="assets/images/nextlevelkitchens_photo_13-640.webp" fetchpriority="high" media="(max-width: 640px)">
+    <link rel="preload" as="image" href="assets/images/nextlevelkitchens_photo_13-1920.webp" fetchpriority="high" media="(min-width: 641px)">
     
-    <!-- Critical Hero CSS - Inline for LCP optimization -->
+    <!-- Critical CSS - Header + Hero (Inline for LCP optimization) -->
     <style>
-        .hero{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden}
-        .hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;display:block}
-        .hero::before{content:'';position:absolute;inset:0;background:rgba(2,23,50,.5);z-index:1}
-        .hero-content{position:relative;z-index:2;max-width:100%;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:11vh}
+        *{margin:0;padding:0;box-sizing:border-box}html{overflow-x:hidden}body{overflow-x:hidden;word-wrap:break-word;overflow-wrap:break-word;font-family:'Montserrat',sans-serif;line-height:1.6;color:#333}:root{--primary-color:#0E5EA4;--secondary-color:#021732;--white:#fff;--dark-grey:#333;--success-green:#0E5EA4}.header{position:fixed;top:0;left:0;right:0;background:rgba(2,23,50,.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;transition:all .3s ease;transform:translateY(-100%);opacity:0;animation:slideInFromTop .6s ease-out .2s forwards}.header.scrolled{background:rgba(2,23,50,.98);box-shadow:0 2px 20px rgba(0,0,0,.1)}.nav{display:flex;justify-content:space-between;align-items:center}.logo img{height:60px;width:auto}.header-phone{display:flex;align-items:center;margin-left:2rem}.header-phone a{color:var(--white);text-decoration:none;font-weight:600;font-size:1.1rem;transition:color .3s ease}.header-phone a::first-letter{color:#0E5EA4}.nav-menu{display:flex;list-style:none;gap:2rem}.nav-menu a{color:var(--white);text-decoration:none;font-weight:600;transition:color .3s ease;text-transform:uppercase}.nav-right{display:flex;align-items:center;gap:1rem}.btn-small{padding:.5rem 1rem;font-size:.9rem}.mobile-menu-toggle{display:none;background:none;border:none;color:var(--white);font-size:1.5rem;cursor:pointer;padding:.25rem}.hero{position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden}.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;display:block}.hero::before{content:'';position:absolute;inset:0;background:rgba(2,23,50,.5);z-index:1}.hero-content{position:relative;z-index:2;max-width:100%;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:11vh}.hero h1{margin-bottom:0;text-shadow:2px 2px 4px rgba(0,0,0,.3)}.hero-badge{background:rgba(255,255,255,.1);color:#fff;padding:.5rem 1.5rem;border-radius:25px;font-size:.9rem;font-weight:600;margin-bottom:0;display:inline-block}.hero-badge::first-letter{color:#0E5EA4}.hero-highlight{color:#6AABC7;text-shadow:0 0 10px rgba(106,171,199,.3);display:inline-block}.hero-subtext{font-size:1.2rem;margin:.5rem 0;line-height:1.6;max-width:900px;margin-left:auto;margin-right:auto;color:#fff}.hero-benefits{display:flex;justify-content:center;gap:1rem;margin:1rem 0;flex-wrap:wrap}.benefit-item{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);padding:.75rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.2);font-weight:600;white-space:nowrap;font-size:.9rem}.hero-trust{display:flex;justify-content:space-evenly;align-items:flex-start;gap:0;margin-top:2rem;flex-wrap:wrap;max-width:900px;margin-left:auto;margin-right:auto;padding:0 2rem}.trust-item{text-align:center;flex:1;min-width:200px;max-width:250px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:0}.trust-number{display:block;font-size:2.2rem;font-weight:900;color:#6AABC7;line-height:1;margin-bottom:.5rem}.trust-text{font-size:.95rem;color:rgba(255,255,255,.8);font-weight:500;line-height:1.2;text-align:center;min-height:2.4rem;display:flex;align-items:center;justify-content:center}.hero-cta{display:flex;justify-content:center;align-items:center;gap:1.5rem;margin-top:2rem;flex-wrap:wrap}.container{max-width:1400px;margin:0 auto;padding:0 2rem}@keyframes slideInFromTop{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}
     </style>
     
     <!-- Fonts -->
@@ -5326,14 +5324,16 @@
         }
     </style>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome - Non-blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
-    <!-- Splide CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <!-- Splide CSS - Non-blocking -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"></noscript>
     
-    <!-- Seline -->
-    <script async src="https://cdn.seline.com/seline.js" data-token="497d162b1630f1a"></script>
+    <!-- Seline - Deferred -->
+    <script defer src="https://cdn.seline.com/seline.js" data-token="497d162b1630f1a"></script>
 </head>
 <body>
     <!-- Header -->
@@ -5341,7 +5341,7 @@
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                    <img src="assets/images/nextlevelkitchens_logo_white.webp" alt="Next Level Kitchens - Custom Kitchen Design Auckland Logo">
+                    <img src="assets/images/nextlevelkitchens_logo_white.webp" alt="Next Level Kitchens - Custom Kitchen Design Auckland Logo" width="200" height="60" loading="eager" decoding="async">
                 </div>
                 <div class="header-phone">
                     <a href="tel:+64211012617"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 4px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> 021 101-2617</a>
@@ -5366,9 +5366,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <picture>
-            <source media="(max-width: 640px)" srcset="assets/images/nextlevelkitchens_photo_13.webp" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="assets/images/nextlevelkitchens_photo_13.webp" type="image/webp">
-            <img src="assets/images/nextlevelkitchens_photo_13.webp" alt="Next Level Kitchens - Custom Kitchen Design Auckland" class="hero-bg" width="1920" height="1080" fetchpriority="high" decoding="async" loading="eager">
+            <source media="(max-width: 640px)" srcset="assets/images/nextlevelkitchens_photo_13-640.webp" type="image/webp">
+            <source media="(max-width: 1280px)" srcset="assets/images/nextlevelkitchens_photo_13-1280.webp" type="image/webp">
+            <source media="(min-width: 1281px)" srcset="assets/images/nextlevelkitchens_photo_13-1920.webp" type="image/webp">
+            <img src="assets/images/nextlevelkitchens_photo_13-1920.webp" alt="Next Level Kitchens - Custom Kitchen Design Auckland" class="hero-bg" width="1920" height="1080" fetchpriority="high" decoding="async" loading="eager">
         </picture>
         <div class="container">
             <div class="hero-content">
@@ -5664,7 +5665,10 @@
              <div class="services-grid">
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/portfolio/top/30 Anna Burns.webp" alt="Kitchens Auckland" class="service-image">
+                       <picture>
+                           <source type="image/webp" srcset="assets/portfolio/top/30 Anna Burns.webp" media="(max-width: 768px)">
+                           <img src="assets/portfolio/top/30 Anna Burns.webp" alt="Kitchens Auckland" class="service-image" width="400" height="300" loading="lazy" decoding="async">
+                       </picture>
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Kitchens</div>
                         </div>
@@ -5681,7 +5685,10 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/images/cabinetry2.webp" alt="Bespoke Cabinetry Auckland" class="service-image">
+                       <picture>
+                           <source type="image/webp" srcset="assets/images/cabinetry2.webp" media="(max-width: 768px)">
+                           <img src="assets/images/cabinetry2.webp" alt="Bespoke Cabinetry Auckland" class="service-image" width="400" height="300" loading="lazy" decoding="async">
+                       </picture>
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Bespoke Cabinetry</div>
                         </div>
@@ -5698,7 +5705,10 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/images/wardrobe2.webp" alt="Wardrobes Auckland" class="service-image">
+                       <picture>
+                           <source type="image/webp" srcset="assets/images/wardrobe2.webp" media="(max-width: 768px)">
+                           <img src="assets/images/wardrobe2.webp" alt="Wardrobes Auckland" class="service-image" width="400" height="300" loading="lazy" decoding="async">
+                       </picture>
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Wardrobes</div>
                         </div>
@@ -5715,7 +5725,10 @@
                  </div>
                 <div class="service-card">
                    <div class="service-image-wrapper">
-                       <img src="assets/images/laundries.webp" alt="Laundries Auckland" class="service-image">
+                       <picture>
+                           <source type="image/webp" srcset="assets/images/laundries.webp" media="(max-width: 768px)">
+                           <img src="assets/images/laundries.webp" alt="Laundries Auckland" class="service-image" width="400" height="300" loading="lazy" decoding="async">
+                       </picture>
                         <div class="service-image-overlay">
                             <div class="service-overlay-text">Laundries</div>
                         </div>
@@ -8508,7 +8521,7 @@
     </div>
 
     <script>
-        // Header scroll effect
+        // Header scroll effect - Critical
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
             if (window.scrollY > 100) {
@@ -8717,11 +8730,8 @@
         `;
         document.head.appendChild(style);
 
-         // Initialize on page load
+         // Initialize on page load - Non-critical parts moved to window.load
          document.addEventListener('DOMContentLoaded', function() {
-             // Initialize enhanced lazy loading
-             initEnhancedLazyLoading();
-             
              // Enhanced hero entrance animation
              setTimeout(() => {
                  const heroContent = document.querySelector('.hero-content');
@@ -8738,18 +8748,14 @@
                      header.style.opacity = '1';
                  }
              }, 100);
-            
-             // Preload critical images
-             const criticalImages = [
-                 'assets/portfolio/cecilia david 2.webp',
-                 'assets/images/nextlevelkitchens_logo_white.webp',
-                 'assets/images/nextlevelkitchens_photo_03.webp'
-             ];
-            
-            criticalImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
+        });
+        
+        // Non-critical initialization on window.load
+        window.addEventListener('load', function() {
+             // Initialize enhanced lazy loading
+             if (typeof initEnhancedLazyLoading === 'function') {
+                 initEnhancedLazyLoading();
+             }
         });
 
 
@@ -9113,14 +9119,14 @@
 
     </script>
 
-    <!-- Splide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <!-- Splide AutoScroll Extension -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <!-- Splide JS - Deferred -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <!-- Splide AutoScroll Extension - Deferred -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
     
-    <!-- Initialize Splide Testimonial Slider -->
+    <!-- Initialize Splide Testimonial Slider - Load on window.load -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('load', function() {
             var testimonialSplide = new Splide('#testimonial-splide', {
                 type: 'loop',           // Loop the slides
                 drag: 'free',          // Free drag mode
