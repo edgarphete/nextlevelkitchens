@@ -1,285 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- Splide CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    
-    <!-- Primary Meta Tags -->
-    <title>Contact Next Level Kitchens | Custom Kitchens Auckland</title>
-    <meta name="title" content="About Next Level Kitchens | Custom Kitchen Makers Auckland">
-    <meta name="description" content="Contact Next Level Kitchens Auckland today. Book a free consultation or ask about our custom kitchen design, renovation, and installation services.">
-    <meta name="keywords" content="Custom Kitchens Auckland, custom kitchen makers Auckland, bespoke kitchens NZ, kitchen design Auckland, kitchen installation, wardrobes, vanities, cabinetry Auckland">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="author" content="Next Level Kitchens">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.nextlevelkitchens.co.nz/contact.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.nextlevelkitchens.co.nz/contact.html">
-    <meta property="og:title" content="Contact Next Level Kitchens | Custom Kitchens Auckland">
-    <meta property="og:description" content="Contact Next Level Kitchens Auckland today. Book a free consultation or ask about our custom kitchen design, renovation, and installation services.">
-    <meta property="og:image" content="https://www.nextlevelkitchens.co.nz/assets/portfolio/cecilia david 2.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Next Level Kitchens - Custom Kitchen Design Auckland">
-    <meta property="og:site_name" content="Next Level Kitchens">
-    <meta property="og:locale" content="en_NZ">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.nextlevelkitchens.co.nz/contact.html">
-    <meta property="twitter:title" content="Contact Next Level Kitchens | Custom Kitchens Auckland">
-    <meta property="twitter:description" content="Contact Next Level Kitchens Auckland today. Book a free consultation or ask about our custom kitchen design, renovation, and installation services.">
-    <meta property="twitter:image" content="https://www.nextlevelkitchens.co.nz/assets/portfolio/cecilia david 2.webp">
-    <meta property="twitter:image:alt" content="Next Level Kitchens - Custom Kitchen Design Auckland">
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="assets/favicons/NLK Logo Icon White.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/NLK Logo Icon White.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/NLK Logo Icon White.webp">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/NLK Logo Icon White.webp">
-    <link rel="shortcut icon" href="assets/favicons/NLK Logo Icon White.webp">
-    <meta name="msapplication-TileImage" content="assets/favicons/NLK Logo Icon White.webp">
-    <meta name="theme-color" content="#021732">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Next Level Kitchens",
-        "image": "https://www.nextlevelkitchens.co.nz/assets/images/nextlevelkitchens_logo_white.webp",
-        "description": "Expert custom kitchen design, renovation and installation in Auckland. Specializing in bespoke kitchens, wardrobes, vanities, and cabinetry with transparent pricing.",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Auckland",
-            "addressCountry": "NZ"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": -36.8485,
-            "longitude": 174.7633
-        },
-        "url": "https://www.nextlevelkitchens.co.nz/",
-        "telephone": "+64-21-101-2617",
-        "email": "sales@nextlevelkitchens.co.nz",
-        "openingHours": "Mo-Fr 08:00-17:00",
-        "priceRange": "$15,000-$50,000+",
-        "serviceArea": {
-            "@type": "GeoCircle",
-            "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": -36.8485,
-                "longitude": 174.7633
-            },
-            "geoRadius": "50000"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Kitchen Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Custom Kitchen Design",
-                        "description": "Bespoke kitchen design and installation tailored to your lifestyle"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Kitchen Renovation",
-                        "description": "Complete kitchen transformations with premium fixtures and finishes"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Custom Wardrobes",
-                        "description": "Custom wardrobe solutions maximizing storage and organization"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Vanities & Cabinetry",
-                        "description": "Elegant vanity units and bespoke cabinetry for any room"
-                    }
-                }
-            ]
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "50",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Carol V."
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "reviewBody": "Transparent, communicative, and customer-focused. We knew exactly what we were getting for our budget — and the end result was better than I ever imagined."
-            },
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Tracy M."
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "reviewBody": "They worked with us to adjust materials and layout so we could stay on budget without compromising on style or quality. Communication was fantastic."
-            },
-            {
-                "@type": "Review",
-                "author": {
-                    "@type": "Person",
-                    "name": "Des W."
-                },
-                "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5"
-                },
-                "reviewBody": "For the same price as a cookie-cutter kitchen from a big chain, I got a fully bespoke design. The detail, the craftsmanship, the service — all next level."
-            }
-        ]
-    }
-    </script>
-    
-    <style>
-        /* Splide Testimonial Slider Styles */
-        .testimonials-splide {
-            background: var(--white);
-            padding: 4rem 0;
-            overflow: hidden; /* Added for full width */
-        }
-
-        .testimonials-splide .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .splide-testimonials-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .splide-testimonials-header h2 {
-            color: #0E5EA4;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        /* Full width splide container */
-        .splide-full-width {
-            width: 100vw;
-            position: relative;
-            margin-left: calc(-50vw + 50%);
-        }
-
-        .splide__slide {
-            padding: 0 1rem;
-        }
-
-        .testimonial-card-splide {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f0f0f0;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card-splide:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .testimonial-card-splide .testimonial-stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-card-splide .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-card-splide .author-name {
-            font-weight: 700;
-            color: #0E5EA4;
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .testimonial-card-splide .author-title {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        /* Splide drag cursor */
-        .splide__track {
-            cursor: grab;
-        }
-
-        .splide__track:active {
-            cursor: grabbing;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .splide-testimonials-header h2 {
-                font-size: 2rem;
-            }
-
-            .testimonial-card-splide {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .splide-testimonials-header h2 {
-                font-size: 1.75rem;
-            }
-        }
-
-        /* CSS Reset and Base Styles */
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -337,7 +56,7 @@
             font-size: clamp(2rem, 4vw, 2.5rem);
             font-weight: 700;
             text-transform: uppercase;
-            color: #0E5EA4;
+            color: var(--dark-grey);
         }
 
         h3 {
@@ -401,7 +120,7 @@
 
         .btn-secondary {
             background-color: #FFF;
-            color: #0E5EA4;
+            color: var(--dark-grey);
             border: 2px solid #FFF;
         }
 
@@ -513,35 +232,9 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* Hero Section */
+        /* Hero Section - Optimized for LCP/CLS */
         .hero {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            text-align: center;
-            position: relative;
-            width: 100%;
-        }
-
-        /* Hero Background */
-        .hero-1 {
-            background: linear-gradient(rgba(2, 23, 50, 0.4), rgba(2, 23, 50, 0.4)), url('assets/images/nextlevelkitchens_photo_09.webp');
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(2, 23, 50, 0.3);
+            min-height: 100vh;
         }
 
         .hero-content {
@@ -594,8 +287,8 @@
         }
 
         .hero-highlight {
-            color: #0E5EA4;
-            text-shadow: 0 0 10px rgba(14, 94, 164, 0.3);
+            color: #6AABC7;
+            text-shadow: 0 0 10px rgba(106, 171, 199, 0.3);
             display: inline-block;
         }
 
@@ -609,12 +302,12 @@
 
         .typed-word {
             display: inline-block;
-            border-right: 3px solid #0E5EA4;
+            border-right: 3px solid #6AABC7;
             animation: blink-cursor 1s infinite;
         }
 
         @keyframes blink-cursor {
-            0%, 50% { border-color: #0E5EA4; }
+            0%, 50% { border-color: #6AABC7; }
             51%, 100% { border-color: transparent; }
         }
 
@@ -716,7 +409,7 @@
             display: block;
             font-size: 2.2rem;
             font-weight: 900;
-            color: #0E5EA4;
+            color: #6AABC7;
             line-height: 1;
             margin-bottom: 0.5rem;
         }
@@ -1225,6 +918,235 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
+         /* Services Section */
+         /* Services Section */
+        .services {
+            background: var(--light-grey);
+            background-image: url('assets/portfolio/kitchen 6.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.85), rgba(248, 249, 250, 0.8), rgba(248, 249, 250, 0.85));
+            pointer-events: none;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+         .services h2 {
+             color: var(--dark-grey);
+             margin-bottom: 1rem;
+         }
+
+         .services-subtitle {
+             font-size: 1.2rem;
+             color: var(--text-light);
+             max-width: 650px;
+             margin: 0 auto;
+             line-height: 1.6;
+         }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Desktop: 4 columns in one row */
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Tablet: 2 columns */
+        @media (max-width: 1199px) and (min-width: 769px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile: 1 column */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Services section - minimal horizontal spacing for maximum card width */
+        .services .container {
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+
+        /* Desktop: minimal spacing for maximum width utilization */
+        @media (min-width: 1200px) {
+            .services .container {
+                padding-left: 0.25rem;
+                padding-right: 0.25rem;
+            }
+        }
+
+        /* Large desktop: almost no spacing for full width utilization */
+        @media (min-width: 1400px) {
+            .services .container {
+                padding-left: 0.125rem;
+                padding-right: 0.125rem;
+                max-width: 1600px;
+            }
+        }
+
+         .service-card {
+             background: var(--white);
+             padding: 1rem;
+             border-radius: 15px;
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+             border: 1px solid #f0f0f0;
+             transition: all 0.3s ease;
+             position: relative;
+             display: flex;
+             flex-direction: column;
+             height: 100%;
+         }
+
+         .service-card:hover {
+             transform: translateY(-8px);
+             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+             border-color: var(--primary-color);
+         }
+
+        .service-image-wrapper {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            position: relative;
+            background: #f8f9fa;
+        }
+
+         .service-card:hover .service-image-wrapper {
+             transform: scale(1.02);
+             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+         }
+
+        .service-image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            transition: all 0.3s ease;
+            display: block !important;
+            image-rendering: auto !important;
+            -ms-interpolation-mode: bicubic !important;
+            backface-visibility: hidden;
+            max-width: none !important;
+            max-height: none !important;
+        }
+
+        .service-card:hover .service-image {
+            transform: translateX(0) scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        /* High-DPI display optimization for service images */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .service-image {
+                image-rendering: auto;
+            }
+        }
+
+         .service-image-overlay {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background: linear-gradient(45deg, rgba(14, 94, 164, 0.8), rgba(14, 94, 164, 0.8));
+             opacity: 0;
+             transition: all 0.3s ease;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+
+         .service-overlay-text {
+             color: white;
+             font-weight: 700;
+             font-size: 1.1rem;
+             text-align: center;
+         }
+
+         .service-content {
+             text-align: center;
+             flex-grow: 1;
+             display: flex;
+             flex-direction: column;
+         }
+
+         .service-card h3 {
+             color: var(--secondary-color);
+             margin-bottom: 1rem;
+             font-size: 1.4rem;
+             font-weight: 700;
+         }
+
+         .service-card p {
+             color: var(--text-light);
+             line-height: 1.7;
+             margin-bottom: 1.5rem;
+             flex-grow: 1;
+         }
+
+         .service-features {
+             display: flex;
+             justify-content: center;
+             gap: 0.5rem;
+             flex-wrap: wrap;
+             margin-top: auto;
+         }
+
+         .feature-tag {
+             background: rgba(14, 94, 164, 0.1);
+             color: #0E5EA4;
+             padding: 0.25rem 0.75rem;
+             border-radius: 15px;
+             font-size: 0.8rem;
+             font-weight: 600;
+             border: 1px solid rgba(14, 94, 164, 0.2);
+         }
+
+
+        .services-cta {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+         .services-cta p {
+             font-size: 1.1rem;
+             color: var(--text-light);
+             margin-bottom: 2rem;
+         }
 
         /* Process Section */
         /* Process Section */
@@ -1239,7 +1161,7 @@
         }
 
         .process h2 {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             margin-bottom: 1rem;
         }
 
@@ -1333,195 +1255,26 @@
 
         /* About Section */
         .about {
-            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e2e8f0" opacity="0.3"/><circle cx="75" cy="75" r="1" fill="%23e2e8f0" opacity="0.3"/><circle cx="50" cy="10" r="0.5" fill="%23e2e8f0" opacity="0.2"/><circle cx="10" cy="60" r="0.5" fill="%23e2e8f0" opacity="0.2"/><circle cx="90" cy="40" r="0.5" fill="%23e2e8f0" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.4;
-            pointer-events: none;
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-badge {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(135deg, #0E5EA4, #0a4a7d);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 8px 25px rgba(14, 94, 164, 0.3);
-            animation: pulse 2s infinite;
-        }
-
-        .about-header h2 {
-            color: #0E5EA4;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .about-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
+            background: var(--white);
         }
 
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: start;
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-text {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .about-intro .lead-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-color);
-            margin-bottom: 0;
-        }
-
-        .about-features {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .feature-item {
-            display: flex;
-            gap: 1.5rem;
-            align-items: flex-start;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f1f5f9;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            border-color: var(--primary-color);
-        }
-
-        .feature-icon {
-            flex-shrink: 0;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0E5EA4, #0a4a7d);
-            border-radius: 12px;
-            display: flex;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 8px 25px rgba(14, 94, 164, 0.3);
         }
 
-        .feature-content h3 {
-            color: #0E5EA4;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .feature-content p {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .about-cta {
-            background: linear-gradient(135deg, #f8fafc, #ffffff);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid #e2e8f0;
-            text-align: center;
-            width: 100%;
-            margin: 2rem auto 0 auto;
-        }
-
-        .cta-text {
-            font-size: 1.1rem;
-            color: var(--text-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .about-visual {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+        .about-text h2 {
+            color: var(--dark-grey);
+            margin-bottom: 2rem;
         }
 
         .about-image {
             position: relative;
             overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-image::after {
-            content: 'Kitchen Design';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #94a3b8;
-            font-size: 1.2rem;
-            font-weight: 600;
-            opacity: 0.7;
-            z-index: 0;
-            display: none;
-        }
-
-        .about-image:not(:has(img))::after {
-            display: block;
-        }
-
-        .about-image:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 35px 70px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .about-image img {
@@ -1529,108 +1282,10 @@
             height: 400px;
             object-fit: cover;
             transition: transform 0.3s ease;
-            display: block;
-            position: relative;
-            z-index: 2;
-        }
-
-        .about-image img[src=""] {
-            display: none;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .about-image:hover::before {
-            opacity: 0.1;
         }
 
         .about-image:hover img {
             transform: scale(1.05);
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(14, 94, 164, 0.9), rgba(10, 74, 125, 0.8));
-            opacity: 0;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-image:hover .image-overlay {
-            opacity: 1;
-        }
-
-        .overlay-content {
-            text-align: center;
-            color: white;
-        }
-
-        .overlay-icon {
-            margin-bottom: 1rem;
-        }
-
-        .overlay-content h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .overlay-content p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid #f1f5f9;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--primary-color);
-            display: block;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #0E5EA4, #0a4a7d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         /* About Stats */
@@ -1698,7 +1353,7 @@
         }
 
         .gallery-marquee h2 {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             margin-bottom: 1rem;
             font-size: 2.5rem;
             font-weight: 700;
@@ -1723,7 +1378,7 @@
         .gallery-marquee-track {
             display: flex;
             gap: 2rem;
-            animation: galleryScroll 40s linear infinite;
+            animation: galleryScroll 355s linear infinite;
             width: max-content;
         }
 
@@ -1743,7 +1398,7 @@
         .gallery-marquee-track-reverse {
             display: flex;
             gap: 2rem;
-            animation: galleryScrollReverse 40s linear infinite;
+            animation: galleryScrollReverse 355s linear infinite;
             width: max-content;
         }
 
@@ -1760,11 +1415,25 @@
             }
         }
 
+        @keyframes shimmer {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         .gallery-item {
-            min-width: 350px;
-            max-width: 350px;
-            height: 300px;
-            background: #f8f9fa;
+            min-width: 400px;
+            max-width: 400px;
+            height: 350px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f8f9fa 100%);
+            background-size: 400% 400%;
+            animation: shimmer 2s ease-in-out infinite;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
@@ -1777,11 +1446,11 @@
             justify-content: center;
         }
 
-        .gallery-item:hover {
+        /* .gallery-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
             border-color: var(--primary-color);
-        }
+        } */
 
         .gallery-item img {
             width: 100%;
@@ -1790,11 +1459,21 @@
             object-position: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             display: block;
+            opacity: 0;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.05);
+        .gallery-item img.loaded {
+            opacity: 1;
         }
+
+        .gallery-item.image-loaded {
+            animation: none;
+            background: transparent;
+        }
+
+        /* .gallery-item:hover img {
+            transform: scale(1.05);
+        } */
 
         .gallery-overlay {
             position: absolute;
@@ -1812,9 +1491,9 @@
             border-radius: 20px;
         }
 
-        .gallery-item:hover .gallery-overlay {
+        /* .gallery-item:hover .gallery-overlay {
             opacity: 1;
-        }
+        } */
 
         .gallery-overlay-content {
             text-align: center;
@@ -1829,8 +1508,99 @@
             align-items: center;
         }
 
-        .gallery-item:hover .gallery-overlay-content {
+        /* .gallery-item:hover .gallery-overlay-content {
             transform: translateY(0);
+        } */
+
+        /* New hover effect with brightness and magnifying glass */
+        .gallery-item:hover img {
+            filter: brightness(1.2);
+            transform: scale(1.02);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 11;
+        }
+
+        .gallery-item:hover::after,
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item {
+            cursor: pointer;
+        }
+
+        /* Smaller desktop screens (13-14 inch laptops) */
+        @media (max-width: 1440px) and (min-width: 1200px) {
+            .service-card p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            .feature-tag {
+                font-size: 0.7rem;
+                padding: 0.2rem 0.6rem;
+            }
+            
+            /* Testimonial cards font size reduction */
+            .testimonial-card-splide .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .testimonial-card-splide .author-name {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+            
+            .testimonial-card-splide .author-title {
+                font-size: 0.8rem;
+            }
+            
+            .testimonial-card-marquee .testimonial-text {
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            
+            .testimonial-card-marquee .author-name {
+                font-size: 0.9rem;
+                white-space: nowrap;
+            }
+            
+            .author-title {
+                font-size: 0.8rem;
+            }
         }
 
         .gallery-overlay-content h3 {
@@ -1909,9 +1679,9 @@
             }
 
             .gallery-item {
-                min-width: 280px;
-                max-width: 280px;
-                height: 240px;
+                min-width: 320px;
+                max-width: 320px;
+                height: 280px;
             }
 
             .gallery-marquee-track {
@@ -1941,9 +1711,9 @@
             }
 
             .gallery-item {
-                min-width: 250px;
-                max-width: 250px;
-                height: 200px;
+                min-width: 280px;
+                max-width: 280px;
+                height: 240px;
             }
 
             .gallery-marquee-track {
@@ -2001,10 +1771,10 @@
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
             .gallery-marquee-track {
-                animation-duration: 80s;
+                animation-duration: 426s;
             }
             .gallery-marquee-track-reverse {
-                animation-duration: 80s;
+                animation-duration: 426s;
             }
         }
 
@@ -2155,11 +1925,12 @@
 
         /* Testimonials Marquee Section */
         .testimonials-marquee {
-            background: var(--white);
+            background: #f8f9fa;
             color: var(--text-color);
             overflow: hidden;
             position: relative;
         }
+
 
 
         .testimonials-marquee .container {
@@ -2195,7 +1966,7 @@
         }
 
         .testimonials-marquee h2 {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             font-size: 2.5rem;
             font-weight: 700;
             line-height: 1.2;
@@ -2208,7 +1979,7 @@
             width: 100vw;
             overflow: hidden;
             position: relative;
-            padding: 2rem 0;
+            padding: 2rem 0 6rem 0;
             margin-left: calc(-50vw + 50%);
         }
 
@@ -2239,8 +2010,7 @@
             min-width: 400px;
             max-width: 400px;
             color: var(--text-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #f0f0f0;
+            border: 1px solid #e5e7eb;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -2248,8 +2018,8 @@
 
 
         .testimonial-card-marquee:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            border-color: #0E5EA4;
         }
 
         .quote-icon {
@@ -2306,9 +2076,92 @@
             opacity: 0.8;
         }
 
+        /* Review Section - Two Column Layout */
+        .review-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('marble.webp') center/cover;
+            padding: 6rem 0;
+            color: var(--text-color);
+        }
+
+        .review-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .review-content {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .review-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .review-item h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-grey);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .review-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        .review-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+        }
+
+        .review-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            object-position: center;
+            display: block;
+            border-radius: 12px;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .review-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 0 1rem;
+            }
+
+            .review-content {
+                gap: 2rem;
+                order: 2;
+            }
+
+            .review-image {
+                order: 1;
+                height: 400px;
+            }
+
+            .review-item h3 {
+                font-size: 1.25rem;
+            }
 
             .testimonials-marquee h2 {
                 font-size: 2rem;
@@ -2424,7 +2277,26 @@
                 cursor: pointer;
             }
 
+            .review-container {
+                padding: 0 0.75rem;
+                gap: 2rem;
+            }
 
+            .review-content {
+                gap: 1.5rem;
+            }
+
+            .review-item h3 {
+                font-size: 1.1rem;
+            }
+
+            .review-item p {
+                font-size: 0.9rem;
+            }
+
+            .review-image {
+                height: 300px;
+            }
 
             .testimonials-marquee h2 {
                 font-size: 1.75rem;
@@ -2515,7 +2387,7 @@
         }
 
         .pricing h2 {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -2677,7 +2549,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            color: #0E5EA4;
+            color: var(--dark-grey);
             font-size: 0.95rem;
             line-height: 1.4;
         }
@@ -2707,44 +2579,148 @@
             margin-top: 2rem;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            flex-direction: column;
             flex-wrap: wrap;
             gap: 2rem;
             padding: 2rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
         }
 
         .pricing-guarantee {
             display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
             align-items: center;
-            gap: 1rem;
-            flex: 1;
-            min-width: 300px;
         }
 
-        .guarantee-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--success-green), #20c997);
+
+
+        /* Light Guarantee Section */
+        .guarantee-light-section {
+            background: #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .guarantee-light {
+            background: none;
+            border-radius: 0;
+            padding: 2.5rem 0;
+            margin: 0;
+            position: relative;
+            overflow: visible;
+            box-shadow: none;
+            border: none;
+        }
+
+        .guarantee-light-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .guarantee-light-header {
+            margin-bottom: 2rem;
+        }
+
+        .guarantee-light-text h4 {
+            margin: 0;
+            color: var(--dark-grey);
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .guarantee-light-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .guarantee-light-feature {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .guarantee-light-feature:hover {
+            background: var(--white);
+            transform: translateY(-5px);
+            border-color: #0E5EA4;
+            box-shadow: 0 10px 30px rgba(14, 94, 164, 0.15);
+        }
+
+        .guarantee-light-feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(14, 94, 164, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            flex-shrink: 0;
+            color: #0E5EA4;
+            margin: 0 auto 1rem auto;
+            border: 2px solid rgba(14, 94, 164, 0.2);
         }
 
-        .guarantee-text h4 {
-            margin: 0 0 0.5rem 0;
-            color: #000000;
-            font-size: 1.1rem;
+        .guarantee-light-feature-title {
+            color: var(--dark-grey);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
         }
 
-        .guarantee-text p {
-            margin: 0;
-            color: #000000;
+        .guarantee-light-feature-desc {
+            color: var(--text-light);
             font-size: 0.9rem;
             line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Mobile responsiveness for light guarantee section */
+        @media (max-width: 768px) {
+            .guarantee-light {
+                padding: 2rem 0;
+            }
+
+            .guarantee-light-content {
+                padding: 0 1.5rem;
+            }
+
+            .guarantee-light-text h4 {
+                font-size: 1.6rem;
+                letter-spacing: 0.5px;
+            }
+
+            .guarantee-light-features {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .guarantee-light-feature {
+                padding: 1.5rem;
+            }
+
+            .guarantee-light-feature-icon {
+                width: 50px;
+                height: 50px;
+            }
         }
 
         /* FAQ Section */
@@ -2770,7 +2746,7 @@
         }
 
         .faq h2 {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             text-align: center;
             margin-bottom: 1rem;
         }
@@ -2898,7 +2874,7 @@
         }
 
         .faq-answer-content {
-            color: #0E5EA4;
+            color: var(--dark-grey);
             line-height: 1.6;
         }
 
@@ -3110,18 +3086,18 @@
             cursor: pointer;
             line-height: 1;
             transition: all 0.3s ease;
+            border-radius: 50%;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            z-index: 10002;
+            z-index: 10005;
         }
 
         .quote-popup-close:hover {
-            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 1);
             transform: scale(1.1);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
@@ -3261,18 +3237,18 @@
             line-height: 1;
             padding: 0;
             transition: all 0.3s ease;
+            border-radius: 50%;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            z-index: 10002;
+            z-index: 10005;
         }
 
         .exit-popup-close:hover {
-            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 1);
             transform: scale(1.1);
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
@@ -3486,6 +3462,14 @@
                 font-size: 2.2rem;
             }
 
+            .hero-subtext {
+                font-size: 1rem;
+                line-height: 1.4;
+                word-break: keep-all;
+                overflow-wrap: break-word;
+                hyphens: none;
+            }
+
             .hero-cta {
                 flex-direction: column;
                 gap: 1rem;
@@ -3568,34 +3552,23 @@
             }
 
              .about-content {
-                 grid-template-columns: 1fr;
-                 gap: 3rem;
+                 grid-template-columns: 1fr !important;
+                 gap: 2rem !important;
              }
-
-             .about-header h2 {
-                 font-size: 2rem;
+             
+             .about-image {
+                 order: -1;
+                 height: 400px !important;
              }
-
-             .about-stats {
-                 grid-template-columns: repeat(2, 1fr);
-                 gap: 1rem;
-             }
-
-             .cta-buttons {
-                 flex-direction: column;
-                 align-items: center;
-             }
-
-             .about-cta {
-                 margin: 1.5rem auto 0 auto;
-                 padding: 1.5rem;
+             
+             .about-image img {
+                 height: 100% !important;
              }
 
              .about-stats {
                  grid-template-columns: repeat(2, 1fr);
                  gap: 1rem;
              }
-
 
              .process-grid {
                  grid-template-columns: repeat(2, 1fr);
@@ -3663,23 +3636,30 @@
                 justify-content: center;
                 text-align: center;
                 flex-direction: column;
-                gap: 1rem;
             }
 
             .guarantee-icon {
                 width: 60px;
                 height: 60px;
                 margin: 0 auto;
+                box-shadow: 0 6px 16px rgba(14, 94, 164, 0.4);
             }
 
             .guarantee-text h4 {
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
+                color: #374151;
+                font-weight: 700;
             }
 
             .guarantee-text p {
                 font-size: 1rem;
                 line-height: 1.5;
+            }
+
+            .guarantee-text li {
+                font-size: 1rem;
+                margin: 0.75rem 0;
             }
 
             .faq-question {
@@ -3739,7 +3719,7 @@
 
             .form-wrapper {
                 order: 1;
-                padding: 2rem 1.5rem;
+                padding: 2rem 1rem;
             }
 
             .form-sidebar {
@@ -3911,6 +3891,65 @@
 
             .exit-popup-form-row p {
                 margin-bottom: 12px;
+            }
+
+            /* Mobile-optimized close buttons - Extra visible and unmistakable */
+            .quote-popup-close {
+                top: -5px;
+                right: -5px;
+                font-size: 2.2rem;
+                color: white;
+                background: rgb(0, 0, 0);
+                border: 3px solid white;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+                z-index: 10005;
+                padding: 0;
+                min-width: 50px;
+                min-height: 50px;
+                font-weight: bold;
+            }
+
+            .quote-popup-close:hover,
+            .quote-popup-close:active {
+                background: rgba(0, 0, 0, 1);
+                border-color: #f0f0f0;
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .exit-popup-close {
+                top: -5px;
+                right: -5px;
+                font-size: 2.2rem;
+                color: white;
+                background: rgb(0, 0, 0);
+                border: 3px solid white;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+                z-index: 10005;
+                padding: 0;
+                min-width: 50px;
+                min-height: 50px;
+                font-weight: bold;
+            }
+
+            .exit-popup-close:hover,
+            .exit-popup-close:active {
+                background: rgba(0, 0, 0, 1);
+                border-color: #f0f0f0;
+                transform: scale(1.1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             }
 
             .exit-popup-btn {
@@ -4098,7 +4137,6 @@
             }
 
 
-
             .process-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -4169,14 +4207,6 @@
                 margin-bottom: 1.5rem;
             }
 
-            .hero-subtext {
-                font-size: 1rem;
-                line-height: 1.4;
-                word-break: keep-all;
-                overflow-wrap: break-word;
-                hyphens: none;
-            }
-
             .hero-cta {
                 flex-direction: column;
                 gap: 1rem;
@@ -4191,29 +4221,9 @@
             }
 
             .about-stats {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 1rem;
             }
-
-            .about-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .feature-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .about-visual {
-                gap: 1.5rem;
-            }
-
-            .about-cta {
-                margin: 1rem auto 0 auto;
-                padding: 1.5rem;
-            }
-
 
             .process-grid {
                 grid-template-columns: 1fr;
@@ -4475,7 +4485,6 @@
                  gap: 1rem;
                  margin-top: 2rem;
              }
-
 
              .process-grid {
                  grid-template-columns: 1fr;
@@ -5021,965 +5030,108 @@
                 grid-template-columns: 1fr !important;
                 gap: 20px !important;
             }
+        }
 
-            /* Mobile-optimized close buttons */
-            .quote-popup-close {
-                top: -5px;
-                right: -5px;
-                font-size: 2.5rem;
-                color: #333;
-                background: rgb(0, 0, 0);
-                border-radius: 50%;
-                width: 44px;
-                height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                z-index: 10005;
-                padding: 0;
-                min-width: 44px;
-                min-height: 44px;
+        /* Splide Testimonial Slider Styles */
+        .testimonials-splide {
+            background: var(--white);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .testimonials-splide .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .splide-testimonials-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Full width splide container */
+        .splide-full-width {
+            width: 100vw;
+            position: relative;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .splide-testimonials-header h2 {
+            color: var(--dark-grey);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .splide__slide {
+            padding: 0 1rem;
+        }
+
+        .testimonial-card-splide {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card-splide:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .testimonial-card-splide .testimonial-stars {
+            color: #FFD700;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card-splide .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card-splide .author-name {
+            font-weight: 700;
+            color: var(--dark-grey);
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-card-splide .author-title {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Splide drag cursor */
+        .splide__track {
+            cursor: grab;
+        }
+
+        .splide__track:active {
+            cursor: grabbing;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .splide-testimonials-header h2 {
+                font-size: 2rem;
             }
 
-            .quote-popup-close:hover,
-            .quote-popup-close:active {
-                background: rgba(255, 255, 255, 1);
-                color: #000;
-                transform: scale(1.05);
-            }
-
-            .exit-popup-close {
-                top: -5px;
-                right: -5px;
-                font-size: 2.5rem;
-                color: #333;
-                background: rgb(0, 0, 0);
-                border-radius: 50%;
-                width: 44px;
-                height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                z-index: 10005;
-                padding: 0;
-                min-width: 44px;
-                min-height: 44px;
-            }
-
-            .exit-popup-close:hover,
-            .exit-popup-close:active {
-                background: rgba(255, 255, 255, 1);
-                color: #000;
-                transform: scale(1.05);
+            .testimonial-card-splide {
+                padding: 1.5rem;
             }
         }
-    </style>
+
+        @media (max-width: 480px) {
+            .splide-testimonials-header h2 {
+                font-size: 1.75rem;
+            }
+        }
     
-    <!-- Seline -->
-    <script async src="https://cdn.seline.com/seline.js" data-token="497d162b1630f1a"></script>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">
-                    <picture>
-                        <source type="image/webp" srcset="assets/images/nextlevelkitchens_logo_white.webp" sizes="(max-width: 768px) 100vw, 50vw">
-                        <img src="assets/images/nextlevelkitchens_logo_white.webp" width="800" height="600" alt="Next Level Kitchens - Custom Kitchen Design Auckland Logo" class="img-cover" decoding="async" loading="lazy">
-                    </picture>
-                </div>
-                <div class="header-phone">
-                    <a href="tel:+64211012617"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 4px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> 021 101-2617</a>
-                </div>
-                 <ul class="nav-menu">
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="about.html">About</a></li>
-                     <li><a href="gallery.html">Gallery</a></li>
-                     <li><a href="pricing.html">Pricing</a></li>
-                     <li><a href="contact.html">Contact</a></li>
-                 </ul>
-                <div class="nav-right">
-                    <button class="btn btn-primary btn-small" onclick="openQuotePopup()">GET QUOTE</button>
-                    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                        ☰
-                    </button>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero hero-1" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg> Auckland's trusted kitchen specialists</div>
-                <h1>Contact Next Level Kitchens</h1>
-                <h2 class="hero-subtext">Let's talk about your dream kitchen.</h2>
-                
-                <div class="hero-cta">
-                    <button class="btn btn-primary btn-pulse" onclick="openQuotePopup()">Get a free quote →</button>
-                     <a href="tel:+64211012617" class="btn btn-secondary"><svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2" style="display: inline-block; margin-right: 6px; vertical-align: middle;"> <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path> </svg> Call Now 021 101-2617</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- Lead Capture Form Section -->
-        <section class="quote-form-section section-padding" id="quote-form">
-            <div class="container">
-                <div class="form-header">
-                    <h2>Get in Touch</h2>
-                    <p class="form-subtitle">Let's talk about your dream kitchen. Whether you're ready to start planning or just exploring ideas, our team is here to answer your questions and guide you through the next steps.</p>
-                </div>
-                
-                <div class="quote-form-container">
-    
-                    <div class="form-sidebar">
-    
-                        <div class="testimonial-mini">
-                            <div class="testimonial-rating">
-                                <span class="stars"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; margin-right: 2px; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: inline-block; vertical-align: middle;"> <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon> </svg></span>
-                            </div>
-                            <div class="testimonial-text">
-                                Next Level Kitchens transformed our outdated kitchen into a modern masterpiece. The attention to detail and quality craftsmanship exceeded our expectations.
-                            </div>
-                            <div class="testimonial-author">
-                                <div class="author-name" style="color: white;">Sarah M.</div>
-                                <div class="author-location" style="color: white;">Ponsonby, Auckland</div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-info">
-                            <h4>Prefer to Call?</h4>
-                            <p>Speak directly with our design team</p>
-                            <a href="tel:+64211012617" class="phone-link">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                </svg>
-                                021 101-2617
-                            </a>
-                            <p style="margin-top: 20px;">Prefer to email us directly?</p>
-                            <a href="mailto:sales@nlk.co.nz" class="phone-link" style="margin-top: 10px;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                                sales@nlk.co.nz
-                            </a>
-                        </div>
-                        
-                    </div>
-    
-                    <div class="form-wrapper">
-                        <div class="form-intro">
-                            <h3>Transform Your Kitchen Today</h3>
-                        </div>
-                        
-                        <form name="contact" method="POST" netlify action="/thank-you" class="quote-form" id="quoteForm">
-                            <p hidden>
-                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                            </p>
-                            
-                            <div class="form-group">
-                                <label for="name">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                        <circle cx="12" cy="7" r="4"/>
-                                    </svg>
-                                    Your Name
-                                </label>
-                                <input type="text" id="name" name="name" placeholder="Enter your name" required />
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                                    </svg>
-                                    Phone Number
-                                </label>
-                                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                        <polyline points="22,6 12,13 2,6"/>
-                                    </svg>
-                                    Email Address
-                                </label>
-                                <input type="email" id="email" name="email" placeholder="Enter your email address" required />
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="budget">
-                                    <i class="fas fa-dollar-sign" style="color: #007bff; font-size: 16px; margin-right: 8px;"></i>
-                                    Budget Range
-                                </label>
-                                <select id="budget" name="budget" required>
-                                    <option value="">Select your budget range</option>
-                                    <option value="$15K - $25K">$15K - $25K (Everyday)</option>
-                                    <option value="$25K - $35K">$25K - $35K (Stylish)</option>
-                                    <option value="$35K+">$35K+ (Showpiece)</option>
-                                    <option value="Not sure yet">Not sure yet</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                                    </svg>
-                                    Project Details
-                                </label>
-                                <textarea id="message" name="message" placeholder="Tell us about your renovation project - what's your vision, timeline, and any specific requirements?" required rows="5"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="form-submit-btn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                    <path d="M22 2L11 13"/>
-                                    <polygon points="22,2 15,22 11,13 2,9 22,2"/>
-                                </svg>
-                                GET QUOTE
-                            </button>
-                        </form>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Next Level Kitchens</h3>
-                </div>
-                <div class="footer-links">
-                    <a href="about.html">About</a>
-                    <a href="gallery.html">Gallery</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="quote-form.html">Contact</a>
-                    <a href="sitemap.xml">Sitemap</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Next Level Kitchens. All Rights Reserved | Design by <a href="https://www.bluelightweb.co.nz" target="_blank" rel="noopener">Bluelight</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Exit Intent Popup -->
-    <div id="exit-intent-popup" class="exit-popup-overlay" aria-hidden="true" onclick="if(event.target === this) { this.style.display='none'; this.setAttribute('aria-hidden', 'true'); console.log('Popup closed by clicking outside'); }">
-        <div class="exit-popup-container" role="dialog" aria-modal="true" aria-labelledby="popup-main-heading" tabindex="-1">
-            <div class="exit-popup-content">
-                <button class="exit-popup-close" type="button" data-exit-close aria-label="Close" onclick="document.getElementById('exit-intent-popup').style.display='none'; document.getElementById('exit-intent-popup').setAttribute('aria-hidden', 'true'); console.log('Popup closed via X button');">×</button>
-                <div class="exit-popup-header">
-                    <h2 id="popup-main-heading">Wait! Don't Miss Out</h2>
-                    <h3>Claim Your Free Kitchen Estimate</h3>
-                    <p>Get expert kitchen design advice and a personalized quote — completely free!</p>
-                </div>
-
-                <form class="exit-popup-form"
-                      name="exit-intent-contact"
-                      method="POST"
-                      action="/thank-you"
-                      data-netlify="true"
-                      netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="exit-intent-contact">
-                    <p style="display:none;">
-                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                    </p>
-                    <div class="exit-form-row">
-                        <p><label>Your Name:
-                            <input type="text" name="name" placeholder="Your Name" class="exit-form-control" required>
-                        </label></p>
-                        <p><label>Your Phone:
-                            <input type="tel" name="phone" placeholder="Your Phone" class="exit-form-control" required>
-                        </label></p>
-                    </div>
-                    <p><label>Your Email:
-                        <input type="email" name="email" placeholder="Your Email" class="exit-form-control" required>
-                    </label></p>
-                    <p><label>Budget Range:
-                        <select name="budget" class="exit-form-control" required>
-                            <option value="">Select your budget range</option>
-                            <option value="$15K - $25K">$15K - $25K (Everyday)</option>
-                            <option value="$25K - $35K">$25K - $35K (Stylish)</option>
-                            <option value="$35K+">$35K+ (Showpiece)</option>
-                            <option value="Not sure yet">Not sure yet</option>
-                        </select>
-                    </label></p>
-                    <p><label>Message:
-                        <textarea name="message" placeholder="Tell us about your kitchen renovation needs..." class="exit-form-control" rows="3"></textarea>
-                    </label></p>
-                    <p>
-                        <button type="submit" class="exit-popup-btn">GET QUOTE<span>→</span></button>
-                    </p>
-                    <div class="exit-form-guarantee">
-                        <i class="fas fa-lock"></i>
-                        <span>100% Free • No Obligation • Your info is secure</span>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Quote Popup Modal -->
-    <div id="quote-popup" class="quote-popup">
-        <div class="quote-popup-overlay"></div>
-        <div class="quote-popup-content">
-            <button class="quote-popup-close" id="quote-popup-close">&times;</button>
-            <div class="quote-popup-header">
-                <h2>Get Free Quote</h2>
-                <p>Transform your kitchen with our expert design and installation services</p>
-            </div>
-            <form name="quote-popup" method="POST" netlify action="/thank-you" class="quote-form" id="quotePopupForm">
-                <p hidden>
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                
-                <div class="quote-popup-form-row">
-                    <div class="form-group">
-                        <label for="popup-name">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                            Your Name
-                        </label>
-                        <input type="text" id="popup-name" name="name" placeholder="Enter your name" required />
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="popup-phone">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                            Phone Number
-                        </label>
-                        <input type="tel" id="popup-phone" name="phone" placeholder="Enter your phone number" required />
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="popup-email">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                        Email Address
-                    </label>
-                    <input type="email" id="popup-email" name="email" placeholder="Enter your email address" required />
-                </div>
-                
-                <div class="form-group">
-                    <label for="popup-budget">
-                        <i class="fas fa-dollar-sign" style="color: #007bff; font-size: 16px; margin-right: 8px;"></i>
-                        Budget Range
-                    </label>
-                    <select id="popup-budget" name="budget" required>
-                        <option value="">Select your budget range</option>
-                        <option value="$15K - $25K">$15K - $25K (Everyday)</option>
-                        <option value="$25K - $35K">$25K - $35K (Stylish)</option>
-                        <option value="$35K+">$35K+ (Showpiece)</option>
-                        <option value="Not sure yet">Not sure yet</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="popup-message">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                        Project Details
-                    </label>
-                    <textarea id="popup-message" name="message" placeholder="Tell us about your kitchen project and requirements" required rows="3"></textarea>
-                </div>
-                
-                <button type="submit" class="form-submit-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#007bff" stroke="#007bff" stroke-width="2">
-                        <path d="M22 2L11 13"/>
-                        <polygon points="22,2 15,22 11,13 2,9 22,2"/>
-                    </svg>
-                    GET A FREE QUOTE
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        mobileMenuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // FAQ accordion functionality is handled by toggleFaq() function
-
-        // Exit Intent Popup functionality
-        let exitIntentShown = false;
-        let pageLoadTime = Date.now();
-
-        document.addEventListener('mouseleave', function(e) {
-            // Only trigger if mouse leaves from the top area and page has been viewed for 15+ seconds
-            if (!exitIntentShown && e.clientY <= 0 && (Date.now() - pageLoadTime > 15000)) {
-                exitIntentShown = true;
-
-                // Show the popup
-                const popup = document.getElementById('exit-intent-popup');
-                if (popup) {
-                    popup.style.display = 'flex';
-                    popup.setAttribute('aria-hidden', 'false');
-                }
-            }
-        });
-
-        // Also trigger on mouse movement to very top (backup method)
-        document.addEventListener('mousemove', function(e) {
-            if (!exitIntentShown && e.clientY <= 1 && (Date.now() - pageLoadTime > 15000)) {
-                exitIntentShown = true;
-
-                const popup = document.getElementById('exit-intent-popup');
-                if (popup) {
-                    popup.style.display = 'flex';
-                    popup.setAttribute('aria-hidden', 'false');
-                }
-            }
-        });
-
-        // Quote Popup functionality
-        function openQuotePopup() {
-            document.getElementById('quote-popup').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeQuotePopup() {
-            document.getElementById('quote-popup').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        // Close popup when clicking close button
-        document.getElementById('quote-popup-close').addEventListener('click', closeQuotePopup);
-
-        // Close popup when clicking overlay
-        document.querySelector('.quote-popup-overlay').addEventListener('click', closeQuotePopup);
-
-        // Close popup when pressing Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeQuotePopup();
-            }
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 80; // Account for fixed header
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-         // Enhanced animation observer
-         const enhancedObserver = new IntersectionObserver(function(entries) {
-             entries.forEach(entry => {
-                 if (entry.isIntersecting) {
-                     entry.target.classList.add('animate');
-                     // Add fade-in-up class for general elements
-                     if (!entry.target.classList.contains('animate')) {
-                         entry.target.classList.add('fade-in-up');
-                     }
-                 }
-             });
-         }, {
-             threshold: 0.1,
-             rootMargin: '0px 0px -50px 0px'
-         });
-
-         // Observe elements for enhanced animations
-         const animateElements = document.querySelectorAll('.service-card, .process-step, .about-text, .gallery-item, .pricing-card, .faq-item, .stat-item');
-         animateElements.forEach(el => enhancedObserver.observe(el));
-
-        // Parallax effect for hero background
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('.hero');
-            const speed = scrolled * 0.5;
-            parallax.style.backgroundPosition = `center ${speed}px`;
-        });
-
-        // Form validation and submission (if contact forms are added later)
-        function validateForm(form) {
-            const inputs = form.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.style.borderColor = '#ff0000';
-                } else {
-                    input.style.borderColor = '#ddd';
-                }
-            });
-            
-            return isValid;
-        }
-
-        // Add loading states to buttons
-        function addLoadingState(button) {
-            const originalText = button.textContent;
-            button.textContent = 'Loading...';
-            button.disabled = true;
-            
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.disabled = false;
-            }, 2000);
-        }
-
-        // Add click handlers to CTA buttons
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Add ripple effect
-                const ripple = document.createElement('span');
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
-                ripple.style.transform = 'scale(0)';
-                ripple.style.animation = 'ripple 0.6s linear';
-                ripple.style.left = (e.clientX - this.offsetLeft) + 'px';
-                ripple.style.top = (e.clientY - this.offsetTop) + 'px';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-
-        // Add CSS animation for ripple effect
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-            .btn {
-                position: relative;
-                overflow: hidden;
-            }
-        `;
-        document.head.appendChild(style);
-
-         // Initialize on page load
-         document.addEventListener('DOMContentLoaded', function() {
-             // Enhanced hero entrance animation
-             setTimeout(() => {
-                 const heroContent = document.querySelector('.hero-content');
-                 if (heroContent) {
-                     heroContent.classList.add('animate');
-                 }
-             }, 300);
-
-             // Staggered header animation
-             setTimeout(() => {
-                 const header = document.querySelector('.header');
-                 if (header) {
-                     header.style.transform = 'translateY(0)';
-                     header.style.opacity = '1';
-                 }
-             }, 100);
-            
-             // Preload critical images
-             const criticalImages = [
-                 'assets/portfolio/cecilia david 2.webp',
-                 'assets/images/nextlevelkitchens_logo_white.webp',
-                 'assets/images/nextlevelkitchens_photo_03.webp'
-             ];
-            
-            criticalImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
-            });
-        });
-
-
-
-        // Multi-step form functionality
-        let currentStep = 1;
-        const totalSteps = 2;
-        
-        function nextStep() {
-            const currentStepEl = document.querySelector(`.form-step[data-step="${currentStep}"]`);
-            const inputs = currentStepEl.querySelectorAll('input[required], select[required]');
-            let isValid = true;
-            
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.style.borderColor = '#ef4444';
-                    input.focus();
-                } else {
-                    input.style.borderColor = '#0E5EA4';
-                }
-            });
-            
-            if (isValid && currentStep < totalSteps) {
-                currentStepEl.classList.remove('active');
-                currentStep++;
-                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
-            }
-        }
-        
-        function prevStep() {
-            if (currentStep > 1) {
-                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.remove('active');
-                currentStep--;
-                document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
-            }
-        }
-
-        // Form submission
-        const quoteForm = document.getElementById('quote-form-main');
-        if (quoteForm) {
-            quoteForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Show success message
-                alert('Thank you! Your consultation request has been submitted. Karl will contact you within 2 hours during business hours.');
-                
-                // Reset form
-                this.reset();
-                currentStep = 1;
-                document.querySelectorAll('.form-step').forEach(step => step.classList.remove('active'));
-                document.querySelector('.form-step[data-step="1"]').classList.add('active');
-            });
-        }
-
-        // Countdown timers
-        function startCountdown(elementId, minutes = 47) {
-            const element = document.getElementById(elementId);
-            if (!element) return;
-            
-            let timeLeft = minutes * 60 + 23 * 60 + 15; // 47:23:15
-            
-            const timer = setInterval(function() {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
-                const seconds = timeLeft % 60;
-                
-                element.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-                
-                if (timeLeft <= 0) {
-                    clearInterval(timer);
-                    element.textContent = "Offer Expired";
-                }
-                timeLeft--;
-            }, 1000);
-        }
-        
-
-        // Start main countdown
-        startCountdown('countdown');
-
-        // Animate recent activity items
-        function animateActivity() {
-            const items = document.querySelectorAll('.activity-item');
-            items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = '0';
-                    setTimeout(() => {
-                        const messages = [
-                            '• <strong>Sarah R.</strong> from Remuera just booked consultation',
-                            '• <strong>Mike P.</strong> from Ponsonby started his project', 
-                            '• <strong>Emma D.</strong> from Devonport left 5-star review',
-                            '• <strong>James K.</strong> from Parnell signed contract',
-                            '• <strong>Lisa M.</strong> from Mt Eden completed kitchen',
-                            '• <strong>David T.</strong> from Newmarket booked consultation'
-                        ];
-                        item.innerHTML = messages[Math.floor(Math.random() * messages.length)];
-                        item.style.opacity = '1';
-                    }, 500);
-                }, index * 2000);
-            });
-        }
-
-        // Animate activity every 15 seconds
-        setInterval(animateActivity, 15000);
-
-        // FAQ Toggle Function - Global scope
-        window.toggleFaq = function(item) {
-            const isCollapsed = item.classList.contains('collapsed');
-            
-            // Toggle the collapsed state of the clicked item
-            if (isCollapsed) {
-                item.classList.remove('collapsed');
-            } else {
-                item.classList.add('collapsed');
-            }
-        }
-
-
-        // Initialize FAQ animations on scroll
-        const faqObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        // Observe FAQ items when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.faq-item').forEach(item => {
-                faqObserver.observe(item);
-            });
-        });
-
-        // Typing Effect for Hero
-        function initTypingEffect() {
-            const words = ['Kitchens', 'Service', 'Craftsmanship', 'Results', 'Design', 'Cabinetry'];
-            const typedWordElement = document.getElementById('typed-word');
-            let currentWordIndex = 0;
-            let isDeleting = false;
-            let charIndex = 0;
-            let typeSpeed = 200;
-            let deleteSpeed = 150;
-            let pauseTime = 2500;
-
-            function typeWriter() {
-                const currentWord = words[currentWordIndex];
-                
-                if (!isDeleting) {
-                    // Typing
-                    typedWordElement.textContent = currentWord.substring(0, charIndex + 1);
-                    charIndex++;
-                    
-                    if (charIndex === currentWord.length) {
-                        // Finished typing, pause then start deleting
-                        setTimeout(() => {
-                            isDeleting = true;
-                            typeWriter();
-                        }, pauseTime);
-                        return;
-                    }
-                    
-                    setTimeout(typeWriter, typeSpeed);
-                } else {
-                    // Deleting
-                    typedWordElement.textContent = currentWord.substring(0, charIndex - 1);
-                    charIndex--;
-                    
-                    if (charIndex === 0) {
-                        // Finished deleting, move to next word
-                        isDeleting = false;
-                        currentWordIndex = (currentWordIndex + 1) % words.length;
-                        setTimeout(typeWriter, typeSpeed);
-                        return;
-                    }
-                    
-                    setTimeout(typeWriter, deleteSpeed);
-                }
-            }
-
-            // Start the effect after a brief delay
-            setTimeout(() => {
-                typeWriter();
-            }, 1000);
-        }
-
-        // Initialize typing effect when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initTypingEffect);
-
-        // Testimonials marquee functionality - no JavaScript needed as it's CSS-based
-
-        // Gallery Modal functionality
-        function initGalleryModal() {
-            const modal = document.getElementById('galleryModal');
-            const modalImage = document.getElementById('galleryModalImage');
-            const closeBtn = document.querySelector('.gallery-modal-close');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            
-            function openModal(imageSrc, imageAlt) {
-                modalImage.src = imageSrc;
-                modalImage.alt = imageAlt || 'Kitchen Gallery Image';
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                
-                // Add fade-in animation
-                setTimeout(() => {
-                    modal.style.opacity = '1';
-                }, 10);
-            }
-            
-            function closeModal() {
-                modal.style.opacity = '0';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }, 300);
-            }
-            
-            // Add click listeners to gallery items
-            galleryItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const imageSrc = item.getAttribute('data-image');
-                    const imageAlt = item.querySelector('img').alt;
-                    openModal(imageSrc, imageAlt);
-                });
-            });
-            
-            // Modal controls
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeModal);
-            }
-            
-            // Close modal on background click
-            if (modal) {
-                modal.addEventListener('click', (e) => {
-                    if (e.target === modal) {
-                        closeModal();
-                    }
-                });
-            }
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (modal && modal.style.display === 'block') {
-                    if (e.key === 'Escape') {
-                        closeModal();
-                    }
-                }
-            });
-        }
-        
-        // Initialize gallery modal when DOM is loaded
-        document.addEventListener('DOMContentLoaded', initGalleryModal);
-
-        // Pricing icon image animation
-        function initPricingIconAnimation() {
-            const pricingImages = document.querySelectorAll('.pricing-icon img');
-            
-            const pricingObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.classList.add('animate');
-                        }, index * 200); // Stagger the animation
-                    }
-                });
-            }, {
-                threshold: 0.3,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            pricingImages.forEach(img => {
-                pricingObserver.observe(img);
-            });
-        }
-
-        // Initialize pricing icon animation
-        document.addEventListener('DOMContentLoaded', initPricingIconAnimation);
-
-        // Compact FAQ Toggle
-        function toggleFAQCompact(button) {
-            const answer = button.nextElementSibling;
-            const icon = button.querySelector('.faq-icon-compact');
-            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-            
-            // Close all other FAQs
-            document.querySelectorAll('.faq-answer-compact').forEach(faq => {
-                faq.style.maxHeight = '0px';
-                const otherIcon = faq.previousElementSibling.querySelector('.faq-icon-compact');
-                otherIcon.style.transform = 'rotate(0deg)';
-                otherIcon.textContent = '+';
-                otherIcon.style.background = 'rgba(0, 123, 255, 0.1)';
-                otherIcon.style.color = '#007bff';
-            });
-            
-            // Toggle current FAQ
-            if (!isOpen) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-                icon.style.transform = 'rotate(45deg)';
-                icon.textContent = '×';
-                icon.style.background = '#007bff';
-                icon.style.color = 'white';
-            } else {
-                answer.style.maxHeight = '0px';
-                icon.style.transform = 'rotate(0deg)';
-                icon.textContent = '+';
-                icon.style.background = 'rgba(0, 123, 255, 0.1)';
-                icon.style.color = '#007bff';
-            }
-        }
-
-    </script>
-
-    <!-- Splide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    
-</body>
-</html>
