@@ -43,7 +43,7 @@ const blogPosts = [
         id: 8,
         title: "The Top Kitchen Design Trends in Auckland for 2025",
         excerpt: "Discover the top kitchen design trends in Auckland for 2025. From earth tones to smart storage, see what Kiwi homeowners are choosing. Expert insights from 20+ years in the industry.",
-        date: "2025-01-15",
+        date: "2025-12-30",
         category: "Design Trends",
         image: "assets/portfolio/new/DSC09395-HDR.webp",
         url: "kitchen-design-trends-auckland-2025.html"
